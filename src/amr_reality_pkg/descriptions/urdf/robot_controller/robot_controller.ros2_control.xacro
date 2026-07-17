@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="robot_control_control" params="
+      name
+      prefix
+      bus_config
+      master_config
+      can_interface_name
+      master_bin">
+
+        <ros2_control name="${name}" type="system">
+            <hardware>
+              <plugin>canopen_ros2_control/RobotSystem</plugin>
+              <param name="bus_config">${bus_config}</param>
+              <param name="master_config">${master_config}</param>
+              <param name="can_interface_name">${can_interface_name}</param>
+              <param name="master_bin">"${master_bin}"</param>
+            </hardware>
+
+            <joint name="${prefix}Left_Joint">                      <!-- trung ten voi cac cau hinh bo dieu khien cua ros-->
+                <param name="device_name">joint1</param>            <!-- device name phai trung voi ten cua node trong bus.yml-->
+                <!-- <command_interface name="position" /> -->
+                <state_interface name="position" />
+                <command_interface name="velocity" />
+                <state_interface name="velocity" />
+            </joint>
+
+            <joint name="${prefix}Right_Joint">
+                <param name="device_name">joint2</param>
+                <!-- <command_interface name="position" /> -->
+                <state_interface name="position" />
+                <command_interface name="velocity" />
+                <state_interface name="velocity" />
+            </joint>
+        </ros2_control>
+
+        <!-- <ros2_control name="Cia402RobotSystem" type="system">
+            <hardware>
+                <plugin>canopen_ros2_control/Cia402System</plugin>
+                <param name="bus_config">${bus_config}</param>
+                <param name="master_config">${master_config}</param>
+                <param name="can_interface_name">${can_interface_name}</param>
+                <param name="master_bin">"${master_bin}"</param>
+            </hardware>
+            
+            <joint name="${prefix}joint1">
+                <param name="device_name">joint1</param>
+                <param name="node_id">2</param>
+                <command_interface name="velocity"/>
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="${prefix}joint2">
+                <param name="device_name">joint2</param>
+                <param name="node_id">3</param>
+                <command_interface name="velocity"/>
+                <command_interface name="position"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+        </ros2_control> -->
+
+    </xacro:macro>
+</robot>

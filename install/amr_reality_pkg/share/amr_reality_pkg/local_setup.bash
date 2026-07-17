@@ -1,0 +1,1 @@
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/ament_cmake_environment_hooks/local_setup.bash

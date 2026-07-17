@@ -1,0 +1,99 @@
+options:
+  dcf_path: "@BUS_CONFIG_PATH@"
+
+master:
+  node_id: 1
+  driver: "ros2_canopen::MasterDriver"
+  package: "canopen_master_driver"
+
+  sync_period: 10000                              # moi 10ms gui SYNC 1 lan
+  boot_timeout: 5000                              # thoi gian cho khoi tao mang  
+  boot_time: 10000
+
+defaults:
+  dcf: "cia402_slave.eds"
+  driver: "ros2_canopen::Cia402Driver"
+  package: "canopen_402_driver"
+  period: 10                                      # chu ki cap nhat vong lap dieu khien
+
+  # position_mode: 1
+  velocity_mode: 3                                # mode 8: CSP, mode 9: CSV
+
+  boot_time: 10000                                # khoang thoi gian cho sau khi master ra lenh cho slave khoi dong
+  boot_timeout_ms: 15000                          # sau 15s ma slave chua chuyen sang che do op thi bao loi
+  sdo_timeout_ms: 10000                           # thoi gian cho timeout ma slave phan hoi sdo
+  polling: false
+  switching_state: 5
+  reset_communication: true
+  enable_lazy_load: true                          # co bao xem slave co load thanh cong khong
+
+  # scale_pos_to_dev: 1.0
+  # scale_pos_from_dev: 1.0
+  # scale_vel_to_dev: 1.0
+  # scale_vel_from_dev: 1.0
+
+  offset_pos_from_dev: 0.0
+  offset_pos_to_dev: 0.0
+
+  # Scaling factors for position and velocity, based on motor resolution my encoder has 10000 counts per revolution
+  scale_pos_to_dev: 15915.4943      # 100000 / (2 * pi)          (ROS -> DRIVER)
+  scale_pos_from_dev: 0.0000628318   # (2 * pi) / 100000          (DRIVER -> ROS)
+  scale_vel_to_dev: 15915.4943      # (100000) / (2 * pi)
+  scale_vel_from_dev: 0.0000628318  # (2 * pi) / (100000)
+
+  sdo:
+    - {index: 0x6040, sub_index: 0, value: 0x80} # Fault reset
+    - {index: 0x6040, sub_index: 0, value: 0x06} # Shutdown
+    - {index: 0x6040, sub_index: 0, value: 0x07} # Switch on
+    - {index: 0x6040, sub_index: 0, value: 0x10F} # Enable operation
+
+    # - {index: 0x6081, sub_index: 0, value: 10000} # profile velocity
+    - {index: 0x6083, sub_index: 0, value: 10000} # profile acceleration
+    - {index: 0x6084, sub_index: 0, value: 10000} # profile deceleration
+    - {index: 0x6098, sub_index: 0, value: 37}   # homing method for actual position
+    - {index: 0x6060, sub_index: 0, value: 3}    # profile velocity mode
+
+
+  tpdo: # TPDO needed statusword, actual velocity, actual position, mode of operation
+    1:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+        - {index: 0x6041, sub_index: 0} # status word
+        - {index: 0x6061, sub_index: 0} # mode of operation display
+    2:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+        - {index: 0x6064, sub_index: 0} # position actual value
+        - {index: 0x606c, sub_index: 0} # velocity actual value
+    3:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+        - {index: 0x603F, sub_index: 0} # error code
+
+  rpdo: # RPDO needed controlword, target position, target velocity, mode of operation
+    1:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+      - {index: 0x6040, sub_index: 0} # controlword
+      - {index: 0x6060, sub_index: 0} # mode of operation
+    2:
+      enabled: true
+      cob_id: "auto"
+      transmission: 0x01
+      mapping:
+      - {index: 0x607A, sub_index: 0} # target position
+      - {index: 0x60FF, sub_index: 0} # target velocity
+
+nodes:
+  joint1:
+    node_id: 2
+  joint2:
+    node_id: 3
