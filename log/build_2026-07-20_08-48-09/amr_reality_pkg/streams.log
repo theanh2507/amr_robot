@@ -1,0 +1,175 @@
+[0.028s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg
+[0.785s] -- The C compiler identification is GNU 11.4.0
+[1.649s] -- The CXX compiler identification is GNU 11.4.0
+[1.691s] -- Detecting C compiler ABI info
+[1.894s] -- Detecting C compiler ABI info - done
+[1.902s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.903s] -- Detecting C compile features
+[1.920s] -- Detecting C compile features - done
+[1.936s] -- Detecting CXX compiler ABI info
+[2.083s] -- Detecting CXX compiler ABI info - done
+[2.092s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.092s] -- Detecting CXX compile features
+[2.093s] -- Detecting CXX compile features - done
+[2.214s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.554s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.670s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.889s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[3.187s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.199s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.216s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.240s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.270s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.507s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.545s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.934s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.978s] -- Found FastRTPS: /opt/ros/humble/include  
+[4.044s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.124s] -- Looking for pthread.h
+[4.371s] -- Looking for pthread.h - found
+[4.372s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.493s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.494s] -- Found Threads: TRUE  
+[4.707s] -- Found canopen_core: 0.2.13 (/opt/ros/humble/share/canopen_core/cmake)
+[4.993s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system thread 
+[5.822s] -- Found canopen_base_driver: 0.2.13 (/opt/ros/humble/share/canopen_base_driver/cmake)
+[5.983s] -- Found canopen_proxy_driver: 0.2.13 (/opt/ros/humble/share/canopen_proxy_driver/cmake)
+[6.063s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[6.598s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.641s] -- Added test 'lint_cmake' to check CMake code style
+[6.643s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[6.647s] -- Added test 'xmllint' to check XML markup files
+[6.650s] -- Configuring done
+[6.658s] -- Generating done
+[6.661s] -- Build files have been written to: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+[6.673s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg
+[6.674s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg -- -j15 -l15
+[6.744s] Built target robot_control_prepare
+[7.600s] joint1: writing 4 bytes to 0x1400/1: 02 02 00 80
+[7.600s] joint1: writing 1 bytes to 0x1400/2: 01
+[7.600s] joint1: writing 1 bytes to 0x1600/0: 00
+[7.600s] joint1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[7.600s] joint1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[7.600s] joint1: writing 1 bytes to 0x1600/0: 02
+[7.600s] joint1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[7.600s] joint1: writing 4 bytes to 0x1401/1: 02 03 00 80
+[7.600s] joint1: writing 1 bytes to 0x1401/2: 01
+[7.600s] joint1: writing 1 bytes to 0x1601/0: 00
+[7.600s] joint1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[7.601s] joint1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[7.601s] joint1: writing 1 bytes to 0x1601/0: 02
+[7.601s] joint1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[7.601s] joint1: writing 4 bytes to 0x1800/1: 82 01 00 80
+[7.601s] joint1: writing 1 bytes to 0x1800/2: 01
+[7.601s] joint1: writing 1 bytes to 0x1A00/0: 00
+[7.601s] joint1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[7.601s] joint1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[7.601s] joint1: writing 1 bytes to 0x1A00/0: 02
+[7.601s] joint1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[7.601s] joint1: writing 4 bytes to 0x1801/1: 82 02 00 80
+[7.601s] joint1: writing 1 bytes to 0x1801/2: 01
+[7.601s] joint1: writing 1 bytes to 0x1A01/0: 00
+[7.601s] joint1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[7.602s] joint1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[7.602s] joint1: writing 1 bytes to 0x1A01/0: 02
+[7.602s] joint1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[7.602s] joint1: writing 4 bytes to 0x1802/1: 82 03 00 80
+[7.602s] joint1: writing 1 bytes to 0x1802/2: 01
+[7.602s] joint1: writing 1 bytes to 0x1A02/0: 00
+[7.602s] joint1: writing 4 bytes to 0x1A02/1: 10 00 3F 60
+[7.602s] joint1: writing 1 bytes to 0x1A02/0: 01
+[7.602s] joint1: writing 4 bytes to 0x1802/1: 82 03 00 00
+[7.602s] joint1: writing 2 bytes to 0x6040/0: 80 00
+[7.602s] joint1: writing 2 bytes to 0x6040/0: 06 00
+[7.602s] joint1: writing 2 bytes to 0x6040/0: 07 00
+[7.603s] joint1: writing 2 bytes to 0x6040/0: 0F 01
+[7.603s] joint1: writing 4 bytes to 0x6083/0: 10 27 00 00
+[7.603s] joint1: writing 4 bytes to 0x6084/0: 10 27 00 00
+[7.603s] joint1: writing 1 bytes to 0x6098/0: 00
+[7.603s] joint1: writing 1 bytes to 0x6060/0: 03
+[7.603s] joint2: writing 4 bytes to 0x1400/1: 03 02 00 80
+[7.603s] joint2: writing 1 bytes to 0x1400/2: 01
+[7.603s] joint2: writing 1 bytes to 0x1600/0: 00
+[7.603s] joint2: writing 4 bytes to 0x1600/1: 10 00 40 60
+[7.603s] joint2: writing 4 bytes to 0x1600/2: 08 00 60 60
+[7.603s] joint2: writing 1 bytes to 0x1600/0: 02
+[7.603s] joint2: writing 4 bytes to 0x1400/1: 03 02 00 00
+[7.603s] joint2: writing 4 bytes to 0x1401/1: 03 03 00 80
+[7.603s] joint2: writing 1 bytes to 0x1401/2: 01
+[7.603s] joint2: writing 1 bytes to 0x1601/0: 00
+[7.603s] joint2: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[7.603s] joint2: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[7.604s] joint2: writing 1 bytes to 0x1601/0: 02
+[7.604s] joint2: writing 4 bytes to 0x1401/1: 03 03 00 00
+[7.604s] joint2: writing 4 bytes to 0x1800/1: 83 01 00 80
+[7.604s] joint2: writing 1 bytes to 0x1800/2: 01
+[7.604s] joint2: writing 1 bytes to 0x1A00/0: 00
+[7.604s] joint2: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[7.604s] joint2: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[7.604s] joint2: writing 1 bytes to 0x1A00/0: 02
+[7.604s] joint2: writing 4 bytes to 0x1800/1: 83 01 00 00
+[7.604s] joint2: writing 4 bytes to 0x1801/1: 83 02 00 80
+[7.604s] joint2: writing 1 bytes to 0x1801/2: 01
+[7.604s] joint2: writing 1 bytes to 0x1A01/0: 00
+[7.604s] joint2: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[7.604s] joint2: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[7.604s] joint2: writing 1 bytes to 0x1A01/0: 02
+[7.604s] joint2: writing 4 bytes to 0x1801/1: 83 02 00 00
+[7.604s] joint2: writing 4 bytes to 0x1802/1: 83 03 00 80
+[7.604s] joint2: writing 1 bytes to 0x1802/2: 01
+[7.605s] joint2: writing 1 bytes to 0x1A02/0: 00
+[7.605s] joint2: writing 4 bytes to 0x1A02/1: 10 00 3F 60
+[7.605s] joint2: writing 1 bytes to 0x1A02/0: 01
+[7.605s] joint2: writing 4 bytes to 0x1802/1: 83 03 00 00
+[7.605s] joint2: writing 2 bytes to 0x6040/0: 80 00
+[7.605s] joint2: writing 2 bytes to 0x6040/0: 06 00
+[7.605s] joint2: writing 2 bytes to 0x6040/0: 07 00
+[7.605s] joint2: writing 2 bytes to 0x6040/0: 0F 01
+[7.605s] joint2: writing 4 bytes to 0x6083/0: 10 27 00 00
+[7.605s] joint2: writing 4 bytes to 0x6084/0: 10 27 00 00
+[7.605s] joint2: writing 1 bytes to 0x6098/0: 00
+[7.605s] joint2: writing 1 bytes to 0x6060/0: 03
+[7.831s] Built target robot_control
+[7.852s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg -- -j15 -l15
+[7.854s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+[7.864s] -- Install configuration: ""
+[7.865s] -- Execute custom install script
+[7.865s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//cia402_slave.eds
+[7.881s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//ros2_controllers.yaml
+[7.897s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//bus.yml
+[7.913s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint1.bin
+[7.932s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint2.bin
+[7.949s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//master.dcf
+[7.962s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//preprocessed_bus.yml
+[7.977s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/launch/amr_reality.launch.py
+[7.992s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Left_Link.STL
+[8.007s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Lidar_Link.STL
+[8.027s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Right_Link.STL
+[8.051s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Left_Link.STL
+[8.084s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Right_Link.STL
+[8.126s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Left_Link.STL
+[8.146s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Right_Link.STL
+[8.172s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/base_link.STL
+[8.199s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/AMR1-00-Khung (1).SLDASM.urdf
+[8.236s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/gazebo_control.xacro
+[8.258s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot.urdf.xacro
+[8.281s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.ros2_control.xacro
+[8.325s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.urdf.xacro
+[8.350s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/sensors.xacro
+[8.373s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/laser_filter.yaml
+[8.405s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg
+[8.437s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/parent_prefix_path/amr_reality_pkg
+[8.473s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.sh
+[8.503s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.dsv
+[8.549s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.sh
+[8.576s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.dsv
+[8.596s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.bash
+[8.621s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.sh
+[8.661s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.zsh
+[8.693s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.dsv
+[8.713s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv
+[8.738s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/packages/amr_reality_pkg
+[8.786s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig.cmake
+[8.818s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig-version.cmake
+[8.846s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.xml
+[8.879s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg

@@ -20,9 +20,21 @@ find_package(lely_core_libraries REQUIRED)
 cogen_dcf(robot_control)
 
 install(DIRECTORY
-  launch descriptions 
+  launch 
+  descriptions              
   DESTINATION share/${PROJECT_NAME}
 )
+
+install(FILES
+  config/laser_filter.yaml
+  DESTINATION share/${PROJECT_NAME}/config    # khai bao ro de tranh gay confict voi cogen_dcf   
+)
+
+install(PROGRAMS
+  scripts/ps4_teleop_node.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

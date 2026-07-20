@@ -5,6 +5,34 @@
 <robot
   name="AMR1-00-Khung (1).SLDASM">
 
+  <!-- COLOR-->
+  <material name="blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="1.0 0.5 0.0 1.0"/>
+  </material>
+
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+
+  <material name="blueygreen" >
+    <color rgba="0.16862745098039217 0.6941176470588235 0.4745098039215686 1.0" />
+  </material>
+
+
+
   <link name="base_footprint"/>
 
   <joint name="base_footprint_joint" type="fixed">
@@ -38,11 +66,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/base_link.STL" />
       </geometry>
-      <material
+
+      <material name="gray"/>
+      <!-- <material
         name="">
         <color
           rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -78,11 +108,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Left_Link.STL" />
       </geometry>
-      <material
+
+      <material name="black"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -134,11 +166,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Right_Link.STL" />
       </geometry>
-      <material
+
+      <material name="black"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -168,10 +202,10 @@
   </joint>
   <link
     name="Lidar_Link">
-    <inertial>
+    <inertial>s
       <origin
         xyz="0.00200541940391469 0.0134103078313806 -0.0338935246801065"
-        rpy="0 0 0" />
+        rpy="0 0 4.71239" />
       <mass
         value="0.22083577503254" />
       <inertia
@@ -185,21 +219,23 @@
     <visual>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 0 4.71239" />
       <geometry>
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Lidar_Link.STL" />
       </geometry>
-      <material
+
+      <material name="white"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="0 0 4.71239" />
       <geometry>
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Lidar_Link.STL" />
@@ -211,7 +247,7 @@
     type="fixed">
     <origin
       xyz="0.33888 -0.00043528 0.12467"
-      rpy="0 0 0" />
+      rpy="0 0 -1.5708" />
     <parent
       link="base_link" />
     <child
@@ -243,11 +279,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Yaw_Front_Left_Link.STL" />
       </geometry>
-      <material
+
+      <material name="orange"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -296,11 +334,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Yaw_Front_Right_Link.STL" />
       </geometry>
-      <material
+
+      <material name="orange"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -349,11 +389,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Yaw_Behind_Left_Link.STL" />
       </geometry>
-      <material
+
+      <material name="orange"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin
@@ -402,11 +444,13 @@
         <mesh
           filename="file://$(find amr_reality_pkg)/descriptions/meshes/Yaw_Behind_Right_Link.STL" />
       </geometry>
-      <material
+
+      <material name="orange"/>
+      <!-- <material
         name="">
         <color
           rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
+      </material> -->
     </visual>
     <collision>
       <origin

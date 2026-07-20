@@ -5,9 +5,11 @@
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot_core.xacro
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/ros2_control.urdf.xacro
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/sensors.xacro
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/laser_filter.yaml
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/mapper_params_online_async.yaml
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/nav2_params.yaml
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/robot_control/ros2_controllers.yaml
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/ps4_teleop_node.py
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.sh

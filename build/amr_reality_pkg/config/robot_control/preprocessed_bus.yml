@@ -55,10 +55,7 @@ joint1:
     value: 10000
   - index: 24728
     sub_index: 0
-    value: 37
-  - index: 24672
-    sub_index: 0
-    value: 3
+    value: 0
   sdo_timeout_ms: 10000
   switching_state: 5
   tpdo: &id003
@@ -87,7 +84,7 @@ joint1:
       - index: 24639
         sub_index: 0
       transmission: 1
-  velocity_mode: 3
+  velocity_mode: 9
 joint2:
   boot_time: 10000
   boot_timeout_ms: 15000
@@ -110,7 +107,7 @@ joint2:
   sdo_timeout_ms: 10000
   switching_state: 5
   tpdo: *id003
-  velocity_mode: 3
+  velocity_mode: 9
 master:
   boot_time: 10000
   boot_timeout: 5000

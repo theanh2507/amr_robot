@@ -1,0 +1,1 @@
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/sllidar_ros2/launch/sllidar_a2m12_launch .py

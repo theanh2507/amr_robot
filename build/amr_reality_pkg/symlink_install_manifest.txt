@@ -19,6 +19,9 @@
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot.urdf.xacro
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.ros2_control.xacro
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.urdf.xacro
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/sensors.xacro
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/laser_filter.yaml
+/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/amr_reality_pkg/ps4_teleop_node.py
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/parent_prefix_path/amr_reality_pkg
 /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.sh

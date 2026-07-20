@@ -3,11 +3,11 @@
 
     <joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
-        <child link="laser_frame"/>
+        <child link="Lidar_Link"/>
         <origin xyz="0.15 0 0.175" rpy="0 0 0"/>
     </joint>
 
-    <link name="laser_frame">
+    <link name="Lidar_Link">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry><cylinder radius="0.05" length="0.04"/></geometry>
@@ -22,7 +22,7 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="laser_frame">
+    <!-- <gazebo reference="Lidar_Link">
         <material>Gazebo/Red</material>
         <sensor name="laser" type="ray">
             <pose>0 0 0 0 0 0</pose>
@@ -46,12 +46,12 @@
                     <argument>~/out:=scan</argument>
                 </ros>
                 <output_type>sensor_msgs/LaserScan</output_type>
-                <frame_name>laser_frame</frame_name>
+                <frame_name>Lidar_Link</frame_name>
             </plugin>
         </sensor>
-    </gazebo>
+    </gazebo> -->
 
-    <joint name="camera_joint" type="fixed">
+    <!-- <joint name="camera_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera_link"/>
         <origin xyz="0.305 0 0.08" rpy="0 0 0"/>
@@ -91,5 +91,5 @@
                 <frame_name>camera_link</frame_name>
             </plugin>
         </sensor>
-    </gazebo>
+    </gazebo> -->
 </robot>

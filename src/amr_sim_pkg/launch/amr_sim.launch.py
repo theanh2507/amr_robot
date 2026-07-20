@@ -5,6 +5,8 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
 
 from launch_ros.actions import Node
 import xacro
@@ -24,7 +26,6 @@ def generate_launch_description():
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
         default_value='true',
-        description='Bật true nếu chạy mô phỏng Gazebo, false nếu chạy robot thật'
     )
 
     # 3. Sử dụng thư viện xacro của ROS 2 để biên dịch file xacro tổng thành chuỗi URDF XML
@@ -55,16 +56,42 @@ def generate_launch_description():
     executable='spawn_entity.py',
     arguments=[
         '-topic', 'robot_description',
-        '-entity', 'my_diff_robot',
+        '-entity', 'my_sim_robot',
         '-z', '0.1'
     ],
     output='screen'
     )
+
+    # Run Rviz
+    rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        output='screen'
+    )
+
+    # Laser Filter
+    laser_filter_path = PathJoinSubstitution(
+    [FindPackageShare("amr_sim_pkg"), "config", "laser_filter.yaml"])
+
+    laser_filter_node = Node(
+            package='laser_filters',
+            executable='scan_to_scan_filter_chain',
+            name='laser_filter',
+            parameters=[laser_filter_path, {'use_sim_time': use_sim_time}],
+            remappings=[
+                    ('scan', '/scan'),                  # Đọc dữ liệu thô từ Lidar thật gửi vào
+                    ('scan_filtered', '/scan_filtered') # Xuất dữ liệu đã cắt góc ra topic này
+                ]
+        )
+
 
     # 5. Trả về đối tượng LaunchDescription để ROS 2 thực thi
     return LaunchDescription([
         declare_use_sim_time_cmd,
         node_robot_state_publisher,
         gazebo,
-        spawn_entity
+        spawn_entity,
+        laser_filter_node,
+        rviz_node,
     ])

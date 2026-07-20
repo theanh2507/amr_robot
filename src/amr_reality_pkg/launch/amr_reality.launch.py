@@ -44,7 +44,9 @@ def generate_launch_description():
         executable="ros2_control_node",
         # Truyền robot_description_param (dạng dict) và file cấu hình yaml
         parameters=[robot_description_param, robot_control_config],
-        output="screen",
+        # respawn=True,
+        # respawn_delay=5.0,
+        output="screen",   
     )
 
 
@@ -104,6 +106,7 @@ def generate_launch_description():
                             output="screen" ,
                             arguments=["0", "0", "0", "0", "0", "0", "map", "odom"])
 
+    # Run Rviz
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -111,6 +114,21 @@ def generate_launch_description():
         output='screen'
     )
     
+
+    # Laser Filter
+    laser_filter_path = PathJoinSubstitution(
+    [FindPackageShare("amr_reality_pkg"), "config", "laser_filter.yaml"])
+
+    laser_filter_node = Node(
+            package='laser_filters',
+            executable='scan_to_scan_filter_chain',
+            name='laser_filter',
+            parameters=[laser_filter_path],
+            remappings=[
+                    ('scan', '/scan'), 
+                    ('scan_filtered', '/scan_filtered')
+                ]
+        )
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true', description='Use sim time if true'),
@@ -120,11 +138,14 @@ def generate_launch_description():
         # position_controller_spawner,
         # velocity_controller_spawner,
         diff_drive_controller_spawner,
-        # node_tf_map,
-        rviz_node,
+        laser_filter_node,
         # gazebo,
         # spawn_entity_gazebo,
+        rviz_node,
     ])
+
+# ls /dev/input/js*
+# ros2 run joy joy_node --ros-args -p device_id:=0
 
 # ros2 topic pub -r10 /velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.0, 0.0]}"
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel_unstamped
