@@ -1,0 +1,640 @@
+[0.000000] (-) TimerEvent: {}
+[0.000233] (amr_reality_pkg) JobQueued: {'identifier': 'amr_reality_pkg', 'dependencies': OrderedDict()}
+[0.000450] (amr_sim_pkg) JobQueued: {'identifier': 'amr_sim_pkg', 'dependencies': OrderedDict()}
+[0.000526] (laser_filters) JobQueued: {'identifier': 'laser_filters', 'dependencies': OrderedDict()}
+[0.000648] (sllidar_ros2) JobQueued: {'identifier': 'sllidar_ros2', 'dependencies': OrderedDict()}
+[0.000709] (amr_reality_pkg) JobStarted: {'identifier': 'amr_reality_pkg'}
+[0.099807] (-) TimerEvent: {}
+[0.200005] (-) TimerEvent: {}
+[0.300208] (-) TimerEvent: {}
+[0.400418] (-) TimerEvent: {}
+[0.500628] (-) TimerEvent: {}
+[0.721290] (-) TimerEvent: {}
+[0.821499] (-) TimerEvent: {}
+[0.921727] (-) TimerEvent: {}
+[1.021956] (-) TimerEvent: {}
+[1.122172] (-) TimerEvent: {}
+[1.222387] (-) TimerEvent: {}
+[1.332436] (-) TimerEvent: {}
+[1.435651] (-) TimerEvent: {}
+[1.520891] (amr_sim_pkg) JobStarted: {'identifier': 'amr_sim_pkg'}
+[1.535725] (-) TimerEvent: {}
+[1.635940] (-) TimerEvent: {}
+[1.687243] (laser_filters) JobStarted: {'identifier': 'laser_filters'}
+[1.736046] (-) TimerEvent: {}
+[1.836332] (-) TimerEvent: {}
+[1.936613] (-) TimerEvent: {}
+[2.036908] (-) TimerEvent: {}
+[2.137186] (-) TimerEvent: {}
+[2.237441] (-) TimerEvent: {}
+[2.337686] (-) TimerEvent: {}
+[2.369481] (sllidar_ros2) JobStarted: {'identifier': 'sllidar_ros2'}
+[2.376184] (amr_reality_pkg) JobProgress: {'identifier': 'amr_reality_pkg', 'progress': 'cmake'}
+[2.376756] (amr_reality_pkg) JobProgress: {'identifier': 'amr_reality_pkg', 'progress': 'build'}
+[2.377466] (amr_reality_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg', '--', '-j15', '-l15'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[2.473220] (-) TimerEvent: {}
+[2.597015] (-) TimerEvent: {}
+[2.697239] (-) TimerEvent: {}
+[2.797473] (-) TimerEvent: {}
+[2.897719] (-) TimerEvent: {}
+[2.997977] (-) TimerEvent: {}
+[3.098258] (-) TimerEvent: {}
+[3.198523] (-) TimerEvent: {}
+[3.298804] (-) TimerEvent: {}
+[3.342907] (amr_sim_pkg) JobProgress: {'identifier': 'amr_sim_pkg', 'progress': 'cmake'}
+[3.398876] (-) TimerEvent: {}
+[3.499112] (-) TimerEvent: {}
+[3.599362] (-) TimerEvent: {}
+[3.699613] (-) TimerEvent: {}
+[3.799913] (-) TimerEvent: {}
+[3.900209] (-) TimerEvent: {}
+[4.000531] (-) TimerEvent: {}
+[4.100809] (-) TimerEvent: {}
+[4.201064] (-) TimerEvent: {}
+[4.301333] (-) TimerEvent: {}
+[4.357829] (amr_sim_pkg) JobProgress: {'identifier': 'amr_sim_pkg', 'progress': 'build'}
+[4.358130] (amr_sim_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg', '--', '-j15', '-l15'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[4.401396] (-) TimerEvent: {}
+[4.501640] (-) TimerEvent: {}
+[4.601942] (-) TimerEvent: {}
+[4.702217] (-) TimerEvent: {}
+[4.802475] (-) TimerEvent: {}
+[4.887619] (laser_filters) JobProgress: {'identifier': 'laser_filters', 'progress': 'cmake'}
+[4.888327] (laser_filters) JobProgress: {'identifier': 'laser_filters', 'progress': 'build'}
+[4.888590] (laser_filters) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters', '--', '-j15', '-l15'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[4.902543] (-) TimerEvent: {}
+[5.002767] (-) TimerEvent: {}
+[5.103039] (-) TimerEvent: {}
+[5.203276] (-) TimerEvent: {}
+[5.303506] (-) TimerEvent: {}
+[5.403746] (-) TimerEvent: {}
+[5.504008] (-) TimerEvent: {}
+[5.604265] (-) TimerEvent: {}
+[5.704515] (-) TimerEvent: {}
+[5.804764] (-) TimerEvent: {}
+[5.905020] (-) TimerEvent: {}
+[6.005303] (-) TimerEvent: {}
+[6.105583] (-) TimerEvent: {}
+[6.134606] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'cmake'}
+[6.135232] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'build'}
+[6.135454] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2', '--', '-j15', '-l15'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[6.205689] (-) TimerEvent: {}
+[6.305941] (-) TimerEvent: {}
+[6.406183] (-) TimerEvent: {}
+[6.506417] (-) TimerEvent: {}
+[6.606659] (-) TimerEvent: {}
+[6.723409] (-) TimerEvent: {}
+[6.823698] (-) TimerEvent: {}
+[6.923959] (-) TimerEvent: {}
+[7.024214] (-) TimerEvent: {}
+[7.124469] (-) TimerEvent: {}
+[7.224723] (-) TimerEvent: {}
+[8.606182] (amr_sim_pkg) CommandEnded: {'returncode': 0}
+[8.606625] (-) TimerEvent: {}
+[8.606749] (amr_sim_pkg) JobProgress: {'identifier': 'amr_sim_pkg', 'progress': 'install'}
+[8.606782] (amr_sim_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[8.607128] (amr_sim_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.607248] (amr_sim_pkg) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[8.620089] (amr_reality_pkg) StdoutLine: {'line': b'Built target robot_control_prepare\n'}
+[8.706731] (-) TimerEvent: {}
+[8.728714] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/amr_sim.launch.py\n'}
+[8.728901] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/localization_launch.py\n'}
+[8.728994] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/navigation_launch.py\n'}
+[8.729271] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/gazebo_control.xacro\n'}
+[8.729393] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/inertial_macros.xacro\n'}
+[8.729524] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot.urdf.xacro\n'}
+[8.729656] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot_core.xacro\n'}
+[8.729798] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/sensors.xacro\n'}
+[8.730087] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/ekf.yaml\n'}
+[8.730212] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/laser_filter.yaml\n'}
+[8.730335] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/mapper_params_online_async.yaml\n'}
+[8.730459] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/nav2_params.yaml\n'}
+[8.730589] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/robot_control/ros2_controllers.yaml\n'}
+[8.730908] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/empty.world\n'}
+[8.731035] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/floor_plan3.sdf\n'}
+[8.731164] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze.world\n'}
+[8.731294] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.config\n'}
+[8.731424] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.sdf\n'}
+[8.731548] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze_2.world\n'}
+[8.731690] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/wall.world\n'}
+[8.731951] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.pgm\n'}
+[8.732074] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.yaml\n'}
+[8.732255] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/ps4_teleop_node.py\n'}
+[8.732379] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/imu_cov.py\n'}
+[8.732576] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg\n'}
+[8.732784] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg\n'}
+[8.732980] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.sh\n'}
+[8.733152] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.dsv\n'}
+[8.733325] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.sh\n'}
+[8.733497] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.dsv\n'}
+[8.733678] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.bash\n'}
+[8.733846] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.sh\n'}
+[8.734014] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.zsh\n'}
+[8.734206] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.dsv\n'}
+[8.734307] (amr_sim_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv\n'}
+[8.746263] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/packages/amr_sim_pkg\n'}
+[8.746412] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig.cmake\n'}
+[8.746549] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig-version.cmake\n'}
+[8.746715] (amr_sim_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.xml\n'}
+[8.748751] (amr_sim_pkg) CommandEnded: {'returncode': 0}
+[8.806799] (-) TimerEvent: {}
+[8.907018] (-) TimerEvent: {}
+[9.007264] (-) TimerEvent: {}
+[9.107515] (-) TimerEvent: {}
+[9.207767] (-) TimerEvent: {}
+[9.308000] (-) TimerEvent: {}
+[9.408223] (-) TimerEvent: {}
+[9.508444] (-) TimerEvent: {}
+[9.608702] (-) TimerEvent: {}
+[9.708959] (-) TimerEvent: {}
+[9.809185] (-) TimerEvent: {}
+[9.909442] (-) TimerEvent: {}
+[10.009715] (-) TimerEvent: {}
+[10.116790] (-) TimerEvent: {}
+[10.217068] (-) TimerEvent: {}
+[10.317350] (-) TimerEvent: {}
+[10.327917] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1400/1: 02 02 00 80\n'}
+[10.328202] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1400/2: 01\n'}
+[10.328371] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1600/0: 00\n'}
+[10.328706] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1600/1: 10 00 40 60\n'}
+[10.328795] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1600/2: 08 00 60 60\n'}
+[10.328867] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1600/0: 02\n'}
+[10.328935] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1400/1: 02 02 00 00\n'}
+[10.329002] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1401/1: 02 03 00 80\n'}
+[10.329073] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1401/2: 01\n'}
+[10.329143] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1601/0: 00\n'}
+[10.329211] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1601/1: 20 00 7A 60\n'}
+[10.329277] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1601/2: 20 00 FF 60\n'}
+[10.329343] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1601/0: 02\n'}
+[10.329409] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1401/1: 02 03 00 00\n'}
+[10.329475] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1800/1: 82 01 00 80\n'}
+[10.329539] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1800/2: 01\n'}
+[10.329600] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A00/0: 00\n'}
+[10.329661] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1A00/1: 10 00 41 60\n'}
+[10.329743] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1A00/2: 08 00 61 60\n'}
+[10.329806] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A00/0: 02\n'}
+[10.329870] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1800/1: 82 01 00 00\n'}
+[10.329932] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1801/1: 82 02 00 80\n'}
+[10.329994] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1801/2: 01\n'}
+[10.330057] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A01/0: 00\n'}
+[10.330120] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1A01/1: 20 00 64 60\n'}
+[10.330182] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1A01/2: 20 00 6C 60\n'}
+[10.330244] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A01/0: 02\n'}
+[10.330305] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1801/1: 82 02 00 00\n'}
+[10.330367] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1802/1: 82 03 00 80\n'}
+[10.330442] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1802/2: 01\n'}
+[10.330507] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A02/0: 00\n'}
+[10.330571] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1A02/1: 10 00 3F 60\n'}
+[10.330635] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x1A02/0: 01\n'}
+[10.330716] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x1802/1: 82 03 00 00\n'}
+[10.330785] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 2 bytes to 0x6040/0: 80 00\n'}
+[10.330850] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 2 bytes to 0x6040/0: 06 00\n'}
+[10.330913] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 2 bytes to 0x6040/0: 07 00\n'}
+[10.330977] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 2 bytes to 0x6040/0: 0F 01\n'}
+[10.331042] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x6083/0: A0 86 01 00\n'}
+[10.331106] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 4 bytes to 0x6084/0: A0 86 01 00\n'}
+[10.331170] (amr_reality_pkg) StdoutLine: {'line': b'joint1: writing 1 bytes to 0x6098/0: 00\n'}
+[10.331233] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1400/1: 03 02 00 80\n'}
+[10.331297] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1400/2: 01\n'}
+[10.331362] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1600/0: 00\n'}
+[10.331426] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1600/1: 10 00 40 60\n'}
+[10.331490] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1600/2: 08 00 60 60\n'}
+[10.331552] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1600/0: 02\n'}
+[10.331613] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1400/1: 03 02 00 00\n'}
+[10.331686] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1401/1: 03 03 00 80\n'}
+[10.331758] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1401/2: 01\n'}
+[10.331821] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1601/0: 00\n'}
+[10.331883] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1601/1: 20 00 7A 60\n'}
+[10.331944] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1601/2: 20 00 FF 60\n'}
+[10.332005] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1601/0: 02\n'}
+[10.332066] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1401/1: 03 03 00 00\n'}
+[10.332128] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1800/1: 83 01 00 80\n'}
+[10.332189] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1800/2: 01\n'}
+[10.332250] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A00/0: 00\n'}
+[10.332312] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1A00/1: 10 00 41 60\n'}
+[10.332373] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1A00/2: 08 00 61 60\n'}
+[10.332434] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A00/0: 02\n'}
+[10.332494] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1800/1: 83 01 00 00\n'}
+[10.332556] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1801/1: 83 02 00 80\n'}
+[10.332617] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1801/2: 01\n'}
+[10.332691] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A01/0: 00\n'}
+[10.332766] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1A01/1: 20 00 64 60\n'}
+[10.332828] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1A01/2: 20 00 6C 60\n'}
+[10.332890] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A01/0: 02\n'}
+[10.332953] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1801/1: 83 02 00 00\n'}
+[10.333025] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1802/1: 83 03 00 80\n'}
+[10.333097] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1802/2: 01\n'}
+[10.333159] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A02/0: 00\n'}
+[10.333220] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1A02/1: 10 00 3F 60\n'}
+[10.333279] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x1A02/0: 01\n'}
+[10.333339] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x1802/1: 83 03 00 00\n'}
+[10.333398] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 2 bytes to 0x6040/0: 80 00\n'}
+[10.333458] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 2 bytes to 0x6040/0: 06 00\n'}
+[10.333516] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 2 bytes to 0x6040/0: 07 00\n'}
+[10.333574] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 2 bytes to 0x6040/0: 0F 01\n'}
+[10.333632] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x6083/0: A0 86 01 00\n'}
+[10.333712] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 4 bytes to 0x6084/0: A0 86 01 00\n'}
+[10.333779] (amr_reality_pkg) StdoutLine: {'line': b'joint2: writing 1 bytes to 0x6098/0: 00\n'}
+[10.417451] (-) TimerEvent: {}
+[10.517723] (-) TimerEvent: {}
+[10.617962] (-) TimerEvent: {}
+[10.705981] (amr_reality_pkg) StdoutLine: {'line': b'Built target robot_control\n'}
+[10.718051] (-) TimerEvent: {}
+[10.818293] (-) TimerEvent: {}
+[10.918531] (-) TimerEvent: {}
+[12.533480] (sllidar_ros2) StdoutLine: {'line': b'[ 90%] Built target sllidar_node\n'}
+[12.534338] (-) TimerEvent: {}
+[12.563981] (sllidar_ros2) StdoutLine: {'line': b'[100%] Built target sllidar_client\n'}
+[12.634427] (-) TimerEvent: {}
+[12.734658] (-) TimerEvent: {}
+[12.834916] (-) TimerEvent: {}
+[12.935179] (-) TimerEvent: {}
+[13.035468] (-) TimerEvent: {}
+[13.135708] (-) TimerEvent: {}
+[13.235937] (-) TimerEvent: {}
+[13.336155] (-) TimerEvent: {}
+[13.436398] (-) TimerEvent: {}
+[13.536709] (-) TimerEvent: {}
+[13.637004] (-) TimerEvent: {}
+[13.737281] (-) TimerEvent: {}
+[13.837541] (-) TimerEvent: {}
+[13.937823] (-) TimerEvent: {}
+[14.038114] (-) TimerEvent: {}
+[14.138385] (-) TimerEvent: {}
+[14.238650] (-) TimerEvent: {}
+[14.338930] (-) TimerEvent: {}
+[14.400227] (laser_filters) StdoutLine: {'line': b'[  8%] Built target laser_scan_filters\n'}
+[14.439037] (-) TimerEvent: {}
+[14.539322] (-) TimerEvent: {}
+[14.639585] (-) TimerEvent: {}
+[14.642625] (laser_filters) StdoutLine: {'line': b'[ 17%] Built target gtest\n'}
+[14.739686] (-) TimerEvent: {}
+[14.839956] (-) TimerEvent: {}
+[14.856750] (amr_sim_pkg) JobEnded: {'identifier': 'amr_sim_pkg', 'rc': 0}
+[15.203533] (-) TimerEvent: {}
+[15.203704] (amr_reality_pkg) CommandEnded: {'returncode': 0}
+[15.204074] (amr_reality_pkg) JobProgress: {'identifier': 'amr_reality_pkg', 'progress': 'install'}
+[15.204102] (amr_reality_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[15.204392] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[15.204623] (amr_reality_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.204722] (sllidar_ros2) JobProgress: {'identifier': 'sllidar_ros2', 'progress': 'install'}
+[15.204747] (sllidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[15.205014] (sllidar_ros2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.205090] (sllidar_ros2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.205154] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a1_launch.py\n'}
+[15.205218] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m12_launch .py\n'}
+[15.205280] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m7_launch.py\n'}
+[15.205341] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a2m8_launch.py\n'}
+[15.205403] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_a3_launch.py\n'}
+[15.205472] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_c1_launch.py\n'}
+[15.205533] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_launch.py\n'}
+[15.205594] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s1_tcp_launch.py\n'}
+[15.205655] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2_launch.py\n'}
+[15.205732] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s2e_launch.py\n'}
+[15.205798] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_s3_launch.py\n'}
+[15.205859] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/sllidar_t1_launch.py\n'}
+[15.205920] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a1_launch.py\n'}
+[15.205981] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m12_launch.py\n'}
+[15.206041] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m7_launch.py\n'}
+[15.206101] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a2m8_launch.py\n'}
+[15.206161] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_a3_launch.py\n'}
+[15.206221] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_c1_launch.py\n'}
+[15.206280] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_launch.py\n'}
+[15.206341] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s1_tcp_launch.py\n'}
+[15.206402] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2_launch.py\n'}
+[15.206463] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s2e_launch.py\n'}
+[15.206534] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_s3_launch.py\n'}
+[15.206593] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/launch/view_sllidar_t1_launch.py\n'}
+[15.206652] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/rviz/sllidar_ros2.rviz\n'}
+[15.206732] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/sllidar_ros2/sllidar_node\n'}
+[15.206804] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/sllidar_ros2/sllidar_client\n'}
+[15.206863] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/ament_index/resource_index/package_run_dependencies/sllidar_ros2\n'}
+[15.206921] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/ament_index/resource_index/parent_prefix_path/sllidar_ros2\n'}
+[15.206998] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.sh\n'}
+[15.207057] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/environment/ament_prefix_path.dsv\n'}
+[15.207115] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/environment/path.sh\n'}
+[15.207172] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/environment/path.dsv\n'}
+[15.207228] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.bash\n'}
+[15.207285] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.sh\n'}
+[15.207341] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.zsh\n'}
+[15.207398] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/local_setup.dsv\n'}
+[15.207456] (sllidar_ros2) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv\n'}
+[15.207513] (amr_reality_pkg) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.207580] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//cia402_slave.eds\n'}
+[15.207643] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/ament_index/resource_index/packages/sllidar_ros2\n'}
+[15.207723] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[15.207786] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[15.207844] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config.cmake\n'}
+[15.207901] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/cmake/sllidar_ros2Config-version.cmake\n'}
+[15.207958] (sllidar_ros2) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.xml\n'}
+[15.208014] (sllidar_ros2) CommandEnded: {'returncode': 0}
+[15.208222] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//ros2_controllers.yaml\n'}
+[15.208317] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//bus.yml\n'}
+[15.208385] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint1.bin\n'}
+[15.208445] (laser_filters) StdoutLine: {'line': b'[ 30%] Built target laser_filter_chains\n'}
+[15.208521] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint2.bin\n'}
+[15.208581] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//master.dcf\n'}
+[15.208642] (laser_filters) StdoutLine: {'line': b'[ 39%] Built target gtest_main\n'}
+[15.208724] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//preprocessed_bus.yml\n'}
+[15.208794] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/launch/amr_reality.launch.py\n'}
+[15.208854] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/launch/localization_launch.py\n'}
+[15.208913] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/launch/navigation_launch.py\n'}
+[15.208969] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Imu_Link.STL\n'}
+[15.209026] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Left_Link.STL\n'}
+[15.209083] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Lidar_Link.STL\n'}
+[15.209139] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Right_Link.STL\n'}
+[15.209195] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Left_Link.STL\n'}
+[15.209252] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Right_Link.STL\n'}
+[15.209308] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Left_Link.STL\n'}
+[15.209364] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Right_Link.STL\n'}
+[15.209434] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/base_link.STL\n'}
+[15.209493] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/AMR1-00-Khung (1).SLDASM.urdf\n'}
+[15.209549] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/gazebo_control.xacro\n'}
+[15.209605] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot.urdf.xacro\n'}
+[15.209676] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.ros2_control.xacro\n'}
+[15.209746] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.urdf.xacro\n'}
+[15.209805] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/laser_filter.yaml\n'}
+[15.209861] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/ekf.yaml\n'}
+[15.209918] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/nav2_params.yaml\n'}
+[15.209974] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/mapper_params_online_async.yaml\n'}
+[15.210030] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/amr_reality_pkg/ps4_teleop_node.py\n'}
+[15.210086] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/amr_reality_pkg/imu_tl740D.py\n'}
+[15.210156] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg\n'}
+[15.210213] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/parent_prefix_path/amr_reality_pkg\n'}
+[15.210271] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.sh\n'}
+[15.210328] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.dsv\n'}
+[15.210384] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.sh\n'}
+[15.210441] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.dsv\n'}
+[15.210497] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.bash\n'}
+[15.210554] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.sh\n'}
+[15.210611] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.zsh\n'}
+[15.210679] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.dsv\n'}
+[15.210761] (amr_reality_pkg) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv\n'}
+[15.210823] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/ament_index/resource_index/packages/amr_reality_pkg\n'}
+[15.210892] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig.cmake\n'}
+[15.210949] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig-version.cmake\n'}
+[15.211017] (amr_reality_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.xml\n'}
+[15.211075] (laser_filters) StdoutLine: {'line': b'[ 47%] Built target generic_laser_filter_node\n'}
+[15.211158] (laser_filters) StdoutLine: {'line': b'[ 56%] Built target test_scan_shadows_filter\n'}
+[15.211237] (laser_filters) StdoutLine: {'line': b'[ 65%] Built target test_speckle_filter\n'}
+[15.211302] (laser_filters) StdoutLine: {'line': b'[ 73%] Built target test_shadow_detector\n'}
+[15.211364] (laser_filters) StdoutLine: {'line': b'[ 82%] Built target test_scan_filter_chain\n'}
+[15.211426] (laser_filters) StdoutLine: {'line': b'[ 91%] Built target scan_to_scan_filter_chain\n'}
+[15.211488] (laser_filters) StdoutLine: {'line': b'[100%] Built target scan_to_cloud_filter_chain\n'}
+[15.303608] (-) TimerEvent: {}
+[15.403865] (-) TimerEvent: {}
+[15.504140] (-) TimerEvent: {}
+[15.604421] (-) TimerEvent: {}
+[15.704676] (-) TimerEvent: {}
+[15.804899] (-) TimerEvent: {}
+[15.905159] (-) TimerEvent: {}
+[16.005415] (-) TimerEvent: {}
+[16.105658] (-) TimerEvent: {}
+[16.205897] (-) TimerEvent: {}
+[16.253689] (sllidar_ros2) JobEnded: {'identifier': 'sllidar_ros2', 'rc': 0}
+[16.405502] (-) TimerEvent: {}
+[16.406375] (laser_filters) CommandEnded: {'returncode': 0}
+[16.406752] (laser_filters) JobProgress: {'identifier': 'laser_filters', 'progress': 'install'}
+[16.406782] (laser_filters) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters'], 'cwd': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'theanh'), ('LC_TIME', 'vi_VN'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/theanh/ros2_ws1/install/ethercat_manager/lib:/home/theanh/ros2_ws1/install/ethercat_msgs/lib:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive/lib:/home/theanh/ros2_ws1/install/ethercat_generic_slave/lib:/home/theanh/ros2_ws1/install/ethercat_driver/lib:/home/theanh/ros2_ws1/install/ethercat_interface/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/theanh'), ('OLDPWD', '/home/theanh'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'vi_VN'), ('SYSTEMD_EXEC_PID', '2417'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/theanh/ros2_ws1/install:/home/theanh/agv_test_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'theanh'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'theanh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/theanh/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/theanh:@/tmp/.ICE-unix/2389,unix/theanh:/tmp/.ICE-unix/2389'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'vi_VN'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/bd19f338_7db5_456b_9b6c_422d118d5057'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'vi_VN'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.EW10T3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.103'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'vi_VN'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'vi_VN'), ('LC_IDENTIFICATION', 'vi_VN'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/home/theanh/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/theanh/ros2_ws1/install/ethercat_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'vi_VN'), ('LC_PAPER', 'vi_VN'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/theanh/ros2_ws1/install/ros2_qt1_demo:/home/theanh/ros2_ws1/install/ethercat_manager:/home/theanh/ros2_ws1/install/control_one_motor_pkg_ex:/home/theanh/ros2_ws1/install/ethercat_msgs:/home/theanh/ros2_ws1/install/ethercat_generic_cia402_drive:/home/theanh/ros2_ws1/install/ethercat_generic_slave:/home/theanh/ros2_ws1/install/ethercat_driver_ros2:/home/theanh/ros2_ws1/install/ethercat_driver:/home/theanh/ros2_ws1/install/ethercat_interface:/home/theanh/agv_test_ws/install/sllidar_ros2:/home/theanh/agv_test_ws/install/agv_test_pkg:/opt/ros/humble')]), 'shell': False}
+[16.407247] (amr_reality_pkg) CommandEnded: {'returncode': 0}
+[16.505607] (-) TimerEvent: {}
+[16.605867] (-) TimerEvent: {}
+[16.706141] (-) TimerEvent: {}
+[16.806421] (-) TimerEvent: {}
+[16.906692] (-) TimerEvent: {}
+[17.006959] (-) TimerEvent: {}
+[17.107228] (-) TimerEvent: {}
+[17.207465] (-) TimerEvent: {}
+[17.307703] (-) TimerEvent: {}
+[17.414742] (-) TimerEvent: {}
+[17.514951] (-) TimerEvent: {}
+[17.615169] (-) TimerEvent: {}
+[17.715424] (-) TimerEvent: {}
+[17.815694] (-) TimerEvent: {}
+[17.915976] (-) TimerEvent: {}
+[18.016260] (-) TimerEvent: {}
+[18.116534] (-) TimerEvent: {}
+[18.216808] (-) TimerEvent: {}
+[18.317129] (-) TimerEvent: {}
+[18.417448] (-) TimerEvent: {}
+[18.517804] (-) TimerEvent: {}
+[18.618089] (-) TimerEvent: {}
+[18.718357] (-) TimerEvent: {}
+[18.818599] (-) TimerEvent: {}
+[18.918894] (-) TimerEvent: {}
+[19.019186] (-) TimerEvent: {}
+[19.119482] (-) TimerEvent: {}
+[19.219741] (-) TimerEvent: {}
+[19.319963] (-) TimerEvent: {}
+[19.463000] (-) TimerEvent: {}
+[19.563244] (-) TimerEvent: {}
+[19.663516] (-) TimerEvent: {}
+[19.763823] (-) TimerEvent: {}
+[19.864109] (-) TimerEvent: {}
+[19.964416] (-) TimerEvent: {}
+[20.064724] (-) TimerEvent: {}
+[20.165005] (-) TimerEvent: {}
+[20.265349] (-) TimerEvent: {}
+[20.365637] (-) TimerEvent: {}
+[20.465931] (-) TimerEvent: {}
+[20.566195] (-) TimerEvent: {}
+[20.666460] (-) TimerEvent: {}
+[20.668460] (amr_reality_pkg) JobEnded: {'identifier': 'amr_reality_pkg', 'rc': 0}
+[20.922283] (-) TimerEvent: {}
+[20.922441] (laser_filters) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.922600] (laser_filters) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[20.922695] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/scan_to_cloud_filter_chain\n'}
+[20.922803] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/scan_to_scan_filter_chain\n'}
+[20.923347] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters//laser_filters_plugins.xml\n'}
+[20.923482] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/angular_bounds_filter.h\n'}
+[20.923607] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/angular_bounds_filter_in_place.h\n'}
+[20.923719] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/array_filter.h\n'}
+[20.923817] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/binning_filter.h\n'}
+[20.923910] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/box_filter.h\n'}
+[20.923999] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/footprint_filter.h\n'}
+[20.924089] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/intensity_filter.h\n'}
+[20.924177] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/interpolation_filter.h\n'}
+[20.924266] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/median_filter.h\n'}
+[20.924355] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/median_spatial_filter.h\n'}
+[20.924445] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/polygon_filter.h\n'}
+[20.924549] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/range_filter.h\n'}
+[20.924638] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_blob_filter.h\n'}
+[20.924740] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_mask_filter.h\n'}
+[20.924829] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_shadow_detector.h\n'}
+[20.924916] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_shadows_filter.h\n'}
+[20.925017] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/sector_filter.h\n'}
+[20.925103] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/speckle_filter.h\n'}
+[20.925187] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/library_path.sh\n'}
+[20.925270] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/library_path.dsv\n'}
+[20.925354] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/liblaser_scan_filters.so\n'}
+[20.925437] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/liblaser_filter_chains.so\n'}
+[20.925519] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/generic_laser_filter_node\n'}
+[20.925601] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/angular_filter_example.launch.py\n'}
+[20.925706] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/angular_filter_example.yaml\n'}
+[20.925824] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/bin_filter_example.launch.py\n'}
+[20.925905] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/bin_filter_example.yaml\n'}
+[20.925983] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/box_filter_example.launch.py\n'}
+[20.926060] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/box_filter_example.yaml\n'}
+[20.926138] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/footprint_filter_example.launch.py\n'}
+[20.926215] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/footprint_filter_example.yaml\n'}
+[20.926291] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/intensity_filter_example.launch.py\n'}
+[20.926367] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/intensity_filter_example.yaml\n'}
+[20.926454] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/mask_filter_example.launch.py\n'}
+[20.926530] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/mask_filter_example.yaml\n'}
+[20.926606] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_filter_example.launch.py\n'}
+[20.926700] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_filter_example.yaml\n'}
+[20.926788] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.py\n'}
+[20.926865] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.xml\n'}
+[20.926944] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter_example.yaml\n'}
+[20.927026] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/multiple_filters_example.launch.py\n'}
+[20.927106] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/multiple_filters_example.yaml\n'}
+[20.927183] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/pass_through_example.launch.py\n'}
+[20.927286] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/pass_through_example.yaml\n'}
+[20.927368] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/polygon_filter_example.launch.py\n'}
+[20.927446] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/polygon_filter_example.yaml\n'}
+[20.927525] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/range_filter_example.launch.py\n'}
+[20.927601] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/range_filter_example.yaml\n'}
+[20.927690] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.launch.py\n'}
+[20.927782] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.yaml\n'}
+[20.927860] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/sector_filter_example.launch.py\n'}
+[20.927938] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/sector_filter_example.yaml\n'}
+[20.928036] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/shadow_filter_example.launch.py\n'}
+[20.928124] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/shadow_filter_example.yaml\n'}
+[20.928202] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/speckle_filter_example.launch\n'}
+[20.928279] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/speckle_filter_example.yaml\n'}
+[20.928355] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/fake_laser.py\n'}
+[20.928431] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_polygon_filter.test.py\n'}
+[20.928507] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_polygon_filter.yaml\n'}
+[20.928583] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.cpp\n'}
+[20.928660] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.launch\n'}
+[20.928757] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.yaml\n'}
+[20.928834] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_shadows_filter.cpp\n'}
+[20.928912] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_shadow_detector.cpp\n'}
+[20.928988] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.cpp\n'}
+[20.929063] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.test.py\n'}
+[20.929140] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.yaml\n'}
+[20.929216] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/package_run_dependencies/laser_filters\n'}
+[20.929293] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/parent_prefix_path/laser_filters\n'}
+[20.929384] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/ament_prefix_path.sh\n'}
+[20.929463] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/ament_prefix_path.dsv\n'}
+[20.929540] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/path.sh\n'}
+[20.929617] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/path.dsv\n'}
+[20.929715] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.bash\n'}
+[20.929798] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.sh\n'}
+[20.929874] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.zsh\n'}
+[20.929950] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.dsv\n'}
+[20.930026] (laser_filters) StdoutLine: {'line': b'-- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.dsv\n'}
+[20.930102] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/packages/laser_filters\n'}
+[20.930179] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/filters__pluginlib__plugin/laser_filters\n'}
+[20.930257] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/rclcpp_components/laser_filters\n'}
+[20.930353] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.930431] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.930509] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.930586] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig.cmake\n'}
+[20.930662] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig-version.cmake\n'}
+[20.930755] (laser_filters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.xml\n'}
+[20.930834] (laser_filters) CommandEnded: {'returncode': 0}
+[21.022369] (-) TimerEvent: {}
+[21.122639] (-) TimerEvent: {}
+[21.222924] (-) TimerEvent: {}
+[21.323211] (-) TimerEvent: {}
+[21.423518] (-) TimerEvent: {}
+[21.523820] (-) TimerEvent: {}
+[21.624073] (-) TimerEvent: {}
+[21.724310] (-) TimerEvent: {}
+[21.824591] (-) TimerEvent: {}
+[21.924885] (-) TimerEvent: {}
+[22.025176] (-) TimerEvent: {}
+[22.125459] (-) TimerEvent: {}
+[22.225740] (-) TimerEvent: {}
+[22.326015] (-) TimerEvent: {}
+[22.437460] (-) TimerEvent: {}
+[22.537763] (-) TimerEvent: {}
+[22.638073] (-) TimerEvent: {}
+[22.738394] (-) TimerEvent: {}
+[22.838761] (-) TimerEvent: {}
+[22.939117] (-) TimerEvent: {}
+[23.039501] (-) TimerEvent: {}
+[23.139880] (-) TimerEvent: {}
+[23.240237] (-) TimerEvent: {}
+[23.340531] (-) TimerEvent: {}
+[23.440827] (-) TimerEvent: {}
+[23.541172] (-) TimerEvent: {}
+[23.641470] (-) TimerEvent: {}
+[23.741804] (-) TimerEvent: {}
+[23.842167] (-) TimerEvent: {}
+[23.942467] (-) TimerEvent: {}
+[24.042831] (-) TimerEvent: {}
+[24.143147] (-) TimerEvent: {}
+[24.243482] (-) TimerEvent: {}
+[24.343757] (-) TimerEvent: {}
+[24.444052] (-) TimerEvent: {}
+[24.544326] (-) TimerEvent: {}
+[24.644583] (-) TimerEvent: {}
+[24.744883] (-) TimerEvent: {}
+[24.845183] (-) TimerEvent: {}
+[24.945476] (-) TimerEvent: {}
+[25.045828] (-) TimerEvent: {}
+[25.146165] (-) TimerEvent: {}
+[25.246518] (-) TimerEvent: {}
+[25.346911] (-) TimerEvent: {}
+[25.522134] (-) TimerEvent: {}
+[25.622434] (-) TimerEvent: {}
+[25.722769] (-) TimerEvent: {}
+[25.823137] (-) TimerEvent: {}
+[25.923473] (-) TimerEvent: {}
+[26.023815] (-) TimerEvent: {}
+[26.124118] (-) TimerEvent: {}
+[26.224432] (-) TimerEvent: {}
+[26.324802] (-) TimerEvent: {}
+[26.425149] (-) TimerEvent: {}
+[26.525495] (-) TimerEvent: {}
+[26.625805] (-) TimerEvent: {}
+[26.726098] (-) TimerEvent: {}
+[26.826422] (-) TimerEvent: {}
+[26.926864] (-) TimerEvent: {}
+[27.027263] (-) TimerEvent: {}
+[27.402441] (-) TimerEvent: {}
+[27.502798] (-) TimerEvent: {}
+[27.603180] (-) TimerEvent: {}
+[27.703578] (-) TimerEvent: {}
+[27.804061] (-) TimerEvent: {}
+[27.904448] (-) TimerEvent: {}
+[28.004904] (-) TimerEvent: {}
+[28.105245] (-) TimerEvent: {}
+[28.205601] (-) TimerEvent: {}
+[28.305955] (-) TimerEvent: {}
+[28.406302] (-) TimerEvent: {}
+[28.506728] (-) TimerEvent: {}
+[28.607068] (-) TimerEvent: {}
+[28.707478] (-) TimerEvent: {}
+[28.807938] (-) TimerEvent: {}
+[28.908282] (-) TimerEvent: {}
+[29.008662] (-) TimerEvent: {}
+[29.109053] (-) TimerEvent: {}
+[29.209359] (-) TimerEvent: {}
+[29.309719] (-) TimerEvent: {}
+[29.410068] (-) TimerEvent: {}
+[29.510456] (-) TimerEvent: {}
+[29.610839] (-) TimerEvent: {}
+[29.711232] (-) TimerEvent: {}
+[29.811539] (-) TimerEvent: {}
+[29.911858] (-) TimerEvent: {}
+[30.012174] (-) TimerEvent: {}
+[30.112511] (-) TimerEvent: {}
+[30.212888] (-) TimerEvent: {}
+[30.313203] (-) TimerEvent: {}
+[30.413528] (-) TimerEvent: {}
+[30.513849] (-) TimerEvent: {}
+[30.647156] (-) TimerEvent: {}
+[30.747526] (-) TimerEvent: {}
+[30.847865] (-) TimerEvent: {}
+[30.948147] (-) TimerEvent: {}
+[31.048428] (-) TimerEvent: {}
+[31.148730] (-) TimerEvent: {}
+[31.249019] (-) TimerEvent: {}
+[31.349306] (-) TimerEvent: {}
+[31.449611] (-) TimerEvent: {}
+[31.482663] (laser_filters) JobEnded: {'identifier': 'laser_filters', 'rc': 0}
+[32.233194] (-) TimerEvent: {}
+[32.233362] (-) EventReactorShutdown: {}

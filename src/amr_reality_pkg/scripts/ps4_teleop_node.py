@@ -13,8 +13,8 @@ class PS4TeleopNode(Node):
         # self.cmd_vel_pub = self.create_publisher(Twist,'/cmd_vel',10)
         self.cmd_vel_pub = self.create_publisher(Twist,'/diff_drive_controller/cmd_vel_unstamped',10)
         
-        self.scale_vel_linear_x = 1.0   # m/s
-        self.scale_vel_angular_z = 1.0  # rad/s
+        self.scale_vel_linear_x = 0.3   # m/s
+        self.scale_vel_angular_z = 0.5  # rad/s
         
         self.get_logger().info("PS4 Teleop Node SUCCESS!")
 

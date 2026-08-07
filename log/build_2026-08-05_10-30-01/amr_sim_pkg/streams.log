@@ -1,0 +1,91 @@
+[0.022s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg
+[2.491s] -- The C compiler identification is GNU 11.4.0
+[5.449s] -- The CXX compiler identification is GNU 11.4.0
+[5.824s] -- Detecting C compiler ABI info
+[6.187s] -- Detecting C compiler ABI info - done
+[6.195s] -- Check for working C compiler: /usr/bin/cc - skipped
+[6.196s] -- Detecting C compile features
+[6.222s] -- Detecting C compile features - done
+[6.232s] -- Detecting CXX compiler ABI info
+[6.373s] -- Detecting CXX compiler ABI info - done
+[6.381s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[6.381s] -- Detecting CXX compile features
+[6.382s] -- Detecting CXX compile features - done
+[6.541s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.192s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[7.619s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[8.669s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[9.957s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[10.120s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[10.492s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[11.341s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[11.588s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[13.297s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[13.335s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[13.791s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[13.849s] -- Found FastRTPS: /opt/ros/humble/include  
+[13.912s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[14.037s] -- Looking for pthread.h
+[15.048s] -- Looking for pthread.h - found
+[15.049s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[15.373s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[15.375s] -- Found Threads: TRUE  
+[15.997s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[16.839s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[16.869s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[16.869s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[19.952s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[19.995s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[20.094s] -- Added test 'flake8' to check Python code syntax and style conventions
+[20.096s] -- Added test 'lint_cmake' to check CMake code style
+[20.097s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[20.101s] -- Added test 'xmllint' to check XML markup files
+[20.103s] -- Configuring done
+[20.110s] -- Generating done
+[20.131s] -- Build files have been written to: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg
+[20.144s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg
+[20.146s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[20.199s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[20.213s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg
+[20.224s] -- Install configuration: ""
+[20.224s] -- Execute custom install script
+[20.225s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/amr_sim.launch.py
+[20.237s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/localization_launch.py
+[20.249s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/navigation_launch.py
+[20.261s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/gazebo_control.xacro
+[20.272s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/inertial_macros.xacro
+[20.283s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot.urdf.xacro
+[20.294s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot_core.xacro
+[20.305s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/sensors.xacro
+[20.318s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/ekf.yaml
+[20.330s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/laser_filter.yaml
+[20.341s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/mapper_params_online_async.yaml
+[20.353s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/nav2_params.yaml
+[20.366s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/robot_control/ros2_controllers.yaml
+[20.378s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/empty.world
+[20.389s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/floor_plan3.sdf
+[20.399s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze.world
+[20.410s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.config
+[20.423s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.sdf
+[20.434s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze_2.world
+[20.446s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/wall.world
+[20.457s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.pgm
+[20.468s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.yaml
+[20.479s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/ps4_teleop_node.py
+[20.495s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/imu_cov.py
+[20.509s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg
+[20.521s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg
+[20.536s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.sh
+[20.549s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.dsv
+[20.562s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.sh
+[20.574s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.dsv
+[20.588s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.bash
+[20.601s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.sh
+[20.613s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.zsh
+[20.706s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.dsv
+[20.718s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv
+[20.729s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/packages/amr_sim_pkg
+[20.742s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig.cmake
+[20.753s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig-version.cmake
+[20.763s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.xml
+[20.776s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg

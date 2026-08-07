@@ -10,7 +10,6 @@ joint1:
   package: canopen_402_driver
   period: 10
   polling: false
-  reset_communication: true
   rpdo: &id001
     1:
       cob_id: auto
@@ -49,10 +48,10 @@ joint1:
     value: 271
   - index: 24707
     sub_index: 0
-    value: 10000
+    value: 100000
   - index: 24708
     sub_index: 0
-    value: 10000
+    value: 100000
   - index: 24728
     sub_index: 0
     value: 0
@@ -97,7 +96,6 @@ joint2:
   package: canopen_402_driver
   period: 10
   polling: false
-  reset_communication: true
   rpdo: *id001
   scale_pos_from_dev: 6.28318e-05
   scale_pos_to_dev: 15915.4943

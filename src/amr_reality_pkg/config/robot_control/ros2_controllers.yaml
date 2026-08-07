@@ -54,9 +54,9 @@ diff_drive_controller:
     right_wheel_names: ['Right_Joint']
 
     # Robot physical parameters
-    wheel_separation: 0.511 # Distance between the two wheels
-    wheels_per_side: 1      # The number wheel on each side
-    wheel_radius: 0.08      # Radius of the wheels
+    wheel_separation: 0.51    # Distance between the two wheels
+    wheels_per_side: 1        # The number wheel on each side
+    wheel_radius: 0.075       # Radius of the wheels (m)
 
     # Multipliers for wheel separation and radius
     wheel_separation_multiplier: 1.0
@@ -67,14 +67,14 @@ diff_drive_controller:
     publish_rate: 50.0
     odom_frame_id: odom
     base_frame_id: base_footprint
-    pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
-    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.5]       # hiep phuong sai cua: x,y,z, roll, pitch, yaw
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.5]       # hiep phuong sai cua: vx, vy,vz, vr, vp, vyaw
 
     # Controller settings
-    open_loop: false              # false: use encoder to caculate odom
-    enable_odom_tf: true          # auto publish odom -> base_footprint
+    open_loop: false                    # false: use encoder to caculate odom
+    enable_odom_tf: false               # auto publish odom -> base_footprint
 
-    cmd_vel_timeout: 1.0          # seconds
+    cmd_vel_timeout: 1.0                # seconds
 
     # false: cmd_vel co kieu du lieu la geometry_msgs/msg/Twist, true cmd_vel co kieu du lieu la geometry_msgs/msg/TwistStamped co gan moc thoi gian
     use_stamped_vel: false
@@ -83,9 +83,9 @@ diff_drive_controller:
     linear.x.has_velocity_limits: true
     linear.x.has_acceleration_limits: true
     linear.x.has_jerk_limits: false
-    linear.x.max_velocity: 1.5                  # m/s
-    linear.x.min_velocity: -1.5
-    linear.x.max_acceleration: 3.0
+    linear.x.max_velocity: 1.0                  # m/s
+    linear.x.min_velocity: -1.0
+    linear.x.max_acceleration: 0.5
     linear.x.max_jerk: 0.0
     linear.x.min_jerk: 0.0
 
@@ -94,7 +94,15 @@ diff_drive_controller:
     angular.z.has_jerk_limits: false
     angular.z.max_velocity: 1.0                 # rad/s
     angular.z.min_velocity: -1.0
-    angular.z.max_acceleration: 3.0
-    angular.z.min_acceleration: -3.0
+    angular.z.max_acceleration: 0.8
+    angular.z.min_acceleration: -0.8
     angular.z.max_jerk: 0.0
     angular.z.min_jerk: 0.0
+
+    qos_overrides:
+      /odom:
+        publisher:
+          reliability: best_effort      # Hoặc "best_effort" nếu mạng quá tải và chấp nhận mất du lieu
+          durability: volatile          # khong gui lai du lieu qua khu cho node nhan
+          history: keep_last            # neu node nhan xu ly ko kip thi luu tam du lieu qua khu voi hang doi depth 
+          depth: 5   

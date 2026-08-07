@@ -16,11 +16,14 @@ install(DIRECTORY
   launch
   descriptions                        # chi can khai bao thu muc cha
   config
+  worlds
+  maps
   DESTINATION share/${PROJECT_NAME}
 )
 
 install(PROGRAMS
   scripts/ps4_teleop_node.py
+  scripts/imu_cov.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

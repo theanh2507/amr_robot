@@ -321,14 +321,14 @@ ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1
 # install(DIRECTORY "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/config/robot_control/" "DESTINATION" "share/amr_reality_pkg/config/robot_control/")
 ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" DIRECTORY "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/config/robot_control/" "DESTINATION" "share/amr_reality_pkg/config/robot_control/")
 
-# install(DIRECTORY "launch" "descriptions" "DESTINATION" "share/amr_reality_pkg")
-ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" DIRECTORY "launch" "descriptions" "DESTINATION" "share/amr_reality_pkg")
+# install(DIRECTORY "launch" "descriptions" "maps" "DESTINATION" "share/amr_reality_pkg")
+ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" DIRECTORY "launch" "descriptions" "maps" "DESTINATION" "share/amr_reality_pkg")
 
-# install(FILES "config/laser_filter.yaml" "DESTINATION" "share/amr_reality_pkg/config")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" FILES "config/laser_filter.yaml" "DESTINATION" "share/amr_reality_pkg/config")
+# install(FILES "config/laser_filter.yaml" "config/ekf.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "DESTINATION" "share/amr_reality_pkg/config")
+ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" FILES "config/laser_filter.yaml" "config/ekf.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "DESTINATION" "share/amr_reality_pkg/config")
 
-# install(PROGRAMS "scripts/ps4_teleop_node.py" "DESTINATION" "lib/amr_reality_pkg")
-ament_cmake_symlink_install_programs("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "DESTINATION" "lib/amr_reality_pkg")
+# install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "DESTINATION" "lib/amr_reality_pkg")
+ament_cmake_symlink_install_programs("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "DESTINATION" "lib/amr_reality_pkg")
 
 # install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
