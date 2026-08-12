@@ -1,0 +1,343 @@
+[0.262s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.262s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=15, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x740e6b97f250>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x740e6bb45090>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x740e6bb45090>>)
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.870s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.870s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws'
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.870s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.888s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.888s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.888s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.888s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.888s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.958s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.959s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.960s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['ignore', 'ignore_ament_install']
+[2.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ignore'
+[2.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ignore_ament_install'
+[2.973s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['colcon_pkg']
+[2.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'colcon_pkg'
+[2.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['colcon_meta']
+[2.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'colcon_meta'
+[2.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['ros']
+[2.974s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ros'
+[2.976s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr_reality_pkg' with type 'ros.ament_cmake' and name 'amr_reality_pkg'
+[2.976s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['ignore', 'ignore_ament_install']
+[2.976s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ignore'
+[2.976s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ignore_ament_install'
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['colcon_pkg']
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'colcon_pkg'
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['colcon_meta']
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'colcon_meta'
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['ros']
+[2.977s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ros'
+[2.977s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr_sim_pkg' with type 'ros.ament_cmake' and name 'amr_sim_pkg'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['ignore', 'ignore_ament_install']
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ignore'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ignore_ament_install'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['colcon_pkg']
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'colcon_pkg'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['colcon_meta']
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'colcon_meta'
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['ros']
+[2.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ros'
+[2.990s] DEBUG:colcon.colcon_core.package_identification:Package 'src/laser_filters' with type 'ros.ament_cmake' and name 'laser_filters'
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore'
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore_ament_install'
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_pkg']
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_pkg'
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_meta']
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_meta'
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ros']
+[3.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ros'
+[3.004s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sllidar_ros2' with type 'ros.ament_cmake' and name 'sllidar_ros2'
+[3.004s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.004s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.004s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.004s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.004s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.039s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.039s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.087s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install
+[3.088s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/theanh/ros2_ws1/install
+[3.088s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/theanh/agv_test_ws/install
+[3.091s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 484 installed packages in /opt/ros/humble
+[3.093s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_target' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.509s] DEBUG:colcon.colcon_core.verb:Building package 'amr_reality_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg', 'merge_install': False, 'path': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg', 'symlink_install': True, 'test_result_base': None}
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_target' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[6.509s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.510s] DEBUG:colcon.colcon_core.verb:Building package 'amr_sim_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg', 'merge_install': False, 'path': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg', 'symlink_install': True, 'test_result_base': None}
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_target' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_clean_cache' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_clean_first' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_force_configure' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'ament_cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'catkin_cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.510s] DEBUG:colcon.colcon_core.verb:Building package 'laser_filters' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters', 'merge_install': False, 'path': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/laser_filters', 'symlink_install': True, 'test_result_base': None}
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[6.510s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.510s] DEBUG:colcon.colcon_core.verb:Building package 'sllidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2', 'merge_install': False, 'path': '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/sllidar_ros2', 'symlink_install': True, 'test_result_base': None}
+[6.511s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.512s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.512s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg' with build type 'ament_cmake'
+[6.512s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg'
+[6.544s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.563s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg' with build type 'ament_cmake'
+[6.563s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg'
+[6.564s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.564s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.569s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/laser_filters' with build type 'ament_cmake'
+[6.569s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/laser_filters'
+[6.569s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.569s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.575s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/sllidar_ros2' with build type 'ament_cmake'
+[6.575s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/sllidar_ros2'
+[6.575s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.575s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.618s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg -- -j15 -l15
+[6.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[6.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters -- -j15 -l15
+[6.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2 -- -j15 -l15
+[7.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[7.378s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg
+[7.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2 -- -j15 -l15
+[7.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2
+[7.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters -- -j15 -l15
+[7.989s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters
+[8.426s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_sim_pkg)
+[8.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg
+[8.523s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg' for CMake module files
+[8.581s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg' for CMake config files
+[8.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_sim_pkg', 'cmake_prefix_path')
+[8.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.ps1'
+[8.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.dsv'
+[8.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.sh'
+[8.717s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib'
+[8.717s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/bin'
+[8.717s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/pkgconfig/amr_sim_pkg.pc'
+[8.717s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/python3.10/site-packages'
+[8.718s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/bin'
+[8.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.ps1'
+[8.738s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv'
+[8.778s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.sh'
+[8.837s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.bash'
+[8.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.zsh'
+[8.838s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/colcon-core/packages/amr_sim_pkg)
+[8.839s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_sim_pkg)
+[8.839s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg' for CMake module files
+[8.840s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg' for CMake config files
+[8.841s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_sim_pkg', 'cmake_prefix_path')
+[8.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.ps1'
+[8.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.dsv'
+[8.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.sh'
+[8.874s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib'
+[8.874s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/bin'
+[8.874s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/pkgconfig/amr_sim_pkg.pc'
+[8.875s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/python3.10/site-packages'
+[8.875s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/bin'
+[8.875s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.ps1'
+[8.876s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv'
+[8.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.sh'
+[8.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.bash'
+[8.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.zsh'
+[8.877s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/colcon-core/packages/amr_sim_pkg)
+[8.878s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[8.878s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2' for CMake module files
+[8.896s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2
+[8.897s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2' for CMake config files
+[8.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[8.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[8.943s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[8.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[8.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib'
+[8.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/bin'
+[8.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[8.944s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/python3.10/site-packages'
+[8.945s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/bin'
+[8.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[8.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[8.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[8.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[8.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[8.947s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[8.947s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[8.947s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2' for CMake module files
+[8.948s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2' for CMake config files
+[8.948s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[8.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[8.966s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[8.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[8.966s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib'
+[8.967s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/bin'
+[8.967s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[8.967s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/lib/python3.10/site-packages'
+[8.967s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/bin'
+[8.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[8.968s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[8.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[8.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[8.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[8.989s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[9.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg -- -j15 -l15
+[9.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+[9.096s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_filters)
+[9.096s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters' for CMake module files
+[9.096s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters
+[9.137s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters' for CMake config files
+[9.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'cmake_prefix_path')
+[9.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.ps1'
+[9.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.dsv'
+[9.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.sh'
+[9.274s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib'
+[9.274s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'ld_library_path_lib')
+[9.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.ps1'
+[9.289s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.dsv'
+[9.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.sh'
+[9.301s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/bin'
+[9.301s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/pkgconfig/laser_filters.pc'
+[9.302s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/python3.10/site-packages'
+[9.302s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/bin'
+[9.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.ps1'
+[9.303s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.dsv'
+[9.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.sh'
+[9.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.bash'
+[9.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.zsh'
+[9.304s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/colcon-core/packages/laser_filters)
+[9.305s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_filters)
+[9.305s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters' for CMake module files
+[9.306s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters' for CMake config files
+[9.306s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'cmake_prefix_path')
+[9.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.ps1'
+[9.307s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.dsv'
+[9.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.sh'
+[9.308s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib'
+[9.308s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'ld_library_path_lib')
+[9.308s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.ps1'
+[9.308s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.dsv'
+[9.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.sh'
+[9.340s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/bin'
+[9.340s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/pkgconfig/laser_filters.pc'
+[9.340s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/python3.10/site-packages'
+[9.341s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/bin'
+[9.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.ps1'
+[9.342s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.dsv'
+[9.343s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.sh'
+[9.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.bash'
+[9.344s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.zsh'
+[9.345s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/colcon-core/packages/laser_filters)
+[9.681s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_reality_pkg)
+[9.682s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg' for CMake module files
+[9.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+[9.704s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg' for CMake config files
+[9.706s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_reality_pkg', 'cmake_prefix_path')
+[9.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.ps1'
+[9.707s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.dsv'
+[9.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.sh'
+[9.708s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib'
+[9.708s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/bin'
+[9.708s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/pkgconfig/amr_reality_pkg.pc'
+[9.708s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/python3.10/site-packages'
+[9.708s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/bin'
+[9.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.ps1'
+[9.709s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv'
+[9.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.sh'
+[9.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.bash'
+[9.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.zsh'
+[9.710s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/colcon-core/packages/amr_reality_pkg)
+[9.711s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_reality_pkg)
+[9.711s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg' for CMake module files
+[9.712s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg' for CMake config files
+[9.712s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_reality_pkg', 'cmake_prefix_path')
+[9.712s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.ps1'
+[9.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.dsv'
+[9.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.sh'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/bin'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/pkgconfig/amr_reality_pkg.pc'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/lib/python3.10/site-packages'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/bin'
+[9.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.ps1'
+[9.729s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv'
+[9.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.sh'
+[9.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.bash'
+[9.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/package.zsh'
+[9.730s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/colcon-core/packages/amr_reality_pkg)
+[9.731s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.731s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.731s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.731s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.754s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.754s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.754s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.765s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.765s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/local_setup.ps1'
+[9.766s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/_local_setup_util_ps1.py'
+[9.799s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/setup.ps1'
+[9.802s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/local_setup.sh'
+[9.840s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/_local_setup_util_sh.py'
+[9.841s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/setup.sh'
+[9.864s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/local_setup.bash'
+[9.886s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/setup.bash'
+[9.887s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/local_setup.zsh'
+[9.888s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/setup.zsh'

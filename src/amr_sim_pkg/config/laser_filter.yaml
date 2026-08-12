@@ -4,6 +4,6 @@ laser_filter:             # phai dat trung ten voi name trong launch file cua la
       name: angle_filter
       type: laser_filters/LaserScanAngularBoundsFilterInPlace         #laser_filters/LaserScanAngularBoundsFilter 
       params:
-        lower_angle: 0.0
-        upper_angle: 3.14159 
+        lower_angle: 1.570795 
+        upper_angle: -1.570795              # phai la gia tri float
 

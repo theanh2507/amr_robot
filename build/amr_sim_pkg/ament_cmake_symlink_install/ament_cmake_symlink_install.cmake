@@ -318,8 +318,8 @@ message(STATUS "Execute custom install script")
 # install(DIRECTORY "launch" "descriptions" "config" "worlds" "maps" "DESTINATION" "share/amr_sim_pkg")
 ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" DIRECTORY "launch" "descriptions" "config" "worlds" "maps" "DESTINATION" "share/amr_sim_pkg")
 
-# install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "DESTINATION" "lib/amr_sim_pkg")
-ament_cmake_symlink_install_programs("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "DESTINATION" "lib/amr_sim_pkg")
+# install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "scripts/nav2_route.py" "DESTINATION" "lib/amr_sim_pkg")
+ament_cmake_symlink_install_programs("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "scripts/nav2_route.py" "DESTINATION" "lib/amr_sim_pkg")
 
 # install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

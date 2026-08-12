@@ -41,7 +41,7 @@ def generate_launch_description():
     use_respawn = LaunchConfiguration('use_respawn')
     log_level = LaunchConfiguration('log_level')
 
-    lifecycle_nodes = ['map_server', 'amcl']
+    lifecycle_nodes = ['map_server', 'amcl', 'route_server']
 
     # Map fully qualified names to relative ones so the node's namespace can be prepended.
     # In case of the transforms (tf), currently, there doesn't seem to be a better alternative
@@ -130,6 +130,17 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # Nav2 route
+            Node(
+                package='nav2_route',
+                executable='route_server',
+                name='route_server',
+                parameters=[configured_params],
+                arguments=['--ros-args', '--log-level', log_level],
+                remappings=remappings,
+            ),
+
             Node(
                 package='nav2_lifecycle_manager',
                 executable='lifecycle_manager',

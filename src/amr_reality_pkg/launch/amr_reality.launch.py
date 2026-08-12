@@ -237,4 +237,8 @@ def generate_launch_description():
 # sudo udevadm control --reload-rules
 # sudo udevadm trigger
 # ls -l /dev/ttyIMU                 (output: lrwxrwxrwx 1 root root 7 Aug  3 10:07 /dev/ttyLIDAR -> ttyUSB0)
+
+
+# ssh orangepi@192.168.0.168        # pass: orangepi
+
  

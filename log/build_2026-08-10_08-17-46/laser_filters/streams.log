@@ -1,0 +1,107 @@
+[2.993s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters -- -j15 -l15
+[11.559s] [  8%] Built target gtest_main
+[11.958s] [ 17%] Built target gtest
+[13.872s] [ 43%] Built target scan_to_cloud_filter_chain
+[13.872s] [ 43%] Built target test_scan_filter_chain
+[13.872s] [ 43%] Built target scan_to_scan_filter_chain
+[19.574s] [ 52%] Built target laser_scan_filters
+[19.604s] [ 60%] Built target test_shadow_detector
+[19.607s] [ 78%] Built target test_speckle_filter
+[19.607s] [ 78%] Built target test_scan_shadows_filter
+[20.228s] [ 91%] Built target laser_filter_chains
+[20.260s] [100%] Built target generic_laser_filter_node
+[28.093s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters -- -j15 -l15
+[28.093s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters
+[28.093s] -- Install configuration: ""
+[28.093s] -- Execute custom install script
+[28.093s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/scan_to_cloud_filter_chain
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/scan_to_scan_filter_chain
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters//laser_filters_plugins.xml
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/angular_bounds_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/angular_bounds_filter_in_place.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/array_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/binning_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/box_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/footprint_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/intensity_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/interpolation_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/median_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/median_spatial_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/polygon_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/range_filter.h
+[28.094s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_blob_filter.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_mask_filter.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_shadow_detector.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/scan_shadows_filter.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/sector_filter.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/include/laser_filters/speckle_filter.h
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/library_path.sh
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/library_path.dsv
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/liblaser_scan_filters.so
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/liblaser_filter_chains.so
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/lib/laser_filters/generic_laser_filter_node
+[28.095s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/angular_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/angular_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/bin_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/bin_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/box_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/box_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/footprint_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/footprint_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/intensity_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/intensity_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/mask_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/mask_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_filter_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.xml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/median_spatial_filter_example.yaml
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/multiple_filters_example.launch.py
+[28.096s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/multiple_filters_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/pass_through_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/pass_through_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/polygon_filter_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/polygon_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/range_filter_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/range_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/sector_filter_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/sector_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/shadow_filter_example.launch.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/shadow_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/speckle_filter_example.launch
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/examples/speckle_filter_example.yaml
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/fake_laser.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_polygon_filter.test.py
+[28.097s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_polygon_filter.yaml
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.cpp
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.launch
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.yaml
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_scan_shadows_filter.cpp
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_shadow_detector.cpp
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.cpp
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.test.py
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/test/test_speckle_filter.yaml
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/package_run_dependencies/laser_filters
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/parent_prefix_path/laser_filters
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/ament_prefix_path.sh
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/ament_prefix_path.dsv
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/path.sh
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/environment/path.dsv
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.bash
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.sh
+[28.098s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.zsh
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/local_setup.dsv
+[28.099s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.dsv
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/packages/laser_filters
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/filters__pluginlib__plugin/laser_filters
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/ament_index/resource_index/rclcpp_components/laser_filters
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_dependencies-extras.cmake
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_include_directories-extras.cmake
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_libraries-extras.cmake
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig.cmake
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig-version.cmake
+[28.099s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters/share/laser_filters/package.xml
+[28.099s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters

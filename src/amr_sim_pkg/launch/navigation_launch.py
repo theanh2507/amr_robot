@@ -80,7 +80,7 @@ def generate_launch_description():
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='false',
+        default_value='true',
         description='Use simulation (Gazebo) clock if true')
 
     declare_params_file_cmd = DeclareLaunchArgument(
@@ -111,6 +111,9 @@ def generate_launch_description():
     load_nodes = GroupAction(
         condition=IfCondition(PythonExpression(['not ', use_composition])),
         actions=[
+
+            # Local Planner: nhan duong di tu planner_server, nhin chuong ngai vat tu 
+            # local cost map va tinh toan van toc geometry_msgs/Twist de gui xuong robot
             Node(
                 package='nav2_controller',
                 executable='controller_server',
@@ -120,6 +123,8 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings + [('cmd_vel', 'cmd_vel')]),
+
+            # nhan duong di tu planer server va lam min cac goc cua gat
             Node(
                 package='nav2_smoother',
                 executable='smoother_server',
@@ -130,9 +135,11 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # tim duong ngan nhat tu vi tri hien tai den vi tri dich dua tren global cost map
             Node(
                 package='nav2_planner',
-                executable='planner_server',
+                executable='planner_server',                            
                 name='planner_server',
                 output='screen',
                 respawn=use_respawn,
@@ -140,6 +147,8 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # khi robot bi ket hoac ko tim thay duong behavior_server dam nhiem chuc nang phuc hoi nhu spin, backup,..., duoc goi boi bt_navigator
             Node(
                 package='nav2_behaviors',
                 executable='behavior_server',
@@ -150,6 +159,9 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # dieu phoi toan bo qua trinh dieu huong, khi cho robot move den diem A, bt_navigator ra lenh cho planner_server tinh duong di,
+            # lay duong do gui cho controller_server
             Node(
                 package='nav2_bt_navigator',
                 executable='bt_navigator',
@@ -160,6 +172,8 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # quan ly 1 danh sach nhieu diem roi rac can di qua (co the dung lai de thuc hien mission tai cac diem)
             Node(
                 package='nav2_waypoint_follower',
                 executable='waypoint_follower',
@@ -170,6 +184,8 @@ def generate_launch_description():
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
+
+            # gioi han gia toc va do giat cua robot, chi cho phep tang toc tu tu
             Node(
                 package='nav2_velocity_smoother',
                 executable='velocity_smoother',
@@ -181,6 +197,8 @@ def generate_launch_description():
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings +
                         [('cmd_vel', 'cmd_vel'), ('cmd_vel_smoothed', 'cmd_vel')]),
+
+            # dam bao cac node duoc khoi dong cau hinh va tat theo dung thu tu logic
             Node(
                 package='nav2_lifecycle_manager',
                 executable='lifecycle_manager',

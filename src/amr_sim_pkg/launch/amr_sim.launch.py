@@ -101,6 +101,16 @@ def generate_launch_description():
         parameters=[ekf_path, {'use_sim_time': use_sim_time}],
     )
 
+    # # Nav2 route
+    # nav2_route = Node(
+    #     package='nav2_route',
+    #     executable='route_server',
+    #     name='route_server',
+    #     parameters=[
+    #         os.path.join(package_name, 'config', 'nav2_params.yaml'),
+    #         {'graph_filepath': os.path.join(package_name, 'maps', 'ros_geograph_file_2026-08-08T07-49-16.759Z.json')}
+    #     ]
+    # )
 
     return LaunchDescription([
         declare_use_sim_time_cmd,
@@ -110,6 +120,7 @@ def generate_launch_description():
         spawn_entity,
         laser_filter_node,
         robot_localization,
+        # nav2_route,
         rviz_node,
     ])
 
@@ -131,3 +142,9 @@ def generate_launch_description():
 
 # ros2 lifecycle get /amcl
 # ros2 lifecycle get /map_server
+
+
+
+# dung action nav2_route gui path va dieu khien robot 
+# ros2 action send_goal /compute_and_track_route nav2_msgs/action/ComputeAndTrackRoute "{start_id: 0, goal_id: 4}"
+# sudo ufw allow from 192.168.0.0/24 proto udp

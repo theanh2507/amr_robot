@@ -1,0 +1,45 @@
+[0.059s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[0.667s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg -- -j15 -l15
+[0.814s] Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg
+[0.822s] -- Install configuration: ""
+[0.823s] -- Execute custom install script
+[0.886s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/amr_sim.launch.py
+[0.927s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/localization_launch.py
+[0.928s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/launch/navigation_launch.py
+[1.074s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/gazebo_control.xacro
+[1.155s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/inertial_macros.xacro
+[1.197s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot.urdf.xacro
+[1.207s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/robot_core.xacro
+[1.239s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/descriptions/urdf/sensors.xacro
+[1.265s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/ekf.yaml
+[1.266s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/laser_filter.yaml
+[1.268s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/mapper_params_online_async.yaml
+[1.306s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/nav2_params.yaml
+[1.329s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/config/robot_control/ros2_controllers.yaml
+[1.414s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/empty.world
+[1.483s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/floor_plan3.sdf
+[1.485s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze.world
+[1.519s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.config
+[1.550s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze/model.sdf
+[1.557s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/maze_2.world
+[1.579s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/worlds/wall.world
+[1.620s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.pgm
+[1.620s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/maps/map_sim.yaml
+[1.621s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/ps4_teleop_node.py
+[1.643s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/lib/amr_sim_pkg/imu_cov.py
+[1.643s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg
+[1.665s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg
+[1.666s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.sh
+[1.688s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/ament_prefix_path.dsv
+[1.689s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.sh
+[1.690s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/environment/path.dsv
+[1.712s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.bash
+[1.712s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.sh
+[1.734s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.zsh
+[1.756s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/local_setup.dsv
+[1.757s] -- Symlinking: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv
+[1.779s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/ament_index/resource_index/packages/amr_sim_pkg
+[1.817s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig.cmake
+[1.860s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/cmake/amr_sim_pkgConfig-version.cmake
+[1.860s] -- Up-to-date symlink: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/share/amr_sim_pkg/package.xml
+[1.863s] Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg

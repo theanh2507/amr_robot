@@ -24,6 +24,7 @@ install(DIRECTORY
 install(PROGRAMS
   scripts/ps4_teleop_node.py
   scripts/imu_cov.py
+  scripts/nav2_route.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
