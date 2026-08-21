@@ -1,1 +1,1 @@
-/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/sllidar_ros2/launch/sllidar_s1_tcp_launch.py
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/sllidar_ros2/launch/sllidar_s1_tcp_launch.py

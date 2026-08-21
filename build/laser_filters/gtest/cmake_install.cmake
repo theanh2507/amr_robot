@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters")
+  set(CMAKE_INSTALL_PREFIX "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

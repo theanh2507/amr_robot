@@ -37,24 +37,12 @@ joint1:
   - index: 24640
     sub_index: 0
     value: 128
-  - index: 24640
-    sub_index: 0
-    value: 6
-  - index: 24640
-    sub_index: 0
-    value: 7
-  - index: 24640
-    sub_index: 0
-    value: 271
   - index: 24707
     sub_index: 0
     value: 100000
   - index: 24708
     sub_index: 0
     value: 100000
-  - index: 24728
-    sub_index: 0
-    value: 0
   sdo_timeout_ms: 10000
   switching_state: 5
   tpdo: &id003
@@ -114,4 +102,4 @@ master:
   package: canopen_master_driver
   sync_period: 10000
 options:
-  dcf_path: '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control'
+  dcf_path: '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control'

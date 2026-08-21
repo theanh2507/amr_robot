@@ -1,1 +1,1 @@
-/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

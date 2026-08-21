@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -128,7 +128,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -186,7 +186,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -256,7 +256,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg/${destination}")
+      set(destination "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -316,49 +316,49 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "launch" "descriptions" "config" "worlds" "maps" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_directory("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" DIRECTORY "launch" "descriptions" "config" "worlds" "maps" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_directory("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" DIRECTORY "launch" "descriptions" "config" "worlds" "maps" "DESTINATION" "share/amr_sim_pkg")
 
 # install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "scripts/nav2_route.py" "DESTINATION" "lib/amr_sim_pkg")
-ament_cmake_symlink_install_programs("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "scripts/nav2_route.py" "DESTINATION" "lib/amr_sim_pkg")
+ament_cmake_symlink_install_programs("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_cov.py" "scripts/nav2_route.py" "DESTINATION" "lib/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr_sim_pkg/environment")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr_sim_pkg/environment")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr_sim_pkg")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr_sim_pkg" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig.cmake" "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig-version.cmake" "DESTINATION" "share/amr_sim_pkg/cmake")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig.cmake" "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig-version.cmake" "DESTINATION" "share/amr_sim_pkg/cmake")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig.cmake" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig-version.cmake" "DESTINATION" "share/amr_sim_pkg/cmake")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig.cmake" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig-version.cmake" "DESTINATION" "share/amr_sim_pkg/cmake")
 
-# install(FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg/package.xml" "DESTINATION" "share/amr_sim_pkg")
-ament_cmake_symlink_install_files("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg" FILES "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg/package.xml" "DESTINATION" "share/amr_sim_pkg")
+# install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg/package.xml" "DESTINATION" "share/amr_sim_pkg")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg" FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg/package.xml" "DESTINATION" "share/amr_sim_pkg")

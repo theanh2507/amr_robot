@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f3ab2062b15ec2d510ef.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "amr_reality_pkg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "amr_reality_pkg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-amr_reality_pkg_uninstall-a4b2c760f7b4107ed5d4.json",
+					"name" : "amr_reality_pkg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_control-43c6963ebf7395f2a4d6.json",
+					"name" : "robot_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_control_prepare::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_control_prepare-33314e7ef739d4258f26.json",
+					"name" : "robot_control_prepare",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-2b96cdbc0d5d298cc5d3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg",
+		"source" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

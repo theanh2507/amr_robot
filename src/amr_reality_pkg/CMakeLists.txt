@@ -22,13 +22,13 @@ cogen_dcf(robot_control)
 install(DIRECTORY
   launch 
   descriptions        
-  maps      
   DESTINATION share/${PROJECT_NAME}
 )
 
 install(FILES
-  config/laser_filter.yaml
   config/ekf.yaml
+  config/twist_mux.yaml
+  config/laser_filter.yaml
   config/nav2_params.yaml
   config/mapper_params_online_async.yaml
   DESTINATION share/${PROJECT_NAME}/config    # khai bao ro de tranh gay confict voi cogen_dcf   
@@ -37,6 +37,7 @@ install(FILES
 install(PROGRAMS
   scripts/ps4_teleop_node.py
   scripts/imu_tl740D.py
+  scripts/cov_odom_scan.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

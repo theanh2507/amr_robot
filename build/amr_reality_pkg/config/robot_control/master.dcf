@@ -1203,13 +1203,13 @@ AccessType=ro
 ParameterName=Node-ID 2
 DataType=0x000F
 AccessType=ro
-UploadFile=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/joint1.bin
+UploadFile=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/joint1.bin
 
 [1F22sub3]
 ParameterName=Node-ID 3
 DataType=0x000F
 AccessType=ro
-UploadFile=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/joint2.bin
+UploadFile=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/joint2.bin
 
 [1F22sub4]
 ParameterName=Node-ID 4

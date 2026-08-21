@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/laser_filters
+CMAKE_SOURCE_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/laser_filters
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters
+CMAKE_BINARY_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/CMakeFiles /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/CMakeFiles /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -313,6 +313,19 @@ test_scan_shadows_filter: cmake_check_build_system
 test_scan_shadows_filter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scan_shadows_filter.dir/build.make CMakeFiles/test_scan_shadows_filter.dir/build
 .PHONY : test_scan_shadows_filter/fast
+
+#=============================================================================
+# Target rules for targets named test_angular_bounds_filter
+
+# Build rule for target.
+test_angular_bounds_filter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_angular_bounds_filter
+.PHONY : test_angular_bounds_filter
+
+# fast build rule for target.
+test_angular_bounds_filter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_angular_bounds_filter.dir/build.make CMakeFiles/test_angular_bounds_filter.dir/build
+.PHONY : test_angular_bounds_filter/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -484,6 +497,30 @@ src/scan_to_scan_filter_chain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/laser_filter_chains.dir/build.make CMakeFiles/laser_filter_chains.dir/src/scan_to_scan_filter_chain.cpp.s
 .PHONY : src/scan_to_scan_filter_chain.cpp.s
 
+test/test_angular_bounds_filter.o: test/test_angular_bounds_filter.cpp.o
+.PHONY : test/test_angular_bounds_filter.o
+
+# target to build an object file
+test/test_angular_bounds_filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_angular_bounds_filter.dir/build.make CMakeFiles/test_angular_bounds_filter.dir/test/test_angular_bounds_filter.cpp.o
+.PHONY : test/test_angular_bounds_filter.cpp.o
+
+test/test_angular_bounds_filter.i: test/test_angular_bounds_filter.cpp.i
+.PHONY : test/test_angular_bounds_filter.i
+
+# target to preprocess a source file
+test/test_angular_bounds_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_angular_bounds_filter.dir/build.make CMakeFiles/test_angular_bounds_filter.dir/test/test_angular_bounds_filter.cpp.i
+.PHONY : test/test_angular_bounds_filter.cpp.i
+
+test/test_angular_bounds_filter.s: test/test_angular_bounds_filter.cpp.s
+.PHONY : test/test_angular_bounds_filter.s
+
+# target to generate assembly for a file
+test/test_angular_bounds_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_angular_bounds_filter.dir/build.make CMakeFiles/test_angular_bounds_filter.dir/test/test_angular_bounds_filter.cpp.s
+.PHONY : test/test_angular_bounds_filter.cpp.s
+
 test/test_scan_filter_chain.o: test/test_scan_filter_chain.cpp.o
 .PHONY : test/test_scan_filter_chain.o
 
@@ -602,6 +639,7 @@ help:
 	@echo "... laser_scan_filters"
 	@echo "... scan_to_cloud_filter_chain"
 	@echo "... scan_to_scan_filter_chain"
+	@echo "... test_angular_bounds_filter"
 	@echo "... test_scan_filter_chain"
 	@echo "... test_scan_shadows_filter"
 	@echo "... test_shadow_detector"
@@ -624,6 +662,9 @@ help:
 	@echo "... src/scan_to_scan_filter_chain.o"
 	@echo "... src/scan_to_scan_filter_chain.i"
 	@echo "... src/scan_to_scan_filter_chain.s"
+	@echo "... test/test_angular_bounds_filter.o"
+	@echo "... test/test_angular_bounds_filter.i"
+	@echo "... test/test_angular_bounds_filter.s"
 	@echo "... test/test_scan_filter_chain.o"
 	@echo "... test/test_scan_filter_chain.i"
 	@echo "... test/test_scan_filter_chain.s"

@@ -2,8 +2,13 @@ laser_filter:             # phai dat trung ten voi name trong launch file cua la
   ros__parameters:
     filter1:              # phai ten la filter1 (danh so thu tu)
       name: angle_filter
-      type: laser_filters/LaserScanAngularBoundsFilterInPlace               # laser_filters/LaserScanAngularBoundsFilter 
+      type: laser_filters/LaserScanAngularBoundsFilter          # laser_filters/LaserScanAngularBoundsFilterInPlace: cat du lieu trong vung lower_angle va upper_angle 
       params:
-        lower_angle: -3.14159                                               # cac gia tri phai la float
-        upper_angle: 0.0
+        # cac gia tri phai la float
+        # lower_angle: 0.349065                                 # 20 do                     
+        # upper_angle: 2.792526                                 # 160 do
 
+        lower_angle: 0.0                                        # 0 do                     
+        upper_angle: 3.141592                                   # 180 do
+        
+    

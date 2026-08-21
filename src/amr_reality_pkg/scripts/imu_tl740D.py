@@ -131,9 +131,9 @@ class tl740D_imu(Node):
 
 
     # tong do dai du lieu gom 32 bao gom ca byte SOF
-    # Roll, Pitch, Yaw: degree/s
+    # Roll, Pitch, Yaw: degree
     # ACC_X, ACC_Y, ACC_Z: g
-    # Gyro_X, Gyro_Y, Gyro_Z: degree/s
+    # Gyro_X, Gyro_Y, Gyro_Z: degree/s  (van toc goc)
 
     def read_rion_format4_robust(self):
         if self.ser.in_waiting > 0:                             # kiem tra so luong byte dang co trong bo dem
@@ -256,7 +256,7 @@ def main(args=None):
     rclpy.init(args=args)
 
     node = tl740D_imu()
-    node.init_frequency_imu(rate_code=0x06)
+    node.init_frequency_imu(rate_code=0x05)
     
     try:
         rclpy.spin(node)

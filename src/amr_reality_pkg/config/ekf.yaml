@@ -104,6 +104,16 @@ ekf_filter_node:
                       false, false, true,                   # r, p, y
                       false, false, false,                  # vx, vy, vz
                       false, false, true,                   # vr, vp, vy
-                      false, false, false]                  # ax, ay, az
+                      true, false, false]                   # ax, ay, az
         imu0_differential: false
         imu0_remove_gravitational_acceleration: true        # loai bo thanh phan gia toc trong truong
+
+
+
+        # odom1: /odom_scan_cov
+        # odom1_config: [true, true, false,                   # x, y, z
+        #                false, false, false,                 # r, p, y
+        #                false, false, false,                 # vx, vy, vz
+        #                false, false, false,                 # vr, vp, vy
+        #                false, false, false]                 # ax, ay, az
+        # odom1_differential: false

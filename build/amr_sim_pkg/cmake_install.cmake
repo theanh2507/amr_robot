@@ -1,8 +1,8 @@
-# Install script for directory: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_sim_pkg
+# Install script for directory: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_sim_pkg")
+  set(CMAKE_INSTALL_PREFIX "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_sim_pkg/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

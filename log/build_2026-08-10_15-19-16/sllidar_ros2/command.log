@@ -1,4 +1,0 @@
-Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2 -- -j15 -l15
-Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2 -- -j15 -l15
-Invoking command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2
-Invoked command in '/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/sllidar_ros2

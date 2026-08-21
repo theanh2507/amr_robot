@@ -1,8 +1,8 @@
-# Install script for directory: /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/laser_filters
+# Install script for directory: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/laser_filters
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/laser_filters")
+  set(CMAKE_INSTALL_PREFIX "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,12 +43,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/gtest/cmake_install.cmake")
+  include("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/gtest/cmake_install.cmake")
 
 endif()
 
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

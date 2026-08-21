@@ -1,1 +1,1 @@
-/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg/launch/navigation_launch.py
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/launch/navigation_launch.py

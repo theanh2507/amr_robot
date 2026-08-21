@@ -1,7 +1,7 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
-set(install_manifest "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/symlink_install_manifest.txt")
+set(install_manifest "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/symlink_install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()

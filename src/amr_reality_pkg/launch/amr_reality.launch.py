@@ -1,6 +1,7 @@
 import os
 import xacro
 
+from launch.actions import TimerAction
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
@@ -91,19 +92,19 @@ def generate_launch_description():
 
 
     # Launch Gazebo
-    gazebo = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([
-            os.path.join(get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')
-        ]),
-    )
+    # gazebo = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource([
+    #         os.path.join(get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')
+    #     ]),
+    # )
 
     # Spawner model robot Gazebo
-    spawn_entity_gazebo = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description', '-entity', 'amr_reality_pkg'],
-        output='screen'
-    )
+    # spawn_entity_gazebo = Node(
+    #     package='gazebo_ros',
+    #     executable='spawn_entity.py',
+    #     arguments=['-topic', 'robot_description', '-entity', 'amr_reality_pkg'],
+    #     output='screen'
+    # )
 
     node_tf_map =Node(
         package="tf2_ros",
@@ -127,6 +128,11 @@ def generate_launch_description():
             # }.items()
         )
 
+    delay_lidar_node = TimerAction(
+        period=5.0,
+        actions=[lidar_launch]
+    )
+
     # Laser Filter
     laser_filter_path = PathJoinSubstitution(
     [FindPackageShare("amr_reality_pkg"), "config", "laser_filter.yaml"])
@@ -141,6 +147,13 @@ def generate_launch_description():
                 ('scan_filtered', '/scan_filtered')
             ]
         )
+
+    odom_scan_cov_node = Node(
+        package=package_name,
+        executable='cov_odom_scan.py',
+        name='odom_scan_node',
+        output='screen',
+    )
 
     # Robot Localization
     robot_localization = Node(
@@ -185,12 +198,14 @@ def generate_launch_description():
         joint_state_broadcaster_spawner,
         diff_drive_controller_spawner,
         imu_node,
-        lidar_launch,
-        joy_node,
+        # lidar_launch,
+        delay_lidar_node,
+        # joy_node,
         ps4_node,
         laser_filter_node,
+        odom_scan_cov_node,
         robot_localization,
-        rviz_node,
+        # rviz_node,
         # gazebo,
         # spawn_entity_gazebo,
     ])
@@ -206,13 +221,13 @@ def generate_launch_description():
 # ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/diff_drive_controller/cmd_vel_unstamped
 
 # run slamtoolbox
-# ros2 launch slam_toolbox online_async_launch.py params_file:=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg/config/mapper_params_online_async.yaml
+# ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/config/mapper_params_online_async.yaml
 
 # save map
-# ros2 run nav2_map_server map_saver_cli -f /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg/maps/map_xuong
+# ros2 run nav2_map_server map_saver_cli -f /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong
 
 # load map
-# ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg/maps/map_xuong.yaml
+# ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong.yaml
 # ros2 run nav2_util lifecycle_bringup map_server       (vi map_server va amcl la managed lifecycle node, khi run xong dang o trang thai unconfigured)
 
 # load amcl
@@ -220,11 +235,17 @@ def generate_launch_description():
 # ros2 run nav2_util lifecycle_bringup amcl
 
 # load map va amcl trong launch file
-# ros2 launch nav2_bringup localization_launch.py map:=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg/maps/map_xuong.yaml
+# ros2 launch amr_reality_pkg localization_launch.py map:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong3.yaml
 
 # load nav2
-# ros2 launch nav2_bringup navigation_launch.py map_subscribe_transient_local:=true
+# ros2 launch amr_reality_pkg navigation_launch.py map_subscribe_transient_local:=true
 
+
+# ros2 lifecycle set /amcl configure
+# ros2 lifecycle set /map_server configure
+
+# ros2 lifecycle set /amcl activate
+# ros2 lifecycle set /map_server activate
 
 # ros2 lifecycle get /amcl
 # ros2 lifecycle get /map_server
@@ -234,6 +255,7 @@ def generate_launch_description():
 # mo file udev quan ly ten thiet bi usb
 # udevadm info --query=all --name=/dev/ttyUSB0 | grep -E "ID_VENDOR|ID_MODEL|ID_SERIAL"
 # sudo nano /etc/udev/rules.d/99-robot-devices.rules
+# SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="0001", SYMLINK+="ttyLIDAR", MODE="0666"
 # sudo udevadm control --reload-rules
 # sudo udevadm trigger
 # ls -l /dev/ttyIMU                 (output: lrwxrwxrwx 1 root root 7 Aug  3 10:07 /dev/ttyLIDAR -> ttyUSB0)
@@ -241,4 +263,23 @@ def generate_launch_description():
 
 # ssh orangepi@192.168.0.168        # pass: orangepi
 
- 
+
+
+# ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p stamped:=true -r /cmd_vel:=/diff_drive_controller/cmd_vel
+
+# ros2 service call /set_pose robot_localization/srv/SetPose "{pose: {header: {frame_id: 'odom'}, pose: {pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}}}"
+
+# ros2 topic echo /slam_toolbox/loop_closure_event
+
+# ros2 param get /slam_toolbox debug_logging
+
+# tu dong luu ban do da chuoi hoa
+# ros2 service call /slam_toolbox/serialize_map slam_toolbox/srv/SerializePoseGraph "filename: 'auto_save.posegraph'"
+
+
+
+# ros2 run ros2_laser_scan_matcher laser_scan_matcher --ros-args -p publish_odom:=/odom_scan -p publish_tf:=true
+
+# ros2 service call /joint2/sdo_read canopen_interfaces/srv/COReadID "{index: 0x603F, subindex: 0}"
+
+# ip -statistics link show can0

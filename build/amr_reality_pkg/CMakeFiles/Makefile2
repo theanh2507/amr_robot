@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg
+CMAKE_SOURCE_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+CMAKE_BINARY_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/robot_control.dir/clean
 CMakeFiles/uninstall.dir/all: CMakeFiles/amr_reality_pkg_uninstall.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -111,14 +111,14 @@ CMakeFiles/uninstall.dir/clean:
 CMakeFiles/amr_reality_pkg_uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/amr_reality_pkg_uninstall.dir/build.make CMakeFiles/amr_reality_pkg_uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/amr_reality_pkg_uninstall.dir/build.make CMakeFiles/amr_reality_pkg_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target amr_reality_pkg_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target amr_reality_pkg_uninstall"
 .PHONY : CMakeFiles/amr_reality_pkg_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/amr_reality_pkg_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/amr_reality_pkg_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/amr_reality_pkg_uninstall.dir/rule
 
 # Convenience name for target.
@@ -137,14 +137,14 @@ CMakeFiles/amr_reality_pkg_uninstall.dir/clean:
 CMakeFiles/robot_control_prepare.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_control_prepare.dir/build.make CMakeFiles/robot_control_prepare.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_control_prepare.dir/build.make CMakeFiles/robot_control_prepare.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target robot_control_prepare"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target robot_control_prepare"
 .PHONY : CMakeFiles/robot_control_prepare.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robot_control_prepare.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_control_prepare.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/robot_control_prepare.dir/rule
 
 # Convenience name for target.
@@ -163,14 +163,14 @@ CMakeFiles/robot_control_prepare.dir/clean:
 CMakeFiles/robot_control.dir/all: CMakeFiles/robot_control_prepare.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_control.dir/build.make CMakeFiles/robot_control.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_control.dir/build.make CMakeFiles/robot_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target robot_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num= "Built target robot_control"
 .PHONY : CMakeFiles/robot_control.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/robot_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_control.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
 .PHONY : CMakeFiles/robot_control.dir/rule
 
 # Convenience name for target.

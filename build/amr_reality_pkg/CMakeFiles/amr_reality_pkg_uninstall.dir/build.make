@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg
+CMAKE_SOURCE_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+CMAKE_BINARY_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
 
 # Utility rule file for amr_reality_pkg_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/amr_reality_pkg_uninstall.dir/compiler_depend.make
 include CMakeFiles/amr_reality_pkg_uninstall.dir/progress.make
 
 CMakeFiles/amr_reality_pkg_uninstall:
-	/usr/bin/cmake -P /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 amr_reality_pkg_uninstall: CMakeFiles/amr_reality_pkg_uninstall
 amr_reality_pkg_uninstall: CMakeFiles/amr_reality_pkg_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/amr_reality_pkg_uninstall.dir/clean:
 .PHONY : CMakeFiles/amr_reality_pkg_uninstall.dir/clean
 
 CMakeFiles/amr_reality_pkg_uninstall.dir/depend:
-	cd /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles/amr_reality_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/amr_reality_pkg_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/amr_reality_pkg_uninstall.dir/depend
 

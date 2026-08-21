@@ -37,24 +37,12 @@ joint1:
   - index: 24640
     sub_index: 0
     value: 128
-  - index: 24640
-    sub_index: 0
-    value: 6
-  - index: 24640
-    sub_index: 0
-    value: 7
-  - index: 24640
-    sub_index: 0
-    value: 271
   - index: 24707
     sub_index: 0
     value: 100000
   - index: 24708
     sub_index: 0
     value: 100000
-  - index: 24728
-    sub_index: 0
-    value: 0
   sdo_timeout_ms: 10000
   switching_state: 5
   tpdo: &id003

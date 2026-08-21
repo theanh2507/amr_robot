@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/laser_filters/scan_to_cloud_filter_chain" "TARGETS" "scan_to_cloud_filter_chain" "DESTINATION" "lib/laser_filters")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/scan_to_cloud_filter_chain" "TARGETS" "scan_to_cloud_filter_chain" "DESTINATION" "lib/laser_filters")

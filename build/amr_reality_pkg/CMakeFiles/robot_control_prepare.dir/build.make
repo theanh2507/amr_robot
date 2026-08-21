@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg
+CMAKE_SOURCE_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg
+CMAKE_BINARY_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
 
 # Utility rule file for robot_control_prepare.
 
@@ -67,9 +67,9 @@ include CMakeFiles/robot_control_prepare.dir/compiler_depend.make
 include CMakeFiles/robot_control_prepare.dir/progress.make
 
 CMakeFiles/robot_control_prepare:
-	rm -rf /home/theanh/Robot_Project/AMR_Robot/amr1_ws/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/*
-	rm -rf /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/config/robot_control/*
-	mkdir -p /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/config/robot_control
+	rm -rf /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control/*
+	rm -rf /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/config/robot_control/*
+	mkdir -p /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/config/robot_control
 
 robot_control_prepare: CMakeFiles/robot_control_prepare
 robot_control_prepare: CMakeFiles/robot_control_prepare.dir/build.make
@@ -84,6 +84,6 @@ CMakeFiles/robot_control_prepare.dir/clean:
 .PHONY : CMakeFiles/robot_control_prepare.dir/clean
 
 CMakeFiles/robot_control_prepare.dir/depend:
-	cd /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/src/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg /home/theanh/Robot_Project/AMR_Robot/amr1_ws/build/amr_reality_pkg/CMakeFiles/robot_control_prepare.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/robot_control_prepare.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/robot_control_prepare.dir/depend
 
