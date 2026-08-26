@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm/libcsm.so" "TARGETS" "csm" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib")

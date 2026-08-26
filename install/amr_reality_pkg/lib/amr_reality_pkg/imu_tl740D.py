@@ -1,1 +1,0 @@
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/scripts/imu_tl740D.py

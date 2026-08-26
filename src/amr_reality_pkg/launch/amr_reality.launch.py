@@ -128,9 +128,24 @@ def generate_launch_description():
             # }.items()
         )
 
+    lidar_node = Node(
+        package='sllidar_ros2',
+        executable='sllidar_node',
+        name='sllidar_node',
+        parameters=[{
+            'channel_type': 'serial',
+            'serial_port': '/dev/ttyLIDAR',         # đổi đúng port thật đang hoạt động
+            'serial_baudrate': 115200,              # đổi đúng baudrate thật
+            'frame_id': 'Lidar_Link',
+            'inverted': False,
+            'angle_compensate': True,
+        }],
+        # remappings=[('scan', 'scan_raw')],
+        output='screen')
+
     delay_lidar_node = TimerAction(
         period=5.0,
-        actions=[lidar_launch]
+        actions=[lidar_node]
     )
 
     # Laser Filter
@@ -154,6 +169,17 @@ def generate_launch_description():
         name='odom_scan_node',
         output='screen',
     )
+
+
+    lidar_loc_node = Node(
+            package=package_name,               
+            executable='lidar_loc',             # Ten executable dat trong CMakeLists.txt
+            name='lidar_loc',                   # Ten node hien thi
+            output='screen',
+            parameters=[{
+                'use_sim_time': use_sim_time
+            }]
+        )
 
     # Robot Localization
     robot_localization = Node(
@@ -182,6 +208,15 @@ def generate_launch_description():
         output='screen',
     )
 
+    twist_mux_node = Node(
+    package='twist_mux',
+    executable='twist_mux',
+    name='twist_mux',
+    output='screen',
+    parameters=[os.path.join(package_name, 'config', 'twist_mux.yaml')],
+    remappings=[('cmd_vel_out', 'diff_drive_controller/cmd_vel_unstamped')]
+    )
+
     # Run Rviz
     rviz_node = Node(
         package='rviz2',
@@ -201,10 +236,13 @@ def generate_launch_description():
         # lidar_launch,
         delay_lidar_node,
         # joy_node,
-        ps4_node,
         laser_filter_node,
-        odom_scan_cov_node,
+        # odom_scan_cov_node,
+        # lidar_loc_node,
         robot_localization,
+
+        # ps4_node,
+        # twist_mux_node,
         # rviz_node,
         # gazebo,
         # spawn_entity_gazebo,

@@ -17,6 +17,17 @@ find_package(canopen_base_driver REQUIRED)
 find_package(canopen_proxy_driver REQUIRED)
 find_package(lely_core_libraries REQUIRED)
 
+find_package(robot_state_publisher REQUIRED)
+find_package(xacro REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)        
+find_package(geometry_msgs REQUIRED)  
+find_package(tf2 REQUIRED)             
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
+find_package(OpenCV REQUIRED)
+
 cogen_dcf(robot_control)
 
 install(DIRECTORY
@@ -38,6 +49,49 @@ install(PROGRAMS
   scripts/ps4_teleop_node.py
   scripts/imu_tl740D.py
   scripts/cov_odom_scan.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+
+# ==================== C++ CONFIGURATION ====================
+include_directories(
+  src/include
+  ${OpenCV_INCLUDE_DIRS}
+)
+
+# add_executable bao cmake biet lidar_loc co excutable la lidar_loc.cpp
+add_executable(lidar_loc 
+  src/src/lidar_loc.cpp
+)
+
+# add_executable(lidar_filter_node 
+#   src/src/lidar_filter_node.cpp
+# )
+
+ament_target_dependencies(lidar_loc
+  rclcpp
+  sensor_msgs
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
+  std_srvs
+  OpenCV
+)
+
+# ament_target_dependencies(lidar_filter_node
+#   rclcpp
+#   sensor_msgs
+# )
+
+target_link_libraries(lidar_loc
+  ${OpenCV_LIBS}
+)
+
+install(TARGETS
+  lidar_loc
+  # lidar_filter_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -1,1 +1,0 @@
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg/launch/localization_launch.py

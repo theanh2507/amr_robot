@@ -11,7 +11,9 @@ class PS4TeleopNode(Node):
         
         self.joy_sub = self.create_subscription(Joy, '/joy', self.joy_callback, 10)
 
-        self.cmd_vel_pub = self.create_publisher(Twist, '/diff_drive_controller/cmd_vel_unstamped', 10)
+        # self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel_joy', 10)             # diff_drive_controller/cmd_vel_unstamped
+
+        self.cmd_vel_pub = self.create_publisher(Twist, '/diff_drive_controller/cmd_vel_unstamped', 10)             # diff_drive_controller/cmd_vel_unstamped
         
         self.scale_vel_linear_x = 1.0  # m/s
         self.scale_vel_angular_z = 1.5  # rad/s

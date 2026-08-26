@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters/generic_laser_filter_node" "TARGETS" "generic_laser_filter_node" "DESTINATION" "lib/laser_filters")

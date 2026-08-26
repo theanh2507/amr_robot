@@ -1,1 +1,0 @@
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/csm/include/gsl_eigen/gsl_eigen.h

@@ -1,1 +1,0 @@
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/sllidar_ros2/launch/sllidar_a3_launch.py

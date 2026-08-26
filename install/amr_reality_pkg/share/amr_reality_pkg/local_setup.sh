@@ -1,1 +1,0 @@
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/ament_cmake_environment_hooks/local_setup.sh
