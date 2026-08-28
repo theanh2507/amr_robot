@@ -209,12 +209,14 @@ def generate_launch_description():
     )
 
     twist_mux_node = Node(
-    package='twist_mux',
-    executable='twist_mux',
-    name='twist_mux',
-    output='screen',
-    parameters=[os.path.join(package_name, 'config', 'twist_mux.yaml')],
-    remappings=[('cmd_vel_out', 'diff_drive_controller/cmd_vel_unstamped')]
+        package='twist_mux',
+        executable='twist_mux',
+        name='twist_mux',
+        output='screen',
+        parameters=[
+            os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+        ],
+        remappings=[('cmd_vel_out', 'diff_drive_controller/cmd_vel_unstamped')],
     )
 
     # Run Rviz
@@ -224,6 +226,18 @@ def generate_launch_description():
         name='rviz2',
         output='screen'
     )
+
+    param_collision_path = PathJoinSubstitution(
+    [FindPackageShare("amr_reality_pkg"), "config", "collision_monitor_params.yaml"]
+    )
+
+    collision_node = Node(
+            package='nav2_collision_monitor',
+            executable='collision_monitor_node',
+            name='collision_monitor',
+            output='screen',
+            parameters=[param_collision_path]
+        )
     
 
     return LaunchDescription([
@@ -240,9 +254,9 @@ def generate_launch_description():
         # odom_scan_cov_node,
         # lidar_loc_node,
         robot_localization,
-
-        # ps4_node,
-        # twist_mux_node,
+        collision_node,
+        ps4_node,
+        twist_mux_node,
         # rviz_node,
         # gazebo,
         # spawn_entity_gazebo,
@@ -264,6 +278,10 @@ def generate_launch_description():
 # save map
 # ros2 run nav2_map_server map_saver_cli -f /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong
 
+# save map dung service
+# ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name: {data: '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong3'}"
+# ros2 service call /slam_toolbox/serialize_map slam_toolbox/srv/SerializePoseGraph "filename: '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong3'"
+
 # load map
 # ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong.yaml
 # ros2 run nav2_util lifecycle_bringup map_server       (vi map_server va amcl la managed lifecycle node, khi run xong dang o trang thai unconfigured)
@@ -273,7 +291,10 @@ def generate_launch_description():
 # ros2 run nav2_util lifecycle_bringup amcl
 
 # load map va amcl trong launch file
-# ros2 launch amr_reality_pkg localization_launch.py map:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong3.yaml
+# ros2 launch amr_reality_pkg localization_launch.py map:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong2.yaml
+
+# chay slamtoolbox o che do dinh vi
+# ros2 launch amr_reality_pkg slamtoolbox_localization.py
 
 # load nav2
 # ros2 launch amr_reality_pkg navigation_launch.py map_subscribe_transient_local:=true
@@ -307,7 +328,8 @@ def generate_launch_description():
 
 # ros2 service call /set_pose robot_localization/srv/SetPose "{pose: {header: {frame_id: 'odom'}, pose: {pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {w: 1.0}}}}}"
 
-# ros2 topic echo /slam_toolbox/loop_closure_event
+# ros2 topic echo /slam_toolbox/loop_clo
+# sure_event
 
 # ros2 param get /slam_toolbox debug_logging
 
@@ -321,3 +343,8 @@ def generate_launch_description():
 # ros2 service call /joint2/sdo_read canopen_interfaces/srv/COReadID "{index: 0x603F, subindex: 0}"
 
 # ip -statistics link show can0
+
+# git log --oneline
+
+# twist mux
+# ros2 run twist_mux twist_mux --ros-args   --params-file /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/config/twist_mux.yaml --remap cmd_vel_out:=/diff_drive_controller/cmd_vel_unstamped

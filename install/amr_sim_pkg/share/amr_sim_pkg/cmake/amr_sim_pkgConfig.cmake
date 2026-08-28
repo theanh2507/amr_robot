@@ -1,0 +1,1 @@
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg/ament_cmake_core/amr_sim_pkgConfig.cmake

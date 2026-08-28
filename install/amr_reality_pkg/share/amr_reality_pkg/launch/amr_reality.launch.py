@@ -1,0 +1,1 @@
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/launch/amr_reality.launch.py

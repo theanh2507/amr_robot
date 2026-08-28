@@ -18,6 +18,6 @@
         prefix=""
         bus_config="$(find amr_reality_pkg)/config/robot_control/bus.yml"
         master_config="$(find amr_reality_pkg)/config/robot_control/master.dcf"
-        can_interface_name="can0"
+        can_interface_name="can1"
         master_bin="" />
 </robot>

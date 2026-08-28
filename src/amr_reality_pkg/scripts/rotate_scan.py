@@ -10,8 +10,7 @@ from sensor_msgs.msg import LaserScan
 class ScanRotator(Node):
     def __init__(self):
         super().__init__('scan_rotator')
-
-        # ---- Tham so, co the chinh qua ros2 param / launch file ----
+        
         self.declare_parameter('rotation_deg', -90.0)
         self.declare_parameter('input_topic', 'scan_raw')
         self.declare_parameter('output_topic', 'scan_rotate')

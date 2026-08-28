@@ -1,0 +1,12 @@
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/uninstall.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/amr_reality_pkg_uninstall.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/robot_control_prepare.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/robot_control.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/lidar_loc.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/test.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/edit_cache.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/rebuild_cache.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/list_install_components.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/install.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/install/local.dir
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles/install/strip.dir
