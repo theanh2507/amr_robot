@@ -42,6 +42,7 @@ install(FILES
   config/laser_filter.yaml
   config/nav2_params.yaml
   config/mapper_params_online_async.yaml
+  config/collision_monitor_params.yaml
   DESTINATION share/${PROJECT_NAME}/config    # khai bao ro de tranh gay confict voi cogen_dcf   
 )
 
@@ -49,6 +50,7 @@ install(PROGRAMS
   scripts/ps4_teleop_node.py
   scripts/imu_tl740D.py
   scripts/cov_odom_scan.py
+  scripts/publish_test_path.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -57,18 +59,29 @@ install(PROGRAMS
 include_directories(
   src/include
   ${OpenCV_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 # add_executable bao cmake biet lidar_loc co excutable la lidar_loc.cpp
-add_executable(lidar_loc 
-  src/src/lidar_loc.cpp
-)
-
-# add_executable(lidar_filter_node 
-#   src/src/lidar_filter_node.cpp
+# add_executable(lidar_loc 
+#   src/src/lidar_loc.cpp
 # )
 
-ament_target_dependencies(lidar_loc
+add_executable(plicp
+  src/src/plicp_localization_node.cpp
+  src/src/point_to_line_icp.cpp
+  src/src/occupancy_grid_map_model.cpp
+  # src/src/csm_point_to_line_icp.cpp
+)
+
+target_include_directories(plicp
+  PRIVATE
+  src/include
+  ${EIGEN3_INCLUDE_DIRS}
+)
+
+
+ament_target_dependencies(plicp
   rclcpp
   sensor_msgs
   nav_msgs
@@ -78,22 +91,32 @@ ament_target_dependencies(lidar_loc
   tf2_geometry_msgs
   std_srvs
   OpenCV
+  rcutils
+  Eigen3
 )
 
-# ament_target_dependencies(lidar_filter_node
-#   rclcpp
-#   sensor_msgs
-# )
-
-target_link_libraries(lidar_loc
-  ${OpenCV_LIBS}
+target_link_libraries(plicp
+  tf2::tf2
+  tf2_geometry_msgs::tf2_geometry_msgs
+  # csm
+  # ${csm_LIBRARIES}
 )
 
+# khai bao de chay ros2 run ...
 install(TARGETS
-  lidar_loc
-  # lidar_filter_node
+  plicp
   DESTINATION lib/${PROJECT_NAME}
 )
+
+# target_link_libraries(lidar_loc
+#   ${OpenCV_LIBS}
+# )
+
+# install(TARGETS
+#   lidar_loc
+#   # lidar_filter_node
+#   DESTINATION lib/${PROJECT_NAME}
+# )
 
 
 if(BUILD_TESTING)

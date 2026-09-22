@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f28919438ba93103116e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rf2o_laser_odometry",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rf2o_laser_odometry::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rf2o_laser_odometry-f769c50a6f18dbf24ee9.json",
+					"name" : "rf2o_laser_odometry",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rf2o_laser_odometry_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rf2o_laser_odometry_node-93c3c0bf84f2355fe811.json",
+					"name" : "rf2o_laser_odometry_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rf2o_laser_odometry_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rf2o_laser_odometry_uninstall-0d9ab2c09401cb340e89.json",
+					"name" : "rf2o_laser_odometry_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-67008d33adad7418d8fc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry",
+		"source" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

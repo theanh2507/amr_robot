@@ -1,0 +1,74 @@
+[0.038s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry
+[0.210s] -- The C compiler identification is GNU 11.4.0
+[0.326s] -- The CXX compiler identification is GNU 11.4.0
+[0.350s] -- Detecting C compiler ABI info
+[0.526s] -- Detecting C compiler ABI info - done
+[0.537s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.537s] -- Detecting C compile features
+[0.537s] -- Detecting C compile features - done
+[0.542s] -- Detecting CXX compiler ABI info
+[0.716s] -- Detecting CXX compiler ABI info - done
+[0.759s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.761s] -- Detecting CXX compile features
+[0.764s] -- Detecting CXX compile features - done
+[0.773s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.999s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.139s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.243s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[1.339s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.346s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.367s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.399s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.462s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.565s] -- Found rmw_implementation_cmake: 6.1.3 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.569s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.745s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.788s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.873s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.884s] -- Looking for pthread.h
+[2.070s] -- Looking for pthread.h - found
+[2.071s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.204s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.205s] -- Found Threads: TRUE  
+[2.324s] -- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.355s] -- Found tf2_geometry_msgs: 0.25.22 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.383s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.385s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.386s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.708s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.740s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.853s] -- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+[3.718s] -- Configuring done
+[3.907s] -- Generating done
+[3.999s] -- Build files have been written to: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry
+[4.139s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry
+[4.140s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry -- -j8 -l8
+[4.600s] [ 20%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry.dir/src/CLaserOdometry2D.cpp.o[0m
+[4.634s] [ 40%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2DNode.cpp.o[0m
+[4.658s] [ 60%] [32mBuilding CXX object CMakeFiles/rf2o_laser_odometry_node.dir/src/CLaserOdometry2D.cpp.o[0m
+[59.287s] [ 80%] [32m[1mLinking CXX executable rf2o_laser_odometry_node[0m
+[61.856s] [ 80%] Built target rf2o_laser_odometry_node
+[71.599s] [100%] [32m[1mLinking CXX static library librf2o_laser_odometry.a[0m
+[72.038s] [100%] Built target rf2o_laser_odometry
+[72.068s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry -- -j8 -l8
+[72.074s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry
+[72.098s] -- Install configuration: ""
+[72.099s] -- Execute custom install script
+[72.100s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib/rf2o_laser_odometry/rf2o_laser_odometry_node
+[72.125s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/launch/rf2o_laser_odometry.launch.py
+[72.152s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/ament_index/resource_index/package_run_dependencies/rf2o_laser_odometry
+[72.176s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/ament_index/resource_index/parent_prefix_path/rf2o_laser_odometry
+[72.202s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.sh
+[72.228s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/ament_prefix_path.dsv
+[72.253s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.sh
+[72.282s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/environment/path.dsv
+[72.307s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.bash
+[72.335s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.sh
+[72.360s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.zsh
+[72.386s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/local_setup.dsv
+[72.414s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv
+[72.442s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/ament_index/resource_index/packages/rf2o_laser_odometry
+[72.467s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig.cmake
+[72.494s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/cmake/rf2o_laser_odometryConfig-version.cmake
+[72.520s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.xml
+[72.558s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry

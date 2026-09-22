@@ -214,9 +214,10 @@ def generate_launch_description():
         name='twist_mux',
         output='screen',
         parameters=[
-            os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+            os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml'),
+            {'autostart': True},
         ],
-        remappings=[('cmd_vel_out', 'diff_drive_controller/cmd_vel_unstamped')],
+        remappings=[('cmd_vel_out', 'cmd_vel_mux')],                        # cmd_vel_mux    diff_drive_controller/cmd_vel_unstamped
     )
 
     # Run Rviz
@@ -231,12 +232,25 @@ def generate_launch_description():
     [FindPackageShare("amr_reality_pkg"), "config", "collision_monitor_params.yaml"]
     )
 
+
+    # la node lifecycle phai configure va activate len (ros2 lifecycle set /collision_monitor configure) (neu la node lifecycle phai add vao lifecycle_manager)
     collision_node = Node(
             package='nav2_collision_monitor',
-            executable='collision_monitor_node',
+            executable='collision_monitor',
             name='collision_monitor',
             output='screen',
-            parameters=[param_collision_path]
+            parameters=[param_collision_path, {'autostart': True}]
+        )
+
+    lifecycle_manager_node = Node(
+            package='nav2_lifecycle_manager',
+            executable='lifecycle_manager',
+            name='lifecycle_manager_collision_monitor',
+            output='screen',
+            parameters=[
+                {'autostart': True},
+                {'node_names': ['collision_monitor']},
+            ],
         )
     
 
@@ -254,6 +268,7 @@ def generate_launch_description():
         # odom_scan_cov_node,
         # lidar_loc_node,
         robot_localization,
+        lifecycle_manager_node,
         collision_node,
         ps4_node,
         twist_mux_node,
@@ -291,13 +306,13 @@ def generate_launch_description():
 # ros2 run nav2_util lifecycle_bringup amcl
 
 # load map va amcl trong launch file
-# ros2 launch amr_reality_pkg localization_launch.py map:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong2.yaml
+# ros2 launch amr_reality_pkg localization_launch.py map:=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong_1509_edited.yaml
 
 # chay slamtoolbox o che do dinh vi
 # ros2 launch amr_reality_pkg slamtoolbox_localization.py
 
 # load nav2
-# ros2 launch amr_reality_pkg navigation_launch.py map_subscribe_transient_local:=true
+# ros2 launch amr_reality_pkg navigation_launch.py
 
 
 # ros2 lifecycle set /amcl configure
@@ -348,3 +363,11 @@ def generate_launch_description():
 
 # twist mux
 # ros2 run twist_mux twist_mux --ros-args   --params-file /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/config/twist_mux.yaml --remap cmd_vel_out:=/diff_drive_controller/cmd_vel_unstamped
+
+
+# RESET diff_drive_controller/odom
+# # 1. Chuyển controller sang trạng thái inactive/unconfigured
+# ros2 service call /controller_manager/switch_controllers controller_manager_msgs/srv/SwitchControllers "{deactivate_controllers: ['diff_drive_controller'], strictness: 1}"
+
+# # 2. Kích hoạt lại controller
+# ros2 service call /controller_manager/switch_controllers controller_manager_msgs/srv/SwitchControllers "{activate_controllers: ['diff_drive_controller'], strictness: 1}"

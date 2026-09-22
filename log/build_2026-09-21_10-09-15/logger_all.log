@@ -1,0 +1,597 @@
+[0.132s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.132s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f902b61d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f9043f940>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f9043f940>>)
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.303s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.304s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.304s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ignore'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ignore_ament_install'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['colcon_pkg']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'colcon_pkg'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_reality_pkg) by extension 'ros'
+[0.325s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr_reality_pkg' with type 'ros.ament_cmake' and name 'amr_reality_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_sim_pkg) by extension 'ros'
+[0.327s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr_sim_pkg' with type 'ros.ament_cmake' and name 'amr_sim_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extension 'colcon_pkg'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extensions ['colcon_meta']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extension 'colcon_meta'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extensions ['ros']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/csm) by extension 'ros'
+[0.328s] DEBUG:colcon.colcon_core.package_identification:Package 'src/csm' with type 'ros.ament_cmake' and name 'csm'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['ignore', 'ignore_ament_install']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ignore'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ignore_ament_install'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['colcon_pkg']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'colcon_pkg'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['colcon_meta']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'colcon_meta'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extensions ['ros']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/laser_filters) by extension 'ros'
+[0.331s] DEBUG:colcon.colcon_core.package_identification:Package 'src/laser_filters' with type 'ros.ament_cmake' and name 'laser_filters'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extensions ['ignore', 'ignore_ament_install']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extension 'ignore'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extension 'ignore_ament_install'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extensions ['colcon_meta']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extension 'colcon_meta'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extensions ['ros']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/plicp_map_matcher) by extension 'ros'
+[0.333s] DEBUG:colcon.colcon_core.package_identification:Package 'src/plicp_map_matcher' with type 'ros.ament_cmake' and name 'plicp_map_matcher'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ros'
+[0.337s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rf2o_laser_odometry' with type 'ros.ament_cmake' and name 'rf2o_laser_odometry'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_laser_scan_matcher) by extension 'ros'
+[0.339s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_laser_scan_matcher' with type 'ros.ament_cmake' and name 'ros2_laser_scan_matcher'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/sllidar_ros2) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sllidar_ros2' with type 'ros.ament_cmake' and name 'sllidar_ros2'
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.340s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.370s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_reality_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.371s] DEBUG:colcon.colcon_core.verb:Building package 'amr_reality_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_args' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_target' from command line to 'None'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.371s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'amr_sim_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'amr_sim_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg', 'symlink_install': True, 'test_result_base': None}
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_target' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_clean_cache' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_clean_first' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'cmake_force_configure' from command line to 'False'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'ament_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'catkin_cmake_args' from command line to 'None'
+[0.372s] Level 5:colcon.colcon_core.verb:set package 'csm' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.372s] DEBUG:colcon.colcon_core.verb:Building package 'csm' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/csm', 'symlink_install': True, 'test_result_base': None}
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_target' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_clean_cache' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_clean_first' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'cmake_force_configure' from command line to 'False'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'ament_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'catkin_cmake_args' from command line to 'None'
+[0.373s] Level 5:colcon.colcon_core.verb:set package 'laser_filters' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.373s] DEBUG:colcon.colcon_core.verb:Building package 'laser_filters' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/laser_filters', 'symlink_install': True, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.374s] DEBUG:colcon.colcon_core.verb:Building package 'rf2o_laser_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry', 'symlink_install': True, 'test_result_base': None}
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_args' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target' from command line to 'None'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.374s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'sllidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'sllidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/sllidar_ros2', 'symlink_install': True, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'plicp_map_matcher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'plicp_map_matcher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher', 'symlink_install': True, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'ros2_laser_scan_matcher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_laser_scan_matcher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher', 'merge_install': False, 'path': '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/ros2_laser_scan_matcher', 'symlink_install': True, 'test_result_base': None}
+[0.376s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.378s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.378s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/csm' with build type 'ament_cmake'
+[0.379s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/csm'
+[0.382s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.382s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.382s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.389s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg' with build type 'ament_cmake'
+[0.389s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg'
+[0.390s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.390s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.395s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg' with build type 'ament_cmake'
+[0.395s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_sim_pkg'
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.416s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/laser_filters' with build type 'ament_cmake'
+[0.417s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/laser_filters'
+[0.417s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.417s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.423s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry' with build type 'ament_cmake'
+[0.423s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/rf2o_laser_odometry'
+[0.423s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.424s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.429s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/sllidar_ros2' with build type 'ament_cmake'
+[0.430s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/sllidar_ros2'
+[0.430s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.430s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.445s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm -- -j8 -l8
+[0.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg -- -j8 -l8
+[0.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg -- -j8 -l8
+[0.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters -- -j8 -l8
+[0.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry -- -j8 -l8
+[0.476s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2 -- -j8 -l8
+[0.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg -- -j8 -l8
+[0.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg
+[0.673s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2 -- -j8 -l8
+[0.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2
+[0.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm -- -j8 -l8
+[0.683s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_sim_pkg)
+[0.691s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm
+[0.692s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_sim_pkg
+[0.697s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg' for CMake module files
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg' for CMake config files
+[0.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_sim_pkg', 'cmake_prefix_path')
+[0.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.ps1'
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.dsv'
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.sh'
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/bin'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib/pkgconfig/amr_sim_pkg.pc'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib/python3.10/site-packages'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/bin'
+[0.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.ps1'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv'
+[0.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.sh'
+[0.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.bash'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.zsh'
+[0.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/colcon-core/packages/amr_sim_pkg)
+[0.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_sim_pkg)
+[0.737s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg' for CMake module files
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg' for CMake config files
+[0.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_sim_pkg', 'cmake_prefix_path')
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.ps1'
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.dsv'
+[0.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/hook/cmake_prefix_path.sh'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/bin'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib/pkgconfig/amr_sim_pkg.pc'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/lib/python3.10/site-packages'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/bin'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.ps1'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.dsv'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.sh'
+[0.745s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.bash'
+[0.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/amr_sim_pkg/package.zsh'
+[0.746s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg/share/colcon-core/packages/amr_sim_pkg)
+[0.754s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(csm)
+[0.754s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm' for CMake module files
+[0.755s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry -- -j8 -l8
+[0.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry
+[0.758s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm' for CMake config files
+[0.759s] Level 1:colcon.colcon_core.shell:create_environment_hook('csm', 'cmake_prefix_path')
+[0.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.ps1'
+[0.761s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.dsv'
+[0.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.sh'
+[0.763s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib'
+[0.764s] Level 1:colcon.colcon_core.shell:create_environment_hook('csm', 'ld_library_path_lib')
+[0.764s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.ps1'
+[0.765s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.dsv'
+[0.766s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.sh'
+[0.767s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/bin'
+[0.767s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib/pkgconfig/csm.pc'
+[0.768s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib/python3.10/site-packages'
+[0.768s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/bin'
+[0.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.ps1'
+[0.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/csm
+[0.770s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.dsv'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.sh'
+[0.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.bash'
+[0.772s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.zsh'
+[0.773s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/colcon-core/packages/csm)
+[0.774s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(csm)
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm' for CMake module files
+[0.775s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm' for CMake config files
+[0.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('csm', 'cmake_prefix_path')
+[0.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.ps1'
+[0.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.dsv'
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/cmake_prefix_path.sh'
+[0.779s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib'
+[0.779s] Level 1:colcon.colcon_core.shell:create_environment_hook('csm', 'ld_library_path_lib')
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.ps1'
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/hook/ld_library_path_lib.sh'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/bin'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib/pkgconfig/csm.pc'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib/python3.10/site-packages'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/bin'
+[0.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.dsv'
+[0.791s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.sh'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.bash'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/package.zsh'
+[0.794s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/colcon-core/packages/csm)
+[0.795s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2' for CMake module files
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2' for CMake config files
+[0.798s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/sllidar_ros2
+[0.799s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[0.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[0.800s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/bin'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib/python3.10/site-packages'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/bin'
+[0.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[0.804s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[0.806s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[0.807s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sllidar_ros2)
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2' for CMake module files
+[0.808s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2' for CMake config files
+[0.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('sllidar_ros2', 'cmake_prefix_path')
+[0.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.ps1'
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.dsv'
+[0.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/hook/cmake_prefix_path.sh'
+[0.812s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib'
+[0.813s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/bin'
+[0.813s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib/pkgconfig/sllidar_ros2.pc'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/lib/python3.10/site-packages'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/bin'
+[0.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.ps1'
+[0.816s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.dsv'
+[0.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.sh'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.bash'
+[0.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/sllidar_ros2/package.zsh'
+[0.823s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2/share/colcon-core/packages/sllidar_ros2)
+[0.825s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher' with build type 'ament_cmake'
+[0.825s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher'
+[0.826s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.826s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.832s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/ros2_laser_scan_matcher' with build type 'ament_cmake'
+[0.832s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/ros2_laser_scan_matcher'
+[0.833s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.833s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters -- -j8 -l8
+[0.845s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[0.846s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry' for CMake module files
+[0.846s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters
+[0.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry' for CMake config files
+[0.849s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[0.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[0.850s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[0.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib'
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/bin'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib/python3.10/site-packages'
+[0.852s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/bin'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[0.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[0.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[0.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[0.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[0.856s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[0.857s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[0.857s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry' for CMake module files
+[0.858s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry' for CMake config files
+[0.858s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[0.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/bin'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/lib/python3.10/site-packages'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/bin'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[0.865s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher -- -j8 -l8
+[0.883s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher -- -j8 -l8
+[0.933s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_filters)
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters' for CMake module files
+[0.935s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters' for CMake config files
+[0.937s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'cmake_prefix_path')
+[0.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.ps1'
+[0.938s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.dsv'
+[0.940s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.sh'
+[0.942s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib'
+[0.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'ld_library_path_lib')
+[0.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.ps1'
+[0.943s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.dsv'
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.sh'
+[0.945s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/bin'
+[0.945s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/pkgconfig/laser_filters.pc'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/python3.10/site-packages'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/bin'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.ps1'
+[0.948s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.dsv'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.sh'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.bash'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.zsh'
+[0.951s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/colcon-core/packages/laser_filters)
+[0.952s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(laser_filters)
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters' for CMake module files
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters' for CMake config files
+[0.954s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'cmake_prefix_path')
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.ps1'
+[0.956s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.dsv'
+[0.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/cmake_prefix_path.sh'
+[0.957s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib'
+[0.958s] Level 1:colcon.colcon_core.shell:create_environment_hook('laser_filters', 'ld_library_path_lib')
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.ps1'
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.dsv'
+[0.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/hook/ld_library_path_lib.sh'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/bin'
+[0.960s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/pkgconfig/laser_filters.pc'
+[0.960s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/python3.10/site-packages'
+[0.960s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/bin'
+[0.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.ps1'
+[0.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.dsv'
+[0.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.sh'
+[0.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.bash'
+[0.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.zsh'
+[0.965s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/colcon-core/packages/laser_filters)
+[1.076s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher -- -j8 -l8
+[1.079s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher
+[1.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher -- -j8 -l8
+[1.107s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher
+[1.126s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_laser_scan_matcher)
+[1.128s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher' for CMake module files
+[1.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/ros2_laser_scan_matcher
+[1.136s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher' for CMake config files
+[1.140s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_laser_scan_matcher', 'cmake_prefix_path')
+[1.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.ps1'
+[1.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.dsv'
+[1.145s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.sh'
+[1.147s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/bin'
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib/pkgconfig/ros2_laser_scan_matcher.pc'
+[1.149s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib/python3.10/site-packages'
+[1.151s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/bin'
+[1.153s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.ps1'
+[1.157s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.dsv'
+[1.161s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.sh'
+[1.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.bash'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.zsh'
+[1.167s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/colcon-core/packages/ros2_laser_scan_matcher)
+[1.170s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_laser_scan_matcher)
+[1.171s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher' for CMake module files
+[1.173s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher' for CMake config files
+[1.174s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_laser_scan_matcher', 'cmake_prefix_path')
+[1.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.ps1'
+[1.177s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.dsv'
+[1.178s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/hook/cmake_prefix_path.sh'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/bin'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib/pkgconfig/ros2_laser_scan_matcher.pc'
+[1.182s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/lib/python3.10/site-packages'
+[1.184s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/bin'
+[1.185s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.ps1'
+[1.187s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.dsv'
+[1.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.sh'
+[1.188s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.bash'
+[1.189s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/ros2_laser_scan_matcher/package.zsh'
+[1.189s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher/share/colcon-core/packages/ros2_laser_scan_matcher)
+[1.192s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plicp_map_matcher)
+[1.193s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher' for CMake module files
+[1.195s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher
+[1.196s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher' for CMake config files
+[1.197s] Level 1:colcon.colcon_core.shell:create_environment_hook('plicp_map_matcher', 'cmake_prefix_path')
+[1.197s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.ps1'
+[1.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.dsv'
+[1.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.sh'
+[1.201s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib'
+[1.201s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/bin'
+[1.201s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/pkgconfig/plicp_map_matcher.pc'
+[1.202s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/python3.10/site-packages'
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/bin'
+[1.203s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.ps1'
+[1.205s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.dsv'
+[1.206s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.sh'
+[1.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.bash'
+[1.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.zsh'
+[1.209s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/colcon-core/packages/plicp_map_matcher)
+[1.211s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plicp_map_matcher)
+[1.211s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher' for CMake module files
+[1.212s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher' for CMake config files
+[1.212s] Level 1:colcon.colcon_core.shell:create_environment_hook('plicp_map_matcher', 'cmake_prefix_path')
+[1.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.ps1'
+[1.214s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.dsv'
+[1.215s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/hook/cmake_prefix_path.sh'
+[1.216s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib'
+[1.216s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/bin'
+[1.216s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/pkgconfig/plicp_map_matcher.pc'
+[1.216s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/python3.10/site-packages'
+[1.217s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/bin'
+[1.218s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.ps1'
+[1.219s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.dsv'
+[1.220s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.sh'
+[1.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.bash'
+[1.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.zsh'
+[1.222s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/colcon-core/packages/plicp_map_matcher)
+[1.976s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg -- -j8 -l8
+[1.982s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
+[2.263s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_reality_pkg)
+[2.264s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg' for CMake module files
+[2.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
+[2.268s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg' for CMake config files
+[2.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_reality_pkg', 'cmake_prefix_path')
+[2.271s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.ps1'
+[2.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.dsv'
+[2.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.sh'
+[2.276s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib'
+[2.277s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/bin'
+[2.277s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/pkgconfig/amr_reality_pkg.pc'
+[2.278s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/python3.10/site-packages'
+[2.280s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/bin'
+[2.281s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.ps1'
+[2.284s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv'
+[2.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.sh'
+[2.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.bash'
+[2.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.zsh'
+[2.291s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/colcon-core/packages/amr_reality_pkg)
+[2.294s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_reality_pkg)
+[2.295s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg' for CMake module files
+[2.298s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg' for CMake config files
+[2.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_reality_pkg', 'cmake_prefix_path')
+[2.300s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.ps1'
+[2.302s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.dsv'
+[2.304s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/hook/cmake_prefix_path.sh'
+[2.306s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib'
+[2.306s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/bin'
+[2.307s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/pkgconfig/amr_reality_pkg.pc'
+[2.308s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/python3.10/site-packages'
+[2.310s] Level 1:colcon.colcon_core.environment:checking '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/bin'
+[2.311s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.ps1'
+[2.315s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv'
+[2.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.sh'
+[2.319s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.bash'
+[2.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.zsh'
+[2.323s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/colcon-core/packages/amr_reality_pkg)
+[2.324s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.325s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.325s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.325s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.329s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.331s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/local_setup.ps1'
+[2.350s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/_local_setup_util_ps1.py'
+[2.353s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/setup.ps1'
+[2.355s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/local_setup.sh'
+[2.356s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/_local_setup_util_sh.py'
+[2.357s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/setup.sh'
+[2.359s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/local_setup.bash'
+[2.360s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/setup.bash'
+[2.361s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/local_setup.zsh'
+[2.362s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/setup.zsh'

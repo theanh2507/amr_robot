@@ -1,0 +1,28 @@
+plicp_map_matcher:
+  ros__parameters:
+    scan_topic: "/scan_filtered"
+    odom_topic: "/odometry/filtered"
+    map_topic: "map"
+    amcl_pose_topic: "amcl_pose"
+    map_frame: "map"
+    odom_frame: "odom"
+    base_frame: "base_footprint"
+
+    outlier_eps_dist: 0.50     # met - loc nhieu (nguoi di lai, vat the dong)
+    min_valid_rays: 20         # so tia hop le toi thieu de chap nhan ket qua PLICP
+
+    csm:
+      max_iterations: 20
+      epsilon_xy: 0.001
+      epsilon_theta: 0.01
+      max_correspondence_dist: 0.3
+      max_angular_correction_deg: 45.0
+      max_linear_correction: 0.5
+      sigma: 0.01
+      orientation_neighbourhood: 20
+      outliers_maxPerc: 0.90
+
+    amcl_pose_timeout: 2.0
+    amcl_feedback_period: 1.0
+    amcl_feedback_stddev_xy: 0.05
+    amcl_feedback_stddev_yaw: 0.02

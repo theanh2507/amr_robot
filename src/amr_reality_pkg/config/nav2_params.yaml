@@ -1,11 +1,11 @@
 amcl:
   ros__parameters:
     use_sim_time: False                                         # gazebo: true
-    alpha1: 0.05                                                # nhieu do rotation gay ra cho rotation
-    alpha2: 0.4                                                 # nhieu do translation gay ra cho rotation
-    alpha3: 0.6                                                 # nhieu do translation gay ra cho translation
+    alpha1: 0.1                                                 # nhieu do rotation gay ra cho rotation
+    alpha2: 0.1                                                 # nhieu do translation gay ra cho rotation
+    alpha3: 0.2                                                 # nhieu do translation gay ra cho translation
     alpha4: 0.1                                                 # nhieu do rotation gay ra cho translation
-    alpha5: 0.2                                                 # danh cho robot kieu ommi
+    alpha5: 0.0                                                 # danh cho robot kieu ommi
     base_frame_id: "base_footprint"
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
@@ -18,29 +18,29 @@ amcl:
     # lidar de len buc tuong tren ban do -> likehood cao -> hat do duoc giu lai
     # lidar dam xuyen qua tuong va lech ra khoang trong -> likehood thap -> hat do bi loai bo
     laser_likelihood_max_dist: 2.0                              # khoang cach toi da 2m, tia laser tu lidar nam cach xa hon 2m so voi tuong cua ban do thi coi do la nhieu
-    laser_max_range: 10.0                                       # su dung gia tri laser toi da 10m
+    laser_max_range: 12.0                                       # su dung gia tri laser toi da 10m
     laser_min_range: 0.2                                        # su dung gia tri laser toi thieu 0.2m
     laser_model_type: "likelihood_field"
-    max_beams: 120                                              # so luong laser dung cho amcl
-    max_particles: 2000                                         # so luong hat toi da
+    max_beams: 360                                              # so luong laser dung cho amcl
+    max_particles: 5000                                         # so luong hat toi da
     min_particles: 500                                          # so luong hat toi thieu
-    odom_frame_id: "odom"
-    pf_err: 0.05                                                # sai so cho phep cua particle filter
+    odom_frame_id: "odom"                                       # tra cuu tf giua odom_frame->base_frame
+    pf_err: 0.1                                                 # sai so quan the hat toi da giua phan phoi thuc te va phan phoi uoc luong (de do do rong hep dam may particel filter)
     pf_z: 0.99                                                  # do tin cay
-    recovery_alpha_fast: 0.1
-    recovery_alpha_slow: 0.002
-    resample_interval: 1                                        # resample particle ( lay mau lai sau moi lan amcl cap nhat bo loc hat)
+    recovery_alpha_fast: 0.1                                    # toc do suy giam cho bo loc ham mu uoc tinh ngan han
+    recovery_alpha_slow: 0.002                                  # toc do suy giam cho bo loc ham mu uoc tinh dai han
+    resample_interval: 1                                        # amcl cap nhat lai trong so cua tat ca cac hat sau do moi tien hanh kld (phan bo) lai cac hat
     robot_model_type: "nav2_amcl::DifferentialMotionModel"
     save_pose_rate: 0.5                                         # tan suat luu pose (0.5 <=> 2 giay luu 1 lan)
     sigma_hit: 0.2                                              # do lech chuan 20cmm duoc xem xet trong mo hinh xac suat
-    tf_broadcast: true                                          # cho phep tf
-    transform_tolerance: 0.2                                    # cho phep 0.2 giay de xu ly tf
-    update_min_a: 0.2                                           # goc xoay can thiet de cap nhat bo loc (rad)
-    update_min_d: 0.3                                           # khoang cach tinh tien can di de cap nhat bo loc (m)
-    z_hit: 0.8                                                  # tia laser do dung (cang cao cang tin tuong vao do chinh xac cua lidar va moi truong thuc te va ban do co do khop cao)
+    tf_broadcast: true                                          # cho phep tf map -> odom
+    transform_tolerance: 0.5                                    # cho phep 0.2 giay de xu ly tf
+    update_min_a: 0.5                                           # goc xoay can thiet de cap nhat bo loc (rad)
+    update_min_d: 0.2                                           # khoang cach tinh tien can di de cap nhat bo loc (m)
+    z_hit: 0.95                                                 # tia laser do dung (cang cao cang tin tuong vao do chinh xac cua lidar va moi truong thuc te va ban do co do khop cao)
     z_max: 0.05                                                 # tia laser do khong phan hoi la hoac vuot qua gia tri max cua lidar
     z_rand: 0.05                                                # nhieu ngau nhien tao ra diem bat thuong
-    z_short: 0.1                                                # tia laser do ngan hon thuc te (tia laser dap vao vat can bat ngo nhu con nguoi, xe qua lai)
+    z_short: 0.05                                               # tia laser do ngan hon thuc te (tia laser dap vao vat can bat ngo nhu con nguoi, xe qua lai)
     scan_topic: /scan_filtered
 
 bt_navigator:
@@ -50,8 +50,9 @@ bt_navigator:
     robot_base_frame: base_footprint
     odom_topic: /odometry/filtered
     bt_loop_duration: 10
-    default_server_timeout: 20
-    wait_for_service_timeout: 1000
+    default_server_timeout: 50
+    wait_for_service_timeout: 2000
+    transform_tolerance: 1.0
     # 'default_nav_through_poses_bt_xml' and 'default_nav_to_pose_bt_xml' are use defaults:
     # nav2_bt_navigator/navigate_to_pose_w_replanning_and_recovery.xml
     # nav2_bt_navigator/navigate_through_poses_w_replanning_and_recovery.xml
@@ -114,83 +115,11 @@ bt_navigator_navigate_to_pose_rclcpp_node:
     use_sim_time: False
 
 
-# dung o local costmap tinh toan va ne vat can
-# controller_server:
-#   ros__parameters:
-#     use_sim_time: False
-#     controller_frequency: 20.0                            # tan so 20Hz tinh toan va gui van toc xuong dong co                       
-#     # costmap_update_timeout: 0.3
-#     min_x_velocity_threshold: 0.01                        # van toc duoi nguong nay duoc coi la dung yen, tranh rung lac, dao dong nho
-#     min_y_velocity_threshold: 0.01
-#     min_theta_velocity_threshold: 0.001
-#     failure_tolerance: 0.3
-#     progress_checker_plugin: "progress_checker"
-#     goal_checker_plugins: ["general_goal_checker"] # "precise_goal_checker"
-#     controller_plugins: ["FollowPath"]
-
-#     # Progress checker parameters                         # kiem tra robot co dang bi ket ko
-#     progress_checker:                                         
-#       plugin: "nav2_controller::SimpleProgressChecker"
-#       required_movement_radius: 0.5
-#       movement_time_allowance: 10.0                       # trong vong 10s ma robot ko di duoc 0.5m bao loi va behavior thuc hien recovery
-#     # Goal checker parameters
-#     #precise_goal_checker:
-#     #  plugin: "nav2_controller::SimpleGoalChecker"
-#     #  xy_goal_tolerance: 0.25
-#     #  yaw_goal_tolerance: 0.25
-#     #  stateful: True
-#     general_goal_checker:                                 # kiem tra robot toi dich chua
-#       stateful: True
-#       plugin: "nav2_controller::SimpleGoalChecker"
-#       xy_goal_tolerance: 0.1                              # m
-#       yaw_goal_tolerance: 0.1                             # rad
-#     # DWB parameters
-#     FollowPath:
-#       plugin: "dwb_core::DWBLocalPlanner"
-#       debug_trajectory_details: True
-#       min_vel_x: 0.0
-#       min_vel_y: 0.0
-#       max_vel_x: 0.26
-#       max_vel_y: 0.0
-#       max_vel_theta: 1.0
-#       min_speed_xy: 0.0
-#       max_speed_xy: 0.26
-#       min_speed_theta: 0.0
-#       # Add high threshold velocity for turtlebot 3 issue.
-#       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
-#       acc_lim_x: 2.5
-#       acc_lim_y: 0.0
-#       acc_lim_theta: 3.2
-#       decel_lim_x: -2.5
-#       decel_lim_y: 0.0
-#       decel_lim_theta: -3.2
-#       vx_samples: 20
-#       vy_samples: 5
-#       vtheta_samples: 20
-#       sim_time: 1.7
-#       linear_granularity: 0.05
-#       angular_granularity: 0.025
-#       transform_tolerance: 0.2
-#       xy_goal_tolerance: 0.25
-#       trans_stopped_velocity: 0.25
-#       short_circuit_trajectory_evaluation: True
-#       stateful: True
-#       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
-#       BaseObstacle.scale: 0.02
-#       PathAlign.scale: 32.0
-#       PathAlign.forward_point_distance: 0.1
-#       GoalAlign.scale: 24.0
-#       GoalAlign.forward_point_distance: 0.1
-#       PathDist.scale: 32.0
-#       GoalDist.scale: 24.0
-#       RotateToGoal.scale: 32.0
-#       RotateToGoal.slowing_factor: 5.0
-#       RotateToGoal.lookahead_time: -1.0
-
+# dung o local costmap (tinh toan local path va dieu khien)
 controller_server:
   ros__parameters:
     use_sim_time: False
-    controller_frequency: 3.0 
+    controller_frequency: 20.0 
     costmap_update_timeout: 0.3
     use_realtime_priority: True
     publish_zero_velocity: True
@@ -205,7 +134,7 @@ controller_server:
     odom_topic: "/odometry/filtered"
     odom_duration: 0.3
     enable_stamped_cmd_vel: False
-    bond_heartbeat_period: 0.1
+    bond_heartbeat_period: 0.5                                  # 2s gui hearbeat 1 lan cho lifecycle manager de bao lifecycle_manager van hoat dong binh thuong
     introspection_mode: "disabled"
     allow_parameter_qos_overrides: True
 
@@ -217,7 +146,7 @@ controller_server:
     # Goal checker parameters
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"              # den vi tri xy dung sai 0.2m va goc la 0.2 rad coi la toi dich
-      xy_goal_tolerance: 0.1
+      xy_goal_tolerance: 0.2
       yaw_goal_tolerance: 0.1
       stateful: True
 
@@ -227,20 +156,20 @@ controller_server:
      # Rotation Shim controller
       angular_dist_threshold: 0.5                               # nguong bat dau xoay tai cho, goc hien tai so voi path > 0.5 thi xoay tai cho  
       angular_disengage_threshold: 0.2                          # nguong nha xoay tra quyen dieu khien ve cho bo dieu khien chinh
-      forward_sampling_distance: 0.3            
+      forward_sampling_distance: 0.5            
       rotate_to_goal_heading: true                              # true: khi den dich shirm se dam nhan viec xoay robot ve dung huong, false: do bo dk chinh dk huong
-      max_angular_accel: 2.0 # Also used by RPP
-      rotate_to_heading_angular_vel: 0.4 # also used by RPP     # van toc goc yaw khi xoay tai cho
+      max_angular_accel: 3.0                                    # Also used by RPP
+      rotate_to_heading_angular_vel: 0.3 # also used by RPP     # gia toc goc yaw khi xoay tai cho
       simulate_ahead_time: 1.0                                  # thoi gian mo phong du doan va cham phia truoc
       closed_loop: true                                         # su dung odom de uoc tinh toc do hien tai
 
       # Regulated pure pursuit
-      desired_linear_vel: 0.5                                   # van toc lon nhat cua robot
-      lookahead_dist: 1.5                                       # only when use_velocity_scaled_lookahead_dist is False
+      desired_linear_vel: 0.6                                   # van toc lon nhat cua robot
+      lookahead_dist: 1.0                                       # only when use_velocity_scaled_lookahead_dist is False
       min_lookahead_dist: 0.5                                   # only when use_velocity_scaled_lookahead_dist is True
-      max_lookahead_dist: 1.0                                   # only when use_velocity_scaled_lookahead_dist is True
+      max_lookahead_dist: 1.5                                   # only when use_velocity_scaled_lookahead_dist is True
       lookahead_time: 1.0                                       # dung de tinh khoang cach look ahead (L=v*t)
-      transform_tolerance: 0.2                                  # qua 0.2 ko nhan duoc tf rpp bao loi
+      transform_tolerance: 0.5                                  # qua 0.2 ko nhan duoc tf rpp bao loi
       use_velocity_scaled_lookahead_dist: true                  # cho phep thay doi khoang cach look ahead, chay nhanh nhin xa, chay cham nhin gan
 
       min_approach_linear_velocity: 0.05                        # van toc toi thieu khi robot ham phanh khi gan ve dich
@@ -269,10 +198,108 @@ controller_server:
       allow_parameter_qos_overrides: true                       # cho phep cau hinh QoS
       min_distance_to_obstacle: -1.0                            # khoang cach toi thieu den vat can (-1: dung ban kinh footprint cua robot)
 
+
+
+# controller_server:
+#   ros__parameters:
+#     controller_frequency: 30.0
+#     FollowPath:
+#       plugin: "nav2_mppi_controller::MPPIController"
+#       time_steps: 56                                              # du doan vi tri robot trong 56 buoc thoi gian -> nhin truoc khoang 56 * 0.05(model_dt) = 2.8s
+#       model_dt: 0.05
+#       batch_size: 1000                                            # so trajectory mppi xem xet trong moi vong lap
+#       vx_std: 0.2                                                 # do lech chuan mppi sinh nhieu cho van toc vx (cang lon mppi kham pha cang nhieu quy dao voi van toc khac nhau)
+#       vy_std: 0.2
+#       wz_std: 0.2
+#       vx_max: 0.5
+#       vx_min: -0.35
+#       vy_max: 0.5
+#       wz_max: 1.0
+#       iteration_count: 1                                          # vong lap toi uu
+#       prune_distance: 1.5
+#       transform_tolerance: 0.1
+#       temperature: 0.3
+#       gamma: 0.015
+#       motion_model: "DiffDrive"
+#       visualize: true
+#       TrajectoryVisualizer:
+#         trajectory_step: 5
+#         time_step: 3
+#       AckermannConstraints:
+#         min_turning_r: 0.2
+#       critics: ["ConstraintCritic", "CostCritic", "GoalCritic", "GoalAngleCritic", "PathAlignCritic", "PathFollowCritic", "PathAngleCritic", "PreferForwardCritic"]
+      
+#       # dung de xu ly gioi han van toc/ chuyen dong nhu vx > vx_max, omega > omega_max
+#       ConstraintCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 4.0                                          # trong so cua critic
+
+#       # dung de danh gia xem trajectory nao dua robot gan goal hon
+#       GoalCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 5.0
+#         threshold_to_consider: 1.4                                # khi robot cach goal 1.4m thi critic bat dau xem xet cac trajectory
+
+#       # dung de xac dinh huong goal robot
+#       GoalAngleCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 3.0
+#         threshold_to_consider: 0.5
+
+#       # critic uu tien robot di tien hay di lui
+#       PreferForwardCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 5.0
+#         threshold_to_consider: 0.5
+#       # ObstaclesCritic:
+#       #   enabled: true
+#       #   cost_power: 1
+#       #   repulsion_weight: 1.5
+#       #   critical_weight: 20.0
+#       #   consider_footprint: false
+#       #   collision_cost: 10000.0
+#       #   collision_margin_distance: 0.1
+#       #   near_goal_distance: 0.5
+#       CostCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 3.81
+#         critical_cost: 300.0
+#         consider_footprint: true
+#         collision_cost: 1000000.0
+#         near_goal_distance: 1.0
+#       PathAlignCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 14.0
+#         max_path_occupancy_ratio: 0.05
+#         trajectory_point_step: 3
+#         threshold_to_consider: 0.5
+#         offset_from_furthest: 20
+#         use_path_orientations: false
+#       PathFollowCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 5.0
+#         offset_from_furthest: 5
+#         threshold_to_consider: 1.4
+#       PathAngleCritic:
+#         enabled: true
+#         cost_power: 1
+#         cost_weight: 2.0
+#         offset_from_furthest: 4
+#         threshold_to_consider: 0.5
+#         max_angle_to_furthest: 1.0
+#         forward_preference: true
+
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 5.0
+      update_frequency: 10.0
       publish_frequency: 5.0
       global_frame: odom
       robot_base_frame: base_footprint
@@ -280,7 +307,7 @@ local_costmap:
       rolling_window: true
       width: 3
       height: 3
-      resolution: 0.03
+      resolution: 0.05
       # robot_radius: 0.22
       footprint: "[ [0.35, 0.25], [0.35, -0.25], [-0.35, -0.25], [-0.35, 0.25] ]"
       plugins: ["voxel_layer", "inflation_layer"]
@@ -323,7 +350,7 @@ global_costmap:
       use_sim_time: False
       # robot_radius: 0.22
       footprint: "[ [0.35, 0.25], [0.35, -0.25], [-0.35, -0.25], [-0.35, 0.25] ]"
-      resolution: 0.03
+      resolution: 0.05
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
@@ -364,15 +391,16 @@ map_saver:
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: True
 
+# dung de tinh global path
 planner_server:
   ros__parameters:
-    expected_planner_frequency: 20.0
+    expected_planner_frequency: 5.0
     use_sim_time: False
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
-      use_astar: false                              # false: a start, true: dijikstra
+      use_astar: true                              # false: a start, true: dijikstra
       allow_unknown: true
 
 smoother_server:
@@ -403,7 +431,7 @@ behavior_server:
       plugin: "nav2_behaviors/AssistedTeleop"
     global_frame: odom
     robot_base_frame: base_footprint
-    transform_tolerance: 0.2
+    transform_tolerance: 0.5
     use_sim_time: False
     simulate_ahead_time: 2.0
     max_rotational_vel: 1.0
@@ -444,7 +472,7 @@ velocity_smoother:
 
 route_server:
   ros__parameters:
-    use_sim_time: true
+    use_sim_time: False
     graph_filepath: "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/ros_geograph_file_2026-08-08T07-49-16.759Z.json"
 
     # Plugin doc file path, mac dinh khi doc file geojson

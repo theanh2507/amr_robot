@@ -3,7 +3,7 @@ ekf_filter_node:
         # The frequency, in Hz, at which the filter will output a position estimate. Note that the filter will not begin
         # computation until it receives at least one message from one of the inputs. It will then run continuously at the
         # frequency specified here, regardless of whether it receives more measurements. Defaults to 30 if unspecified.
-        frequency: 50.0
+        frequency: 30.0
 
         # The period, in seconds, after which we consider a sensor to have timed out. In this event, we carry out a predict
         # cycle on the EKF without correcting it. This parameter can be thought of as the minimum frequency with which the
@@ -36,7 +36,7 @@ ekf_filter_node:
         # Whether to publish the acceleration state. Defaults to false if unspecified.
         publish_acceleration: false
 
-        # Whether to broadcast the transformation over the /tf topic. Defaults to true if unspecified.
+        # Whether to broadcast the transformation over the /tf topic. Defaults to true if unspecified.  (odom->base)
         publish_tf: true
 
         use_sim_time: false
@@ -104,16 +104,16 @@ ekf_filter_node:
                       false, false, true,                   # r, p, y
                       false, false, false,                  # vx, vy, vz
                       false, false, true,                   # vr, vp, vy
-                      true, false, false]                   # ax, ay, az
+                      false, false, false]                  # ax, ay, az
         imu0_differential: false
         imu0_remove_gravitational_acceleration: true        # loai bo thanh phan gia toc trong truong
 
 
 
-        # odom1: /odom_scan_cov
-        # odom1_config: [true, true, false,                   # x, y, z
-        #                false, false, false,                 # r, p, y
-        #                false, false, false,                 # vx, vy, vz
-        #                false, false, false,                 # vr, vp, vy
-        #                false, false, false]                 # ax, ay, az
-        # odom1_differential: false
+        odom1: /odom_rf2o
+        odom1_config: [false, false, false,                 # x, y, z
+                       false, false, false,                 # r, p, yaw
+                       true, true, false,                   # vx, vy, vz
+                       false, false, true,                  # vr, vp, vyaw
+                       false, false, false]                 # ax, ay, az
+        odom1_differential: false

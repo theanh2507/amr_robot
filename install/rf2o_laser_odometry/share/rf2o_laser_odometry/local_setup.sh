@@ -1,0 +1,1 @@
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/rf2o_laser_odometry/ament_cmake_environment_hooks/local_setup.sh

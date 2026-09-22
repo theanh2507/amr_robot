@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ff26fc5c128e5207fa6a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "plicp_map_matcher",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "plicp_map_matcher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plicp_map_matcher-fed89b22a398d9a8c949.json",
+					"name" : "plicp_map_matcher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "plicp_map_matcher_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plicp_map_matcher_uninstall-ce2599398b1fa3d50387.json",
+					"name" : "plicp_map_matcher_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1b363d9502fe5c5a979f.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher",
+		"source" : "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

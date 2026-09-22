@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher/plicp_map_matcher" "TARGETS" "plicp_map_matcher" "DESTINATION" "lib/plicp_map_matcher")

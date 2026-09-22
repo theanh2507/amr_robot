@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target plicp_map_matcher[0m
+[100%] Built target plicp_map_matcher
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/plicp_map_matcher/plicp_map_matcher
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/launch/plicp_map_matcher_launch.py
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/config/plicp_map_matcher_params.yaml
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/package_run_dependencies/plicp_map_matcher
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/parent_prefix_path/plicp_map_matcher
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/path.sh
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/path.dsv
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.bash
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.sh
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.zsh
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.dsv
+-- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.dsv
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/packages/plicp_map_matcher
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/cmake/plicp_map_matcherConfig.cmake
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/cmake/plicp_map_matcherConfig-version.cmake
+-- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.xml

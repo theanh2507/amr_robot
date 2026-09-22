@@ -224,41 +224,89 @@ robot_control/fast:
 .PHONY : robot_control/fast
 
 #=============================================================================
-# Target rules for targets named lidar_loc
+# Target rules for targets named plicp
 
 # Build rule for target.
-lidar_loc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lidar_loc
-.PHONY : lidar_loc
+plicp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 plicp
+.PHONY : plicp
 
 # fast build rule for target.
-lidar_loc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/build
-.PHONY : lidar_loc/fast
+plicp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/build
+.PHONY : plicp/fast
 
-src/src/lidar_loc.o: src/src/lidar_loc.cpp.o
-.PHONY : src/src/lidar_loc.o
+src/src/occupancy_grid_map_model.o: src/src/occupancy_grid_map_model.cpp.o
+.PHONY : src/src/occupancy_grid_map_model.o
 
 # target to build an object file
-src/src/lidar_loc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/src/src/lidar_loc.cpp.o
-.PHONY : src/src/lidar_loc.cpp.o
+src/src/occupancy_grid_map_model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/occupancy_grid_map_model.cpp.o
+.PHONY : src/src/occupancy_grid_map_model.cpp.o
 
-src/src/lidar_loc.i: src/src/lidar_loc.cpp.i
-.PHONY : src/src/lidar_loc.i
+src/src/occupancy_grid_map_model.i: src/src/occupancy_grid_map_model.cpp.i
+.PHONY : src/src/occupancy_grid_map_model.i
 
 # target to preprocess a source file
-src/src/lidar_loc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/src/src/lidar_loc.cpp.i
-.PHONY : src/src/lidar_loc.cpp.i
+src/src/occupancy_grid_map_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/occupancy_grid_map_model.cpp.i
+.PHONY : src/src/occupancy_grid_map_model.cpp.i
 
-src/src/lidar_loc.s: src/src/lidar_loc.cpp.s
-.PHONY : src/src/lidar_loc.s
+src/src/occupancy_grid_map_model.s: src/src/occupancy_grid_map_model.cpp.s
+.PHONY : src/src/occupancy_grid_map_model.s
 
 # target to generate assembly for a file
-src/src/lidar_loc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/src/src/lidar_loc.cpp.s
-.PHONY : src/src/lidar_loc.cpp.s
+src/src/occupancy_grid_map_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/occupancy_grid_map_model.cpp.s
+.PHONY : src/src/occupancy_grid_map_model.cpp.s
+
+src/src/plicp_localization_node.o: src/src/plicp_localization_node.cpp.o
+.PHONY : src/src/plicp_localization_node.o
+
+# target to build an object file
+src/src/plicp_localization_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/plicp_localization_node.cpp.o
+.PHONY : src/src/plicp_localization_node.cpp.o
+
+src/src/plicp_localization_node.i: src/src/plicp_localization_node.cpp.i
+.PHONY : src/src/plicp_localization_node.i
+
+# target to preprocess a source file
+src/src/plicp_localization_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/plicp_localization_node.cpp.i
+.PHONY : src/src/plicp_localization_node.cpp.i
+
+src/src/plicp_localization_node.s: src/src/plicp_localization_node.cpp.s
+.PHONY : src/src/plicp_localization_node.s
+
+# target to generate assembly for a file
+src/src/plicp_localization_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/plicp_localization_node.cpp.s
+.PHONY : src/src/plicp_localization_node.cpp.s
+
+src/src/point_to_line_icp.o: src/src/point_to_line_icp.cpp.o
+.PHONY : src/src/point_to_line_icp.o
+
+# target to build an object file
+src/src/point_to_line_icp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/point_to_line_icp.cpp.o
+.PHONY : src/src/point_to_line_icp.cpp.o
+
+src/src/point_to_line_icp.i: src/src/point_to_line_icp.cpp.i
+.PHONY : src/src/point_to_line_icp.i
+
+# target to preprocess a source file
+src/src/point_to_line_icp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/point_to_line_icp.cpp.i
+.PHONY : src/src/point_to_line_icp.cpp.i
+
+src/src/point_to_line_icp.s: src/src/point_to_line_icp.cpp.s
+.PHONY : src/src/point_to_line_icp.s
+
+# target to generate assembly for a file
+src/src/point_to_line_icp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/src/src/point_to_line_icp.cpp.s
+.PHONY : src/src/point_to_line_icp.cpp.s
 
 # Help Target
 help:
@@ -277,10 +325,16 @@ help:
 	@echo "... robot_control"
 	@echo "... robot_control_prepare"
 	@echo "... uninstall"
-	@echo "... lidar_loc"
-	@echo "... src/src/lidar_loc.o"
-	@echo "... src/src/lidar_loc.i"
-	@echo "... src/src/lidar_loc.s"
+	@echo "... plicp"
+	@echo "... src/src/occupancy_grid_map_model.o"
+	@echo "... src/src/occupancy_grid_map_model.i"
+	@echo "... src/src/occupancy_grid_map_model.s"
+	@echo "... src/src/plicp_localization_node.o"
+	@echo "... src/src/plicp_localization_node.i"
+	@echo "... src/src/plicp_localization_node.s"
+	@echo "... src/src/point_to_line_icp.o"
+	@echo "... src/src/point_to_line_icp.i"
+	@echo "... src/src/point_to_line_icp.s"
 .PHONY : help
 
 

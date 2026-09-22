@@ -1,0 +1,123 @@
+[0.042s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters -- -j8 -l8
+[0.152s] [35m[1mConsolidate compiler generated dependencies of target scan_to_cloud_filter_chain[0m
+[0.153s] [35m[1mConsolidate compiler generated dependencies of target laser_scan_filters[0m
+[0.159s] [35m[1mConsolidate compiler generated dependencies of target scan_to_scan_filter_chain[0m
+[0.180s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.182s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.205s] [  8%] Built target scan_to_cloud_filter_chain
+[0.209s] [ 16%] Built target scan_to_scan_filter_chain
+[0.226s] [ 24%] Built target gtest_main
+[0.236s] [ 32%] Built target gtest
+[0.240s] [ 40%] Built target laser_scan_filters
+[0.255s] [35m[1mConsolidate compiler generated dependencies of target test_shadow_detector[0m
+[0.259s] [35m[1mConsolidate compiler generated dependencies of target test_scan_shadows_filter[0m
+[0.271s] [35m[1mConsolidate compiler generated dependencies of target test_scan_filter_chain[0m
+[0.275s] [35m[1mConsolidate compiler generated dependencies of target test_speckle_filter[0m
+[0.276s] [ 48%] Built target test_shadow_detector
+[0.280s] [35m[1mConsolidate compiler generated dependencies of target laser_filter_chains[0m
+[0.280s] [35m[1mConsolidate compiler generated dependencies of target test_angular_bounds_filter[0m
+[0.353s] [ 64%] Built target test_speckle_filter
+[0.354s] [ 64%] Built target test_scan_filter_chain
+[0.355s] [ 72%] Built target test_scan_shadows_filter
+[0.356s] [ 80%] Built target test_angular_bounds_filter
+[0.372s] [ 92%] Built target laser_filter_chains
+[0.384s] [35m[1mConsolidate compiler generated dependencies of target generic_laser_filter_node[0m
+[0.415s] [100%] Built target generic_laser_filter_node
+[0.463s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters -- -j8 -l8
+[0.465s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters
+[0.489s] -- Install configuration: ""
+[0.491s] -- Execute custom install script
+[0.492s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/laser_filters/scan_to_cloud_filter_chain
+[0.493s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/laser_filters/scan_to_scan_filter_chain
+[0.493s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters//laser_filters_plugins.xml
+[0.497s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/angular_bounds_filter.h
+[0.498s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/angular_bounds_filter_in_place.h
+[0.499s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/array_filter.h
+[0.500s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/binning_filter.h
+[0.500s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/box_filter.h
+[0.501s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/footprint_filter.h
+[0.502s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/intensity_filter.h
+[0.502s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/interpolation_filter.h
+[0.505s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/median_filter.h
+[0.506s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/median_spatial_filter.h
+[0.507s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/polygon_filter.h
+[0.508s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/range_filter.h
+[0.509s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/scan_blob_filter.h
+[0.510s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/scan_mask_filter.h
+[0.511s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/scan_shadow_detector.h
+[0.514s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/scan_shadows_filter.h
+[0.514s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/sector_filter.h
+[0.515s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/include/laser_filters/speckle_filter.h
+[0.516s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/library_path.sh
+[0.518s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/library_path.dsv
+[0.519s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/liblaser_scan_filters.so
+[0.520s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/liblaser_filter_chains.so
+[0.521s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib/laser_filters/generic_laser_filter_node
+[0.522s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/angular_filter_example.launch.py
+[0.524s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/angular_filter_example.yaml
+[0.525s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/angular_filter_in_place_example.launch.py
+[0.526s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/angular_filter_in_place_example.yaml
+[0.527s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/bin_filter_example.launch.py
+[0.528s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/bin_filter_example.yaml
+[0.529s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/box_filter_example.launch.py
+[0.529s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/box_filter_example.yaml
+[0.530s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/footprint_filter_example.launch.py
+[0.531s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/footprint_filter_example.yaml
+[0.533s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/intensity_filter_example.launch.py
+[0.533s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/intensity_filter_example.yaml
+[0.534s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/mask_filter_example.launch.py
+[0.534s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/mask_filter_example.yaml
+[0.535s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/median_filter_example.launch.py
+[0.535s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/median_filter_example.yaml
+[0.536s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.py
+[0.537s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/median_spatial_filter.launch.xml
+[0.538s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/median_spatial_filter_example.yaml
+[0.538s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/multiple_filters_example.launch.py
+[0.539s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/multiple_filters_example.yaml
+[0.540s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/pass_through_example.launch.py
+[0.540s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/pass_through_example.yaml
+[0.541s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/polygon_filter_example.launch.py
+[0.541s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/polygon_filter_example.yaml
+[0.542s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/range_filter_example.launch.py
+[0.542s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/range_filter_example.yaml
+[0.543s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.launch.py
+[0.543s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/scan_blob_filter_example.yaml
+[0.544s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/sector_filter_example.launch.py
+[0.544s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/sector_filter_example.yaml
+[0.545s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/shadow_filter_example.launch.py
+[0.546s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/shadow_filter_example.yaml
+[0.551s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/speckle_filter_example.launch
+[0.552s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/examples/speckle_filter_example.yaml
+[0.553s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/fake_laser.py
+[0.554s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_angular_bounds_filter.cpp
+[0.556s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_polygon_filter.test.py
+[0.558s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_polygon_filter.yaml
+[0.559s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.cpp
+[0.560s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.launch
+[0.560s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_scan_filter_chain.yaml
+[0.561s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_scan_shadows_filter.cpp
+[0.561s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_shadow_detector.cpp
+[0.562s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_speckle_filter.cpp
+[0.563s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_speckle_filter.test.py
+[0.563s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/test/test_speckle_filter.yaml
+[0.564s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/ament_index/resource_index/package_run_dependencies/laser_filters
+[0.565s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/ament_index/resource_index/parent_prefix_path/laser_filters
+[0.565s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/ament_prefix_path.sh
+[0.566s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/ament_prefix_path.dsv
+[0.567s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/path.sh
+[0.567s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/environment/path.dsv
+[0.568s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/local_setup.bash
+[0.568s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/local_setup.sh
+[0.568s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/local_setup.zsh
+[0.569s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/local_setup.dsv
+[0.570s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.dsv
+[0.576s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/ament_index/resource_index/packages/laser_filters
+[0.577s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/ament_index/resource_index/filters__pluginlib__plugin/laser_filters
+[0.577s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/ament_index/resource_index/rclcpp_components/laser_filters
+[0.578s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.579s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.580s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/cmake/ament_cmake_export_libraries-extras.cmake
+[0.581s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig.cmake
+[0.583s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/cmake/laser_filtersConfig-version.cmake
+[0.584s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/share/laser_filters/package.xml
+[0.586s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/laser_filters

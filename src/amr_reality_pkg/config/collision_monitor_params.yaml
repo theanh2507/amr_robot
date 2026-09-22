@@ -1,17 +1,17 @@
 collision_monitor:
   ros__parameters:
     use_sim_time: false
+    autostart: true                                                     # tu dong dua node life cycle vao trang thai active
     base_frame_id: "base_footprint"
     odom_frame_id: "odom"
-    cmd_vel_in_topic: "diff_drive_controller/cmd_vel_unstamped"         # Topic vận tốc đầu vào (từ Nav2/Teleop)
+    cmd_vel_in_topic: "cmd_vel_mux"                                     # Topic vận tốc đầu vào (từ Nav2/Teleop)
     cmd_vel_out_topic: "diff_drive_controller/cmd_vel_unstamped"        # Topic vận tốc đầu ra (gửi tới motor driver)
     state_topic: "collision_monitor_state"
     transform_tolerance: 0.2
     source_timeout: 2.0
-    base_shift_correction: true
-    stop_pub_timeout: 2.0
+    base_shift_correction: true                                         # bu tru do tre giua thoi diem scan va thoi diem du lieu duoc xu ly
+    stop_pub_timeout: 2.0                                               # neu ko nhan duoc du lieu qua 2s coi nhu da mat cam bien, dung khan cap
 
-    # Khai báo các nguồn dữ liệu cảm biến
     observation_sources: ["scan"]
 
     scan:
@@ -19,22 +19,29 @@ collision_monitor:
       topic: "/scan_filtered"
       enabled: true
 
-    # Khai báo danh sách các vùng bảo vệ (Được ưu tiên theo thứ tự từ trên xuống dưới)
-    polygons: ["PolygonStop", "PolygonSlow"]
+    # polygons: ["PolygonStopFront", "PolygonStopBack", "PolygonSlow"]
+    polygons: ["PolygonStopFront", "PolygonSlow"]
 
-    # Stop Zone
-    PolygonStop:
+    # tinh tu base_link
+    PolygonStopFront:
       type: "polygon"
-      points: [0.4, 0.3,  0.4, -0.3,  -0.4, -0.3,  -0.4, 0.3]
+      points: [0.8, 0.4,  0.8, -0.4,  0.0, -0.4,  0.0, 0.4]
       action_type: "stop"
-      max_points: 3             # lon hon 3 diem cam bien trong vung robot dung lai
+      max_points: 3
       visualize: true
-      polygon_pub_topic: "polygon_stop"
+      polygon_pub_topic: "polygon_stop_front"
 
-    # Slowdown Zone
+    # PolygonStopBack:
+    #   type: "polygon"
+    #   points: [0.0, 0.4,  0.0, -0.4,  -0.4, -0.4,  -0.4, 0.4]
+    #   action_type: "stop"
+    #   max_points: 3
+    #   visualize: true
+    #   polygon_pub_topic: "polygon_stop_back"
+
     PolygonSlow:
       type: "polygon"
-      points: [0.8, 0.5,  0.8, -0.5,  -0.8, -0.5,  -0.8, 0.5]
+      points: [1.0, 0.4,  1.0, -0.4,  0.0, -0.4,  0.0, 0.4]
       action_type: "slowdown"
       slowdown_ratio: 0.3       
       max_points: 3

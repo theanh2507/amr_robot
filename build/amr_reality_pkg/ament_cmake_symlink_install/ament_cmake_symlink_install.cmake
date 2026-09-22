@@ -324,13 +324,13 @@ ament_cmake_symlink_install_directory("/home/orangepi/Robot_Project/AMR_Robot/am
 # install(DIRECTORY "launch" "descriptions" "DESTINATION" "share/amr_reality_pkg")
 ament_cmake_symlink_install_directory("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg" DIRECTORY "launch" "descriptions" "DESTINATION" "share/amr_reality_pkg")
 
-# install(FILES "config/ekf.yaml" "config/twist_mux.yaml" "config/laser_filter.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "DESTINATION" "share/amr_reality_pkg/config")
-ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg" FILES "config/ekf.yaml" "config/twist_mux.yaml" "config/laser_filter.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "DESTINATION" "share/amr_reality_pkg/config")
+# install(FILES "config/ekf.yaml" "config/twist_mux.yaml" "config/laser_filter.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "config/collision_monitor_params.yaml" "DESTINATION" "share/amr_reality_pkg/config")
+ament_cmake_symlink_install_files("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg" FILES "config/ekf.yaml" "config/twist_mux.yaml" "config/laser_filter.yaml" "config/nav2_params.yaml" "config/mapper_params_online_async.yaml" "config/collision_monitor_params.yaml" "DESTINATION" "share/amr_reality_pkg/config")
 
-# install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "scripts/cov_odom_scan.py" "DESTINATION" "lib/amr_reality_pkg")
-ament_cmake_symlink_install_programs("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "scripts/cov_odom_scan.py" "DESTINATION" "lib/amr_reality_pkg")
+# install(PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "scripts/cov_odom_scan.py" "scripts/publish_test_path.py" "DESTINATION" "lib/amr_reality_pkg")
+ament_cmake_symlink_install_programs("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg" PROGRAMS "scripts/ps4_teleop_node.py" "scripts/imu_tl740D.py" "scripts/cov_odom_scan.py" "scripts/publish_test_path.py" "DESTINATION" "lib/amr_reality_pkg")
 
-# install("TARGETS" "lidar_loc" "DESTINATION" "lib/amr_reality_pkg")
+# install("TARGETS" "plicp" "DESTINATION" "lib/amr_reality_pkg")
 include("/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

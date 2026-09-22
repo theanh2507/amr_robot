@@ -28,10 +28,12 @@
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/laser_filter.yaml
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/nav2_params.yaml
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/mapper_params_online_async.yaml
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/collision_monitor_params.yaml
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/ps4_teleop_node.py
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/imu_tl740D.py
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/cov_odom_scan.py
-/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/lidar_loc
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/publish_test_path.py
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/plicp
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/ament_index/resource_index/parent_prefix_path/amr_reality_pkg
 /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.sh

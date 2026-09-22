@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_re
 # The main recursive "all" target.
 all: CMakeFiles/robot_control_prepare.dir/all
 all: CMakeFiles/robot_control.dir/all
-all: CMakeFiles/lidar_loc.dir/all
+all: CMakeFiles/plicp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -77,7 +77,7 @@ clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/amr_reality_pkg_uninstall.dir/clean
 clean: CMakeFiles/robot_control_prepare.dir/clean
 clean: CMakeFiles/robot_control.dir/clean
-clean: CMakeFiles/lidar_loc.dir/clean
+clean: CMakeFiles/plicp.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -185,30 +185,30 @@ CMakeFiles/robot_control.dir/clean:
 .PHONY : CMakeFiles/robot_control.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lidar_loc.dir
+# Target rules for target CMakeFiles/plicp.dir
 
 # All Build rule for target.
-CMakeFiles/lidar_loc.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num=1,2 "Built target lidar_loc"
-.PHONY : CMakeFiles/lidar_loc.dir/all
+CMakeFiles/plicp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles --progress-num=1,2,3,4 "Built target plicp"
+.PHONY : CMakeFiles/plicp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lidar_loc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lidar_loc.dir/all
+CMakeFiles/plicp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/plicp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg/CMakeFiles 0
-.PHONY : CMakeFiles/lidar_loc.dir/rule
+.PHONY : CMakeFiles/plicp.dir/rule
 
 # Convenience name for target.
-lidar_loc: CMakeFiles/lidar_loc.dir/rule
-.PHONY : lidar_loc
+plicp: CMakeFiles/plicp.dir/rule
+.PHONY : plicp
 
 # clean rule for target.
-CMakeFiles/lidar_loc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_loc.dir/build.make CMakeFiles/lidar_loc.dir/clean
-.PHONY : CMakeFiles/lidar_loc.dir/clean
+CMakeFiles/plicp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/plicp.dir/build.make CMakeFiles/plicp.dir/clean
+.PHONY : CMakeFiles/plicp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

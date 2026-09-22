@@ -1,0 +1,1 @@
+/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher/ament_cmake_environment_hooks/local_setup.zsh

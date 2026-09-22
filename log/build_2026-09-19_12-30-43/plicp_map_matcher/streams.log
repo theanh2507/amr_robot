@@ -1,0 +1,71 @@
+[0.027s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher
+[0.168s] -- The C compiler identification is GNU 11.4.0
+[0.314s] -- The CXX compiler identification is GNU 11.4.0
+[0.344s] -- Detecting C compiler ABI info
+[0.556s] -- Detecting C compiler ABI info - done
+[0.597s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.598s] -- Detecting C compile features
+[0.599s] -- Detecting C compile features - done
+[0.605s] -- Detecting CXX compiler ABI info
+[0.837s] -- Detecting CXX compiler ABI info - done
+[0.877s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.878s] -- Detecting CXX compile features
+[0.880s] -- Detecting CXX compile features - done
+[0.886s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.163s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.291s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.407s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.484s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.496s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.516s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.542s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.574s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.682s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[1.768s] -- Found rmw_implementation_cmake: 6.1.3 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.775s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.986s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.027s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.087s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.101s] -- Looking for pthread.h
+[2.314s] -- Looking for pthread.h - found
+[2.314s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.530s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.534s] -- Found Threads: TRUE  
+[2.634s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.664s] -- Found tf2_ros: 0.25.22 (/opt/ros/humble/share/tf2_ros/cmake)
+[2.844s] -- Found tf2_geometry_msgs: 0.25.22 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.867s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.869s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.870s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.873s] -- Found csm: 0.0.0 (/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/share/csm/cmake)
+[3.016s] -- Configuring done
+[3.039s] -- Generating done
+[3.046s] -- Build files have been written to: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher
+[3.066s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher
+[3.071s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher -- -j8 -l8
+[3.228s] [ 50%] [32mBuilding CXX object CMakeFiles/plicp_map_matcher.dir/src/plicp_map_matcher.cpp.o[0m
+[32.799s] [100%] [32m[1mLinking CXX executable plicp_map_matcher[0m
+[35.252s] [100%] Built target plicp_map_matcher
+[35.285s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher -- -j8 -l8
+[35.291s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher
+[35.315s] -- Install configuration: ""
+[35.316s] -- Execute custom install script
+[35.317s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/lib/plicp_map_matcher/plicp_map_matcher
+[35.348s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/launch/plicp_map_matcher_launch.py
+[35.376s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/config/plicp_map_matcher_params.yaml
+[35.403s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/package_run_dependencies/plicp_map_matcher
+[35.432s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/parent_prefix_path/plicp_map_matcher
+[35.459s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/ament_prefix_path.sh
+[35.488s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/ament_prefix_path.dsv
+[35.513s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/path.sh
+[35.541s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/environment/path.dsv
+[35.568s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.bash
+[35.596s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.sh
+[35.623s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.zsh
+[35.649s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/local_setup.dsv
+[35.675s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.dsv
+[35.702s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/ament_index/resource_index/packages/plicp_map_matcher
+[35.729s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/cmake/plicp_map_matcherConfig.cmake
+[35.756s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/cmake/plicp_map_matcherConfig-version.cmake
+[35.782s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher/share/plicp_map_matcher/package.xml
+[35.817s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher' returned '0': CMAKE_PREFIX_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/sllidar_ros2:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/ros2_laser_scan_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/rf2o_laser_odometry:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/plicp_map_matcher:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_sim_pkg:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/csm/lib:/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/laser_filters/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/plicp_map_matcher

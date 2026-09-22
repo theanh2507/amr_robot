@@ -17,9 +17,11 @@ slam_toolbox:
     scan_topic: /scan_filtered
     use_map_saver: true                                                     # cho phep luu map
 
-    mode: localization                                                      # mapping
-    map_file_name: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong3
-    map_start_pose: [0.0, 0.0, 0.0]                                         # [x, y, yaw] vi tri khoi dau du kien tren map
+    mode: mapping
+
+    # mode: localization                                                           # mapping     localization
+    # map_file_name: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/maps/map_xuong_1509
+    # map_start_pose: [0.0, 0.0, 0.0]                                         # [x, y, yaw] vi tri khoi dau du kien tren map
 
     # map_start_pose: [0.0, 0.0, 0.0]
     # map_start_at_dock: true
@@ -32,17 +34,17 @@ slam_toolbox:
     # map_start_at_dock: true
 
     debug_logging: false
-    throttle_scans: 1
+    throttle_scans: 2
     transform_publish_period: 0.02 #if 0 never publishes odometry           # tan so publish map -> odom (50Hz)      
-    map_update_interval: 3.0                                                # map duoc update moi 3s 1 lan
-    resolution: 0.03                                                        # do phan giai, moi pixel tuong duong 3cm
+    map_update_interval: 2.0                                                # map duoc update moi 2s 1 lan
+    resolution: 0.05                                                        # do phan giai, moi pixel tuong duong 3cm
     min_laser_range: 0.3  #for rastering images
     max_laser_range: 12.0 #for rastering images
     minimum_time_interval: 0.5                                              # khoang thoi gian quet giua cac lan o che do sync
-    transform_timeout: 0.2                                                  # khoang thoi gian cho timeout cho tf: 200ms
+    transform_timeout: 0.5                                                  # khoang thoi gian cho timeout cho tf: 200ms
     tf_buffer_duration: 30.0                                                # tf_buffer du du lieu trong vong 30s
     stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
-    enable_interactive_mode: false                                           # bat che do tuong tac voi rviz
+    enable_interactive_mode: true                                           # bat che do tuong tac voi rviz
 
     # General Parameters
     use_scan_matching: true
@@ -53,22 +55,22 @@ slam_toolbox:
     # minimum_travel_distance: 0.4    # m                                       # 
     # minimum_travel_heading: 0.3     # rad                                     #
 
-    minimum_travel_distance: 0.2      # m                                       # 
+    minimum_travel_distance: 0.2      # m                                       # add posegraph
     minimum_travel_heading: 0.1       # rad                                     #
 
-    scan_buffer_size: 10                                                      # giu toi da 10 scan trong buffer
+    scan_buffer_size: 10                                                        # giu toi da 10 scan trong buffer
     scan_buffer_maximum_scan_distance: 10.0
     link_match_minimum_response_fine: 0.8
     link_scan_maximum_distance: 1.5
 
     # ── Loop closure ─────────────────────────────────────────────────────
     # Search radius for loop closure candidates
-    loop_search_maximum_distance: 15.0                                        # slam tim kiem loop close trong pham vi 15m de dinh vi vi tri robot
+    loop_search_maximum_distance: 5.0                                         # slam tim kiem loop close trong pham vi 15m de dinh vi vi tri robot
     do_loop_closing: true                                                     # thuc hien so khop dong vong lap
     loop_match_minimum_chain_size: 10                                         # chi loop close khi xac nhan 10 lan quet lien tiep so khop thanh cong
     loop_match_maximum_variance_coarse: 3.0                                   
-    loop_match_minimum_response_coarse: 0.25                                  # tim kiem so khop tho (do chinh xac lon hon 30% thi tien hanh so khop fine)                  
-    loop_match_minimum_response_fine: 0.65                                    # do chinh xac so khop lon hon 80% moi xac nhan loop close
+    loop_match_minimum_response_coarse: 0.45                                  # tim kiem so khop tho (do chinh xac lon hon 30% thi tien hanh so khop fine)                  
+    loop_match_minimum_response_fine: 0.6                                     # do chinh xac so khop lon hon 80% moi xac nhan loop close
 
     # Correlation Parameters - Correlation Parameters (Local Scan Matching))
     correlation_search_space_dimension: 1.0                                   # khong gian tim kiem cua scan matching, sua loi trong o vuong 1m*1m quanh odom
@@ -76,7 +78,7 @@ slam_toolbox:
     correlation_search_space_smear_deviation: 0.1                             # giam de slam tin vao du lieu lidar hon odom, tranh bi troi                       
 
     # Correlation Parameters - Loop Closure Parameters 
-    loop_search_space_dimension: 10.0                                         # kich thuoc o vuong 10*10 de slam tim kiem loop close
+    loop_search_space_dimension: 8.0                                          # kich thuoc o vuong 10*10 de slam tim kiem loop close
     loop_search_space_resolution: 0.05                                        
     loop_search_space_smear_deviation: 0.05                                   # do lam min, giam bot anh huong hieu cua lidar 
 
