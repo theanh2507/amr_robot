@@ -66,6 +66,7 @@ struct Pose2D
   Pose2D(double x_, double y_, double theta_)
   : x(x_), y(y_), theta(theta_) {}
 
+  // chuyen doi pose sang ma tran dong nhat 3x3 (vi tri va huong)
   Eigen::Matrix3d toMatrix() const
   {
     Eigen::Matrix3d m = Eigen::Matrix3d::Identity();
@@ -76,6 +77,7 @@ struct Pose2D
     return m;
   }
 
+  // thu nguoc pose tu ma tran 3x3
   static Pose2D fromMatrix(const Eigen::Matrix3d & m)
   {
     Pose2D p;
@@ -85,14 +87,20 @@ struct Pose2D
     return p;
   }
 
+  // nghich dao pose (pose T trong he toa do B chuyen sang toa do A (T_A->B) thi T^-1 se la T_B->A)
+  // vi du T dang la pose lidar trong he map (T_map_lidar) -> T^-1 se la T_lidar_map
   Pose2D inverse() const {return fromMatrix(toMatrix().inverse());}
 
   // this ⊕ other (ap dung other truoc, roi den this)
+  // cong hai he pose (he toa do noi tiep)
   Pose2D compose(const Pose2D & other) const
   {
-    return fromMatrix(toMatrix() * other.toMatrix());
+    return fromMatrix(this->toMatrix() * other.toMatrix());
   }
 };
+
+// const Pose2D delta = last_odom_.inverse().compose(current_odom);
+// estimated_pose_ = estimated_pose_.compose(delta);
 
 // ============================================================================
 // Node chinh
@@ -261,7 +269,9 @@ private:
     if (has_last_odom_) {
       // Lan truyen uoc luong bang chuyen dong odometry (motion update) - dung khi
       // chua co pose moi tu AMCL hoac PLICP giua hai lan cap nhat.
-      const Pose2D delta = last_odom_.inverse().compose(current_odom);
+
+      // last_odom = T_odom_last (bien doi khung odom sang vi tri robot o thoi diem truoc)
+      const Pose2D delta = last_odom_.inverse().compose(current_odom);              // delta = T_last_odom * T_odom_current (== T_last_current)
       estimated_pose_ = estimated_pose_.compose(delta);
     }
     last_odom_ = current_odom;
@@ -316,8 +326,8 @@ private:
     int n_valid = 0;
     double angle = msg->angle_min;
 
-    Pose2D T_base_laser(laser_x_offset_, laser_y_offset_, laser_yaw_offset_);
-    Pose2D laser_pose_map = guess.compose(T_base_laser);
+    Pose2D T_base_laser(laser_x_offset_, laser_y_offset_, laser_yaw_offset_);       // tim laser trong he toa do base   T_base_laser
+    Pose2D laser_pose_map = guess.compose(T_base_laser);                            // tim laser trong he map           T_map_laser = T_map_base * T_base_laser
 
     // giu nguyen du lieu tap P o he local, bien doi du lieu tap Q tu global sang local 
     for (int i = 0; i < n; ++i, angle += msg->angle_increment) {
@@ -365,7 +375,7 @@ private:
       RCLCPP_WARN_THROTTLE(
         get_logger(), *get_clock(), 2000,
         "Qua it tia hop le sau loc nhieu (%d) - dua vao AMCL/odometry.", n_valid);
-      publishTf(guess, odom_pose, msg->header.stamp);
+      // publishTf(guess, odom_pose, msg->header.stamp);
       return;
     }
 
@@ -384,19 +394,20 @@ private:
     input.laser_sens = lidar_cloud_ldp;   // DU LIEU dang xet la LIDAR (dm)
 
     // do lech uoc luong ban dau giua laser_ref va laser_sens (do map_cloud va lidar_cloud deu duoc xay dung dua tren 1 pose gia dinh guess)
-    input.first_guess[0] = 0.0;           // deltaX
-    input.first_guess[1] = 0.0;           // deltaY
-    input.first_guess[2] = 0.0;           // delta theta
+    input.first_guess[0] = 0.0;                                                   // deltaX
+    input.first_guess[1] = 0.0;                                                   // deltaY
+    input.first_guess[2] = 0.0;                                                   // delta theta
 
     // input.min_reading = 0.0;
     input.min_reading = msg->range_min;                                           // khoang cach do nho nhat de csm chap nhan lam input
     input.max_reading = msg->range_max;                                           // khoang cach do lon nhat de csm chap nhan lam input
     input.max_angular_correction_deg = csm_max_angular_correction_deg_;           // do xoay toi da csm cho phep tim so khop (!!!)
     input.max_linear_correction = csm_max_linear_correction_;                     // khoang cach di chuyen toi da giua 2 lan so khop (!!!)
-    input.max_iterations = csm_max_iterations_;                                   // so vong lap pl-icp 
+
+    input.max_iterations = csm_max_iterations_;                                   // so vong lap pl-icp (delta x,y nho hon nguong thi coi la hoi tu -> dung thuat toan)
     input.epsilon_xy = csm_epsilon_xy_;                                           // dieu kien dung thuat toan phuong tinh tien (!!!)
     input.epsilon_theta = csm_epsilon_theta_;                                     // dieu kien dung thuat toan goc xoay (!!!)
-    input.max_correspondence_dist = csm_max_correspondence_dist_;                 // nguong xet 2 diem duoc coi la khop nhau (correspondence) (!!!)
+    input.max_correspondence_dist = csm_max_correspondence_dist_;                 // nguong xet 2 diem duoc coi la cap diem tuong ung giua 2 lan quet (correspondence) (!!!) khi residual cua 2 point nho hon nguong nay thi coi 2 point do la 1 cap
     input.sigma = csm_sigma_;                                                     // do nhieu (uncertainly) cua measurament (sigma nho: tin tuong vao gia tri quet cua lidar)
     input.use_corr_tricks = 1;                                                    // use smart tricks for finding correspondences
     input.restart = 0;                                                            // cho phep thuat toan restart trong 1 so truong hop khong hoi tu (1: restart, 0: khong restart)
@@ -405,7 +416,7 @@ private:
     input.use_point_to_line_distance = 1;                                         // bat dung PLICP (Censi)
     input.do_alpha_test = 0;  
     input.outliers_maxPerc = csm_outliers_maxPerc_;                               // ty le outlier toi da co the loai bo (!!!)
-    input.outliers_adaptive_order = 0.7;                                          
+    input.outliers_adaptive_order = 0.7;
     input.outliers_adaptive_mult = 2.0;
     input.do_visibility_test = 0;
     input.outliers_remove_doubles = 1;                                            // 1: loai bo cac correspondence trung lap
@@ -417,10 +428,10 @@ private:
     sm_icp(&input, &output);
 
     Pose2D final_pose = guess;
-    if (output.valid)                                                             // kiem tra xem thuat toan co hoi tu ko
+    if (output.valid)                                                                 // kiem tra xem thuat toan co hoi tu ko
     {
       // luong hieu chinh
-      // const Pose2D correction(output.x[0], output.x[1], output.x[2]);             // tra ve do lech trong he toa do local (delta x, delta y, delta theta)
+      // const Pose2D correction(output.x[0], output.x[1], output.x[2]);              // tra ve do lech trong he toa do local (delta x, delta y, delta theta)
       // // thuc hien nhan 2 ma tran 3x3 voi nhau (T_final = T_guess * T_delta)
       // final_pose = guess.compose(correction);                                     
       // {
@@ -430,12 +441,12 @@ private:
 
     const Pose2D laser_correction(output.x[0], output.x[1], output.x[2]);
     
-    // Update pose của Laser trong Map
-    Pose2D final_laser_pose = laser_pose_map.compose(laser_correction);
+    // Update lai pose của Laser trong Map sau khi so khop
+    Pose2D final_laser_pose = laser_pose_map.compose(laser_correction);               
     
     // Suy ra ngược lại pose của base_footprint trong Map:
     // T_map_base = T_map_laser ⊕ (T_base_laser)^(-1)
-    final_pose = final_laser_pose.compose(T_base_laser.inverse());
+    final_pose = final_laser_pose.compose(T_base_laser.inverse());                    // tim toa do base trong map, T_map_base = T_map_laser * (T_base_laser)^-1
 
     std::lock_guard<std::mutex> lock(mutex_);
     estimated_pose_ = final_pose;
@@ -455,7 +466,8 @@ private:
     ld_free(map_cloud_ldp);
     ld_free(lidar_cloud_ldp);
 
-    publishTf(final_pose, odom_pose, msg->header.stamp);
+    // xuat tf map->odom (tat de cho amcl pub tf map->odom)
+    // publishTf(final_pose, odom_pose, msg->header.stamp); 
   }
 
   // --------------------------------------------------------------------
@@ -620,19 +632,19 @@ bool ensureLaserTf()
   std::string map_frame_, odom_frame_, base_frame_;
 
 
-  // gan gia tri mac dinh 
-  double outlier_eps_dist_{0.5};
-  int min_valid_rays_{20};
+  // gan gia tri mac dinh
+  int min_valid_rays_{30};
+  double outlier_eps_dist_{0.3};
 
   int csm_max_iterations_{25};
-  double csm_epsilon_xy_{1e-2};
-  double csm_epsilon_theta_{1e-1};
-  double csm_max_correspondence_dist_{1.0};
-  double csm_max_angular_correction_deg_{45.0};
-  double csm_max_linear_correction_{0.8};
+  double csm_epsilon_xy_{1e-5};
+  double csm_epsilon_theta_{1e-5};
+  double csm_max_correspondence_dist_{0.1};
+  double csm_max_angular_correction_deg_{30.0};
+  double csm_max_linear_correction_{0.5};
   double csm_sigma_{0.1};
   int csm_orientation_neighbourhood_{20};
-  double csm_outliers_maxPerc_{0.70};
+  double csm_outliers_maxPerc_{0.80};
 
   double amcl_pose_timeout_{2.0};
   double amcl_feedback_period_{1.0};

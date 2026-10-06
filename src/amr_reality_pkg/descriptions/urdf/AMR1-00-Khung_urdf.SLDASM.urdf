@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="AMR1-00-Khung_urdf.SLDASM">
+
+  <!-- ADD BASE_FOOTPRINT-->
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <!-- offset_z_cua_base_link chính là độ cao từ mặt đất lên đến tâm base_link của bạn -->
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00279878783034943 0.000349136462393707 0.0530223374688259"
+        rpy="0 0 0" />
+      <mass
+        value="10.5112582754106" />
+      <inertia
+        ixx="0.0703590178791575"
+        ixy="-3.37517653099426E-06"
+        ixz="1.03652413426658E-07"
+        iyy="0.164662641495289"
+        iyz="5.72979483332576E-08"
+        izz="0.224100335228083" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Left_Link">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 1.73870826358988E-05 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.575934835821199" />
+      <inertia
+        ixx="0.00087589921824093"
+        ixy="-3.76432534478882E-19"
+        ixz="6.79202136870355E-20"
+        iyy="0.0016488162374295"
+        iyz="-2.92852847904531E-20"
+        izz="0.00087589921824093" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Joint"
+    type="continuous">
+    <origin
+      xyz="0.000867529754259258 0.2555 0.0554645048190109"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="19"
+      velocity="0" />
+  </joint>
+  <link
+    name="Right_Link">
+    <inertial>
+      <origin
+        xyz="-3.46944695195361E-18 -1.7387082635878E-05 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.5759348358212" />
+      <inertia
+        ixx="0.000875899218240932"
+        ixy="-4.63055680129818E-19"
+        ixz="1.02362064487779E-19"
+        iyy="0.0016488162374295"
+        iyz="-1.65269688734498E-19"
+        izz="0.000875899218240932" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_joint"
+    type="continuous">
+    <origin
+      xyz="0.00086753 -0.2555 0.055465"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_Link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="19"
+      velocity="0" />
+  </joint>
+  <link
+    name="Lidar_Link">
+    <inertial>
+      <origin
+        xyz="-0.00301780247155942 -2.13106155008136E-05 -0.0255486575312154"
+        rpy="0 0 0" />
+      <mass
+        value="0.199872995132082" />
+      <inertia
+        ixx="0.0001391310838615"
+        ixy="2.62084147417229E-08"
+        ixz="2.42545641275738E-06"
+        iyy="0.000136736046161428"
+        iyz="-4.77180638444419E-08"
+        izz="9.17012877956289E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lidar_Joint"
+    type="fixed">
+    <origin
+      xyz="0.33636 0 0.1326"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Yaw_Front_Left_Link">
+    <inertial>
+      <origin
+        xyz="0.0148205227516305 -1.28853555976527E-06 -0.046451385428168"
+        rpy="0 0 0" />
+      <mass
+        value="0.317263848923435" />
+      <inertia
+        ixx="0.000223317298267878"
+        ixy="1.58305698159497E-08"
+        ixz="1.24868278086581E-05"
+        iyy="0.000249460460904027"
+        iyz="-1.66771223948785E-08"
+        izz="0.000211421163836343" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Front_Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Front_Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Yaw_Front_Left_Joint"
+    type="fixed">
+    <origin
+      xyz="0.29512 0.199 0.076436"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Yaw_Front_Left_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Yaw_Front_Right_Link">
+    <inertial>
+      <origin
+        xyz="0.0148205227516303 -1.28853555969588E-06 -0.0464513854281679"
+        rpy="0 0 0" />
+      <mass
+        value="0.317263848923433" />
+      <inertia
+        ixx="0.000223317298267878"
+        ixy="1.58305698158915E-08"
+        ixz="1.24868278086581E-05"
+        iyy="0.000249460460904026"
+        iyz="-1.66771223949379E-08"
+        izz="0.000211421163836342" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Front_Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Front_Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Yaw_Front_Right_Joint"
+    type="fixed">
+    <origin
+      xyz="0.29512 -0.199 0.076436"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Yaw_Front_Right_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Yaw_Behind_Left_Link">
+    <inertial>
+      <origin
+        xyz="0.0148205227516304 -1.28853555972364E-06 -0.046451385428168"
+        rpy="0 0 0" />
+      <mass
+        value="0.317263848923435" />
+      <inertia
+        ixx="0.000223317298267878"
+        ixy="1.58305698158977E-08"
+        ixz="1.24868278086581E-05"
+        iyy="0.000249460460904027"
+        iyz="-1.6677122394921E-08"
+        izz="0.000211421163836343" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Behind_Left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Behind_Left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Yaw_Behind_Left_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.29488 0.199 0.076436"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Yaw_Behind_Left_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Yaw_Behind_Right_Link">
+    <inertial>
+      <origin
+        xyz="0.0148205227516304 -1.28853555964037E-06 -0.046451385428168"
+        rpy="0 0 0" />
+      <mass
+        value="0.317263848923434" />
+      <inertia
+        ixx="0.000223317298267878"
+        ixy="1.58305698159303E-08"
+        ixz="1.24868278086581E-05"
+        iyy="0.000249460460904026"
+        iyz="-1.6677122394978E-08"
+        izz="0.000211421163836342" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Behind_Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Yaw_Behind_Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Yaw_Behind_Right_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.29488 -0.199 0.076436"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Yaw_Behind_Right_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Imu_Link">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 0 -0.00297319248852461"
+        rpy="0 0 0" />
+      <mass
+        value="0.0811739569825906" />
+      <inertia
+        ixx="2.47712711705124E-05"
+        ixy="-1.08567455397585E-21"
+        ixz="2.35935183908199E-21"
+        iyy="2.47712711705124E-05"
+        iyz="-5.79317178874105E-21"
+        izz="3.89013899986479E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Imu_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find amr_reality_pkg)/descriptions/meshes_2/Imu_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Imu_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.0328824702457415 0 0.0312500000000002"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Imu_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

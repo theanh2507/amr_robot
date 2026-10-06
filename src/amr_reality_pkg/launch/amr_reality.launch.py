@@ -255,7 +255,7 @@ def generate_launch_description():
     
 
     return LaunchDescription([
-        DeclareLaunchArgument('use_sim_time', default_value='true', description='Use sim time if true'),
+        DeclareLaunchArgument('use_sim_time', default_value='false', description='Use sim time if true'),
         control_node,
         node_robot_state_publisher,
         joint_state_broadcaster_spawner,
@@ -268,13 +268,12 @@ def generate_launch_description():
         # odom_scan_cov_node,
         # lidar_loc_node,
         robot_localization,
+
         lifecycle_manager_node,
         collision_node,
+        
         ps4_node,
         twist_mux_node,
-        # rviz_node,
-        # gazebo,
-        # spawn_entity_gazebo,
     ])
 
 
@@ -371,3 +370,13 @@ def generate_launch_description():
 
 # # 2. Kích hoạt lại controller
 # ros2 service call /controller_manager/switch_controllers controller_manager_msgs/srv/SwitchControllers "{activate_controllers: ['diff_drive_controller'], strictness: 1}"
+
+# sick tim
+# ros2 launch sick_scan_xd sick_tim_5xx.launch.py \
+#   hostname:=192.168.10.100 \
+#   port:=2112 \
+#   frame_id:=Lidar_Link \
+#   tf_base_frame_id:=base_link \
+#   add_transform_xyz_rpy:="0.33636 0 0.1326 0 0 0" \
+#   tf_publish_rate:=0.0
+

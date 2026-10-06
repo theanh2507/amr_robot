@@ -1,36 +1,44 @@
 #!/usr/bin/env python3
 import math
 import time
-from geometry_msgs.msg import PoseStamped
+from typing import List, Tuple, Optional
+
+import rclpy
+import tf2_ros
+from rclpy.duration import Duration
+from rclpy.parameter import Parameter
+from rclpy.qos import (
+    DurabilityPolicy,
+    QoSDurabilityPolicy,
+    QoSHistoryPolicy,
+    QoSProfile,
+    QoSReliabilityPolicy,
+    ReliabilityPolicy,
+)
+from rclpy.time import Time
+
+from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
 from nav_msgs.msg import Path
 from nav2_simple_commander.robot_navigator import BasicNavigator, TaskResult
-import rclpy
-from rclpy.executors import SingleThreadedExecutor
-import tf2_ros
-from rclpy.parameter import Parameter
-from rclpy.qos import QoSProfile, DurabilityPolicy, ReliabilityPolicy
-from geometry_msgs.msg import PoseWithCovarianceStamped
 
-from rclpy.qos import QoSDurabilityPolicy, QoSHistoryPolicy
-from rclpy.qos import QoSProfile, QoSReliabilityPolicy
 
-# ============================================================
-# CAU HINH DANH SACH DIEM MỤC TIÊU
-# ============================================================
-WAYPOINTS = [
+WAYPOINTS: List[Tuple[float, float, float]] = [
     (0.0, 0.0, 0.0),
-    (5.0, 0.0, -180.0),
-    (0.0, 0.0, 90.0),
-    (0.0, 4.5, 0.0),
-    (3.0, 4.5, -180.0),
-    (0.0, 4.5, -90.0),
+    (9.0, 0.0, -90.0),
+    (9.0, -2.5, -180.0),
+    (0.0, -2.5, 90.0),
 ]
 
 MAP_FRAME = 'map'
 ROBOT_BASE_FRAME = 'base_footprint'
 
+# So lan lap lai TOAN BO vong waypoint TRONG MOI LAN goi followPath. Vi
+# followPath khong lap vo han duoc (phai tinh san 1 path huu han), chon so
+# nay du lon de robot chay lien tuc mot thoi gian dai ma khong can goi lai.
+LOOPS_PER_CALL = 200
 
-def yaw_to_quaternion(yaw_deg: float):
+
+def yaw_to_quaternion(yaw_deg: float) -> Tuple[float, float]:
     yaw_rad = math.radians(yaw_deg)
     return math.sin(yaw_rad / 2.0), math.cos(yaw_rad / 2.0)
 
@@ -40,323 +48,204 @@ def quaternion_to_yaw_deg(qz: float, qw: float) -> float:
     return math.degrees(yaw_rad)
 
 
-def make_pose(nav: BasicNavigator, x: float, y: float, yaw_deg: float) -> PoseStamped:
-    pose = PoseStamped()
-    pose.header.frame_id = MAP_FRAME
-    pose.header.stamp = nav.get_clock().now().to_msg()
-    pose.pose.position.x = float(x)
-    pose.pose.position.y = float(y)
-    pose.pose.position.z = 0.0
-    qz, qw = yaw_to_quaternion(yaw_deg)
-    pose.pose.orientation.z = qz
-    pose.pose.orientation.w = qw
-    return pose
+class WaypointPatroller:
+    """
+    Chay TUAN TU theo DUNG 1 CHIEU co dinh (khong dao chieu), lap lai vong
+    waypoint nhieu lan - nhung thay vi goi followPath() MOI CHU KY (gay loi
+    SUCCEEDED gia vi diem dau/cuoi cua moi path trung nhau o waypoints[-1]),
+    ta build SAN mot path dai noi LOOPS_PER_CALL vong lien tiep thanh MOT
+    path DUY NHAT, roi chi goi followPath() MOT LAN cho ca chuoi do. Goal
+    cuoi cung (diem cuoi path) chi xuat hien o CUOI CUNG, sau rat nhieu vong,
+    nen khong con tinh huong "vua bat dau da trung goal" nhu truoc.
+    """
 
+    def __init__(self, waypoints: List[Tuple[float, float, float]], step_size: float = 0.05):
+        self.waypoints = waypoints
+        self.step_size = step_size
 
-def get_current_robot_pose_from_tf(tf_buffer: tf2_ros.Buffer, logger):
-    # Kiểm tra xem liên kết giữa map và base_footprint đã sẵn sàng chưa
-    if not tf_buffer.can_transform(MAP_FRAME, ROBOT_BASE_FRAME, rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=0.5)):
-        logger.warn(f'Chua tim me frame {MAP_FRAME} trong cây TF, dang cho...', throttle_duration_sec=2.0)
-        return None
+        self.nav = BasicNavigator()
+        self.nav.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, False)])
 
-    try:
-        trans = tf_buffer.lookup_transform(
-            MAP_FRAME,
-            ROBOT_BASE_FRAME,
-            rclpy.time.Time(), # Lấy transform mới nhất
-            timeout=rclpy.duration.Duration(seconds=0.5)
-        )
-        x = trans.transform.translation.x
-        y = trans.transform.translation.y
-        qz = trans.transform.rotation.z
-        qw = trans.transform.rotation.w
-        yaw_deg = quaternion_to_yaw_deg(qz, qw)
-        return x, y, yaw_deg
-    except Exception as e:
-        logger.warn(f'Loi khi lookup TF {MAP_FRAME} -> {ROBOT_BASE_FRAME}: {e}', throttle_duration_sec=2.0)
-        return None
+        self.tf_buffer = tf2_ros.Buffer()
+        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self.nav, spin_thread=True)
 
+        self.path_pub = self.nav.create_publisher(
+            Path, '/plan',
+            QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL,
+                       reliability=ReliabilityPolicy.RELIABLE))
 
-def interpolate_segment_from_current(nav: BasicNavigator, current_pose: tuple, target_wp: tuple, step_size: float = 0.05) -> Path:
-    path_msg = Path()
-    now_stamp = nav.get_clock().now().to_msg()
-    path_msg.header.frame_id = MAP_FRAME
-    path_msg.header.stamp = now_stamp
+    # --------------------------------------------------------------
+    def make_pose(self, x: float, y: float, yaw_deg: float) -> PoseStamped:
+        pose = PoseStamped()
+        pose.header.frame_id = MAP_FRAME
+        pose.header.stamp = self.nav.get_clock().now().to_msg()
+        pose.pose.position.x = float(x)
+        pose.pose.position.y = float(y)
+        pose.pose.position.z = 0.0
+        qz, qw = yaw_to_quaternion(yaw_deg)
+        pose.pose.orientation.z = qz
+        pose.pose.orientation.w = qw
+        return pose
 
-    x1, y1, yaw1 = current_pose
-    x2, y2, yaw2 = target_wp
+    def get_current_robot_pose_from_tf(self) -> Optional[Tuple[float, float, float]]:
+        if not self.tf_buffer.can_transform(
+                MAP_FRAME, ROBOT_BASE_FRAME, Time(), timeout=Duration(seconds=0.5)):
+            self.nav.get_logger().warn(
+                f'Chua tim frame {MAP_FRAME} trong cay TF, dang cho...',
+                throttle_duration_sec=2.0)
+            return None
+        try:
+            trans = self.tf_buffer.lookup_transform(
+                MAP_FRAME, ROBOT_BASE_FRAME, Time(), timeout=Duration(seconds=0.5))
+            x = trans.transform.translation.x
+            y = trans.transform.translation.y
+            qz = trans.transform.rotation.z
+            qw = trans.transform.rotation.w
+            yaw_deg = quaternion_to_yaw_deg(qz, qw)
+            return x, y, yaw_deg
+        except Exception as e:
+            self.nav.get_logger().warn(
+                f'Loi khi lookup TF {MAP_FRAME} -> {ROBOT_BASE_FRAME}: {e}',
+                throttle_duration_sec=2.0)
+            return None
 
-    dist = math.hypot(x2 - x1, y2 - y1)
-    num_steps = max(int(dist / step_size), 1)
+    def wait_for_robot_pose(self) -> Tuple[float, float, float]:
+        pose = None
+        while rclpy.ok() and pose is None:
+            rclpy.spin_once(self.nav, timeout_sec=0.1)
+            pose = self.get_current_robot_pose_from_tf()
+            if pose is None:
+                time.sleep(0.1)
+        return pose
 
-    interpolated_poses = []
-    for s in range(num_steps):
-        t = s / float(num_steps)
-        curr_x = x1 + t * (x2 - x1)
-        curr_y = y1 + t * (y2 - y1)
+    def wait_for_amcl_pose(self):
+        amcl_pose_qos = QoSProfile(
+            durability=QoSDurabilityPolicy.TRANSIENT_LOCAL,
+            reliability=QoSReliabilityPolicy.RELIABLE,
+            history=QoSHistoryPolicy.KEEP_LAST,
+            depth=1)
+        received = {'ok': False}
 
-        diff_yaw = (yaw2 - yaw1 + 180.0) % 360.0 - 180.0
-        curr_yaw = yaw1 + t * diff_yaw
+        def amcl_callback(msg):
+            if msg is not None:
+                received['ok'] = True
 
-        interpolated_poses.append(make_pose(nav, curr_x, curr_y, curr_yaw))
+        sub = self.nav.create_subscription(
+            PoseWithCovarianceStamped, '/amcl_pose', amcl_callback, amcl_pose_qos)
+        while rclpy.ok() and not received['ok']:
+            self.nav.get_logger().info('Dang cho amcl_pose')
+            rclpy.spin_once(self.nav, timeout_sec=0.1)
+        self.nav.get_logger().info('Da nhan /amcl_pose! An toan de bat dau Nav2.')
+        self.nav.destroy_subscription(sub)
 
-    interpolated_poses.append(make_pose(nav, x2, y2, yaw2))
-    path_msg.poses = interpolated_poses
-    return path_msg
+    # --------------------------------------------------------------
+    # Noi suy 1 doan thang giua 2 diem, THEM vao danh sach chung (khong tao
+    # Path rieng) - dung lam khoi xay dung cho build_looped_path().
+    # --------------------------------------------------------------
+    def _append_segment(self, poses_out: list, p1: Tuple[float, float, float],
+                         p2: Tuple[float, float, float]):
+        x1, y1, yaw1 = p1
+        x2, y2, yaw2 = p2
+        dist = math.hypot(x2 - x1, y2 - y1)
+        num_steps = max(int(dist / self.step_size), 1)
+        for s in range(num_steps):
+            t = s / float(num_steps)
+            curr_x = x1 + t * (x2 - x1)
+            curr_y = y1 + t * (y2 - y1)
+            diff_yaw = (yaw2 - yaw1 + 180.0) % 360.0 - 180.0
+            curr_yaw = yaw1 + t * diff_yaw
+            poses_out.append(self.make_pose(curr_x, curr_y, curr_yaw))
+
+    # --------------------------------------------------------------
+    # Build MOT path DUY NHAT: tu vi tri hien tai -> waypoints[0] -> ... ->
+    # waypoints[-1] -> waypoints[0] -> ... -> waypoints[-1] (lap LOOPS_PER_CALL
+    # lan), LUON DUNG 1 CHIEU co dinh (khong dao nguoc).
+    # --------------------------------------------------------------
+    def build_looped_path(self, start_pose: Tuple[float, float, float], loops: int) -> Path:
+        path_msg = Path()
+        path_msg.header.frame_id = MAP_FRAME
+        path_msg.header.stamp = self.nav.get_clock().now().to_msg()
+
+        interpolated_poses: list = []
+
+        # Doan dau: tu vi tri hien tai den waypoint dau tien
+        self._append_segment(interpolated_poses, start_pose, self.waypoints[0])
+
+        # Lap lai vong waypoint "loops" lan, noi tiep nhau khong dut quang
+        for _ in range(loops):
+            for i in range(len(self.waypoints) - 1):
+                self._append_segment(interpolated_poses, self.waypoints[i], self.waypoints[i + 1])
+            # Noi tu waypoint cuoi quay VE waypoint dau, de khep vong va tiep
+            # tuc lap vong ke tiep lien tuc (tru lan lap CUOI CUNG, xu ly ben duoi)
+            self._append_segment(interpolated_poses, self.waypoints[-1], self.waypoints[0])
+
+        # Them diem CUOI CUNG that su (waypoint dau, vi vong lap tren luon
+        # "chuan bi" cho 1 vong tiep theo) - xem lai logic: ta can path DUNG
+        # tai waypoints[-1] cua vong lap CUOI, khong phai quay lai waypoints[0].
+        # Sua lai bang cach bo doan quay-ve-dau o lan lap cuoi:
+        last_x, last_y, last_yaw = self.waypoints[-1]
+        interpolated_poses.append(self.make_pose(last_x, last_y, last_yaw))
+
+        path_msg.poses = interpolated_poses
+        return path_msg
+
+    # --------------------------------------------------------------
+    def run(self):
+        self.wait_for_amcl_pose()
+        self.nav.waitUntilNav2Active()
+
+        try:
+            while rclpy.ok():
+                start_pose = self.wait_for_robot_pose()
+                self.nav.get_logger().info(
+                    f'Vi tri xuat phat (TF): ({start_pose[0]:.2f}, {start_pose[1]:.2f}, '
+                    f'{start_pose[2]:.1f} deg) - bat dau {LOOPS_PER_CALL} vong lien tuc.')
+
+                full_path = self.build_looped_path(start_pose, LOOPS_PER_CALL)
+                self.nav.get_logger().info(f'Da noi suy path dai {len(full_path.poses)} diem.')
+
+                self.path_pub.publish(full_path)
+                self.nav.followPath(full_path)
+
+                start_wait = time.time()
+                while time.time() - start_wait < 0.3:
+                    rclpy.spin_once(self.nav, timeout_sec=0.1)
+                    time.sleep(0.02)
+
+                while not self.nav.isTaskComplete():
+                    rclpy.spin_once(self.nav)
+                    feedback = self.nav.getFeedback()
+                    if feedback:
+                        print(f'   Con lai: {feedback.distance_to_goal:.2f} m', end='\r')
+                    time.sleep(0.05)
+                print()
+
+                result = self.nav.getResult()
+                if result == TaskResult.SUCCEEDED:
+                    self.nav.get_logger().info(
+                        f'Da hoan thanh {LOOPS_PER_CALL} vong - goi lai path moi de tiep tuc.')
+                elif result == TaskResult.CANCELED:
+                    self.nav.get_logger().warn('Bi huy - dung han chuong trinh.')
+                    break
+                else:
+                    self.nav.get_logger().error('That bai giua chung - thu lai tu vi tri hien tai.')
+                    time.sleep(1.0)
+
+        except KeyboardInterrupt:
+            self.nav.get_logger().info('Nhan Ctrl+C - dung robot va thoat.')
+            self.nav.cancelTask()
+        finally:
+            self.nav.destroy_node()
 
 
 def main():
     rclpy.init()
-    nav = BasicNavigator()
-    nav.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, False)])
-    
-    # Khoi tao TF Listener
-    tf_buffer = tf2_ros.Buffer()
-    tf_listener = tf2_ros.TransformListener(tf_buffer, nav, spin_thread=True)   # spin_thread=True: spin TransformListener de cap nhat du lieu buffer tf
-
-    amcl_pose_qos = QoSProfile(
-          durability=QoSDurabilityPolicy.TRANSIENT_LOCAL,
-          reliability=QoSReliabilityPolicy.RELIABLE,
-          history=QoSHistoryPolicy.KEEP_LAST,
-          depth=1)
-
-    amcl_pose_received = False
-
-    def amcl_callback(msg):
-        nonlocal amcl_pose_received 
-        if(msg is not None):
-            amcl_pose_received = True
-        return
-
-    sub = nav.create_subscription(PoseWithCovarianceStamped,'/amcl_pose', amcl_callback, amcl_pose_qos)
-
-    while rclpy.ok() and not amcl_pose_received:
-        nav.get_logger().info("Dang cho amcl_pose")
-        # time.sleep(0.1)
-        rclpy.spin_once(nav, timeout_sec=0.1)
-        # rclpy.spin(nav)
-
-    nav.get_logger().info("Da nhan /amcl_pose! An toan de bat dau Nav2.")
-    nav.destroy_subscription(sub)
-
-    nav.waitUntilNav2Active()
-
-    path_pub = nav.create_publisher(
-    Path, '/plan',
-    QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL,
-               reliability=ReliabilityPolicy.RELIABLE))
-
-    cycle_count = 0
-
+    patroller = WaypointPatroller(WAYPOINTS, step_size=0.05)
     try:
-        while rclpy.ok():
-            cycle_count += 1
-            nav.get_logger().info(f'=== BAT DAU CHU KY #{cycle_count} ===')
-
-            for i in range(len(WAYPOINTS)):
-                target_wp = WAYPOINTS[i]
-
-                # 1. DOC TOA DO THUC TE TU TF
-                robot_pose = None
-                while rclpy.ok() and robot_pose is None:
-                    # Catch spin liên tục để cập nhật cây TF
-                    rclpy.spin_once(nav)
-                    robot_pose = get_current_robot_pose_from_tf(tf_buffer, nav.get_logger())
-                    if robot_pose is None:
-                        time.sleep(0.1)
-
-                current_x, current_y, current_yaw = robot_pose
-
-                # 2. KIEM TRA KHOANG CACH DEN WAYPOINT TARGET
-                dist_to_target = math.hypot(target_wp[0] - current_x, target_wp[1] - current_y)
-                if dist_to_target < 0.1:
-                    nav.get_logger().info(
-                        f'Robot da rat gan Waypoint {i+1} {target_wp[:2]} (cach {dist_to_target:.2f}m), chuyen tiep.'
-                    )
-                    continue
-
-                nav.get_logger().info(
-                    f'-> Toa do TF thuc te: ({current_x:.2f}, {current_y:.2f}, {current_yaw:.1f}deg) '
-                    f'-> Noi suy den Waypoint {i+1}: {target_wp[:2]}'
-                )
-
-                # 3. NOI SUY DONG
-                segment_path = interpolate_segment_from_current(
-                    nav, (current_x, current_y, current_yaw), target_wp, step_size=0.05
-                )
-
-                path_pub.publish(segment_path)
-
-                # 4. GUI PATH VA CHO ACTION ACCEPTED (Giai doan then chot)
-                nav.followPath(segment_path)
-
-                # CHO 0.3 GIÂY ĐỂ NAV2 ACTION SERVER NHẬN GOAL VÀ BẮT ĐẦU CHẠY
-                # Tránh trường hợp check isTaskComplete ngay khi server chưa kịp ACCEPT Goal
-                start_wait = time.time()
-                while time.time() - start_wait < 0.3:
-                    rclpy.spin_once(nav, timeout_sec=0.1)
-                    time.sleep(0.02)
-
-                # 5. VONG LAP CHO THUC THI CHUAN CUA ROS 2
-                while not nav.isTaskComplete():
-                    # BẮT BUỘC SPIN ĐỂ CẬP NHẬT ACTION CLIENT CALLBACK
-                    rclpy.spin_once(nav)
-                    
-                    feedback = nav.getFeedback()
-                    if feedback:
-                        print(
-                            f'   [Waypoint {i+1}] Khoang cach con lai: {feedback.distance_to_goal:.2f} m',
-                            end='\r'
-                        )
-                    time.sleep(0.05)
-
-                print() # Xuong dong
-
-
-                result = nav.getResult()
-                if result == TaskResult.SUCCEEDED:
-                    nav.get_logger().info(f'-> DA DEN WAYPOINT {i+1}: {target_wp}')
-                else:
-                    nav.get_logger().error(f'Chang {i+1} THAT BAI hoac bi HUY!')
-                    break
-
-            nav.get_logger().info(f'=== HOAN THANH CHU KY #{cycle_count} ===\n')
-            time.sleep(1.0)
-
-    except KeyboardInterrupt:
-        nav.get_logger().info('Dung robot va thoat.')
-        nav.cancelTask()
-
+        patroller.run()
     finally:
-        nav.destroy_node()
         rclpy.shutdown()
 
 
 if __name__ == '__main__':
     main()
-
-# def main():
-#     rclpy.init()
-
-#     # 1. Khởi tạo BasicNavigator & Thêm tham số
-#     nav = BasicNavigator()
-#     nav.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, False)])
-
-#     # 2. Sử dụng MultiThreadedExecutor để spin node ở background thread
-#     # Giúp TF Buffer, Action feedback và Subscriptions luôn tự động cập nhật
-#     executor = MultiThreadedExecutor()
-#     executor.add_node(nav)
-#     spin_thread = threading.Thread(target=executor.spin, daemon=True)
-#     spin_thread.start()
-
-#     # 3. Khởi tạo TF2 Buffer & Listener (Background spin sẽ tự cập nhật TF)
-#     tf_buffer = tf2_ros.Buffer()
-#     tf_listener = tf2_ros.TransformListener(tf_buffer, nav, spin_thread=True)
-
-#     # 4. Đợi nhận pose đầu tiên từ AMCL
-#     amcl_pose_received = False
-
-#     def amcl_callback(msg):
-#         nonlocal amcl_pose_received
-#         amcl_pose_received = True
-
-#     sub = nav.create_subscription(
-#         PoseWithCovarianceStamped,
-#         '/amcl_pose',
-#         amcl_callback,
-#         10
-#     )
-
-#     nav.get_logger().info("Dang cho tin hieu /amcl_pose...")
-#     while rclpy.ok() and not amcl_pose_received:
-#         time.sleep(0.1)
-
-#     nav.get_logger().info("Da nhan /amcl_pose! An toan de bat dau Nav2.")
-#     nav.destroy_subscription(sub)
-
-#     # 5. Chờ Nav2 Active
-#     nav.waitUntilNav2Active()
-
-#     # 6. Khởi tạo Publisher cho Path
-#     path_pub = nav.create_publisher(
-#         Path,
-#         '/plan',
-#         QoSProfile(
-#             depth=1,
-#             durability=DurabilityPolicy.TRANSIENT_LOCAL,
-#             reliability=ReliabilityPolicy.RELIABLE
-#         )
-#     )
-
-#     cycle_count = 0
-
-#     try:
-#         while rclpy.ok():
-#             cycle_count += 1
-#             nav.get_logger().info(f'=== BAT DAU CHU KY #{cycle_count} ===')
-
-#             for i, target_wp in enumerate(WAYPOINTS):
-#                 # 1. ĐỌC TỌA ĐỘ THỰC TẾ TỪ TF
-#                 robot_pose = None
-#                 while rclpy.ok() and robot_pose is None:
-#                     robot_pose = get_current_robot_pose_from_tf(tf_buffer, nav.get_logger())
-#                     if robot_pose is None:
-#                         time.sleep(0.05)
-
-#                 current_x, current_y, current_yaw = robot_pose
-
-#                 # 2. KIỂM TRA KHOẢNG CÁCH ĐẾN WAYPOINT
-#                 dist_to_target = math.hypot(target_wp[0] - current_x, target_wp[1] - current_y)
-#                 if dist_to_target < 0.1:
-#                     nav.get_logger().info(
-#                         f'Robot da rat gan Waypoint {i+1} {target_wp[:2]} '
-#                         f'(cach {dist_to_target:.2f}m), chuyen tiep.'
-#                     )
-#                     continue
-
-#                 nav.get_logger().info(
-#                     f'-> Pose TF: ({current_x:.2f}, {current_y:.2f}, {current_yaw:.1f}deg) '
-#                     f'-> Noi suy toi Waypoint {i+1}: {target_wp[:2]}'
-#                 )
-
-#                 # 3. NỘI SỤY ĐƯỜNG ĐI DỘNG & PUBLISH PATH
-#                 segment_path = interpolate_segment_from_current(
-#                     nav, (current_x, current_y, current_yaw), target_wp, step_size=0.05
-#                 )
-#                 path_pub.publish(segment_path)
-
-#                 # 4. GỬI GOAL CHO NAV2
-#                 nav.followPath(segment_path)
-
-#                 # 5. ĐỢI TASK HOÀN THÀNH (Executor ở background tự nhận feedback)
-#                 while not nav.isTaskComplete():
-#                     feedback = nav.getFeedback()
-#                     if feedback:
-#                         print(
-#                             f'   [Waypoint {i+1}] Khoang cach con lai: {feedback.distance_to_goal:.2f} m',
-#                             end='\r'
-#                         )
-#                     time.sleep(0.05)
-
-#                 print()  # Xống dòng sau khi chạy xong waypoint
-
-#                 # 6. KIỂM TRA KẾT QUẢ
-#                 result = nav.getResult()
-#                 if result == TaskResult.SUCCEEDED:
-#                     nav.get_logger().info(f'-> DA DEN WAYPOINT {i+1}: {target_wp}')
-#                 else:
-#                     nav.get_logger().error(f'Chang {i+1} THAT BAI hoac bi HUY!')
-#                     break
-
-#             nav.get_logger().info(f'=== HOAN THANH CHU KY #{cycle_count} ===\n')
-#             time.sleep(1.0)
-
-#     except KeyboardInterrupt:
-#         nav.get_logger().info('Nhan KeyboardInterrupt: Dang huystask va thoat...')
-#         nav.cancelTask()
-
-#     finally:
-#         # Dọn dẹp tài nguyên
-#         executor.shutdown()
-#         nav.destroy_node()
-#         rclpy.shutdown()

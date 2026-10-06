@@ -52,7 +52,8 @@ class PS4TeleopNode(Node):
                     throttle_duration_sec=1.0)
             else:
                 # Duong binh thuong - di qua twist_mux -> collision_monitor
-                self.cmd_vel_joy_pub.publish(twist)
+                self.cmd_vel_joy_pub.publish(twist)               # tat tam thoi de dieu khien lai binh thuong bang ps4
+                # self.cmd_vel_override_pub.publish(twist)
 
         self._handle_goal_buttons(msg)
 

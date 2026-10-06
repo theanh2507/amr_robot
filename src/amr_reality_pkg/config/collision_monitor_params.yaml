@@ -8,7 +8,7 @@ collision_monitor:
     cmd_vel_out_topic: "diff_drive_controller/cmd_vel_unstamped"        # Topic vận tốc đầu ra (gửi tới motor driver)
     state_topic: "collision_monitor_state"
     transform_tolerance: 0.2
-    source_timeout: 2.0
+    source_timeout: 3.0
     base_shift_correction: true                                         # bu tru do tre giua thoi diem scan va thoi diem du lieu duoc xu ly
     stop_pub_timeout: 2.0                                               # neu ko nhan duoc du lieu qua 2s coi nhu da mat cam bien, dung khan cap
 
@@ -27,7 +27,7 @@ collision_monitor:
       type: "polygon"
       points: [0.8, 0.4,  0.8, -0.4,  0.0, -0.4,  0.0, 0.4]
       action_type: "stop"
-      max_points: 3
+      max_points: 5
       visualize: true
       polygon_pub_topic: "polygon_stop_front"
 
@@ -43,7 +43,7 @@ collision_monitor:
       type: "polygon"
       points: [1.0, 0.4,  1.0, -0.4,  0.0, -0.4,  0.0, 0.4]
       action_type: "slowdown"
-      slowdown_ratio: 0.3       
-      max_points: 3
+      slowdown_ratio: 0.4       
+      max_points: 5
       visualize: true
       polygon_pub_topic: "polygon_slow"

@@ -20,12 +20,12 @@ amcl:
     laser_likelihood_max_dist: 2.0                              # khoang cach toi da 2m, tia laser tu lidar nam cach xa hon 2m so voi tuong cua ban do thi coi do la nhieu
     laser_max_range: 12.0                                       # su dung gia tri laser toi da 10m
     laser_min_range: 0.2                                        # su dung gia tri laser toi thieu 0.2m
-    laser_model_type: "likelihood_field"
+    laser_model_type: "likelihood_field"                        # su dung "likelihood_field" thi chi co 2 tham so z_hit, z_rand con dung "beam" thi co 4 tham so z_hit_z_rand, z_max, z_short
     max_beams: 360                                              # so luong laser dung cho amcl
     max_particles: 5000                                         # so luong hat toi da
-    min_particles: 500                                          # so luong hat toi thieu
+    min_particles: 1000                                         # so luong hat toi thieu
     odom_frame_id: "odom"                                       # tra cuu tf giua odom_frame->base_frame
-    pf_err: 0.1                                                 # sai so quan the hat toi da giua phan phoi thuc te va phan phoi uoc luong (de do do rong hep dam may particel filter)
+    pf_err: 0.1                                               # sai so quan the hat toi da giua phan phoi thuc te va phan phoi uoc luong (de do do rong hep dam may particel filter)
     pf_z: 0.99                                                  # do tin cay
     recovery_alpha_fast: 0.1                                    # toc do suy giam cho bo loc ham mu uoc tinh ngan han
     recovery_alpha_slow: 0.002                                  # toc do suy giam cho bo loc ham mu uoc tinh dai han
@@ -35,8 +35,8 @@ amcl:
     sigma_hit: 0.2                                              # do lech chuan 20cmm duoc xem xet trong mo hinh xac suat
     tf_broadcast: true                                          # cho phep tf map -> odom
     transform_tolerance: 0.5                                    # cho phep 0.2 giay de xu ly tf
-    update_min_a: 0.5                                           # goc xoay can thiet de cap nhat bo loc (rad)
-    update_min_d: 0.2                                           # khoang cach tinh tien can di de cap nhat bo loc (m)
+    update_min_a: 0.05                                          # goc xoay can thiet de cap nhat bo loc (rad)
+    update_min_d: 0.05                                          # khoang cach tinh tien can di de cap nhat bo loc (m)
     z_hit: 0.95                                                 # tia laser do dung (cang cao cang tin tuong vao do chinh xac cua lidar va moi truong thuc te va ban do co do khop cao)
     z_max: 0.05                                                 # tia laser do khong phan hoi la hoac vuot qua gia tri max cua lidar
     z_rand: 0.05                                                # nhieu ngau nhien tao ra diem bat thuong
@@ -146,20 +146,22 @@ controller_server:
     # Goal checker parameters
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"              # den vi tri xy dung sai 0.2m va goc la 0.2 rad coi la toi dich
-      xy_goal_tolerance: 0.2
+      xy_goal_tolerance: 0.1
       yaw_goal_tolerance: 0.1
       stateful: True
 
     FollowPath:
+      # plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
+    
       plugin: "nav2_rotation_shim_controller::RotationShimController"
       primary_controller: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
-     # Rotation Shim controller
-      angular_dist_threshold: 0.5                               # nguong bat dau xoay tai cho, goc hien tai so voi path > 0.5 thi xoay tai cho  
-      angular_disengage_threshold: 0.2                          # nguong nha xoay tra quyen dieu khien ve cho bo dieu khien chinh
-      forward_sampling_distance: 0.5            
+      # Rotation Shim controller
+      angular_dist_threshold: 0.2                               # nguong bat dau xoay tai cho, goc hien tai so voi path > 0.5 thi xoay tai cho  
+      angular_disengage_threshold: 0.1                          # nguong nha xoay tra quyen dieu khien ve cho bo dieu khien chinh
+      forward_sampling_distance: 0.8                            # diem point dat truoc base robot 1 doan 0.8 de xem xet rotation controller co cho phep quay ko (nen dat xap xi bang lookahead_dist)
       rotate_to_goal_heading: true                              # true: khi den dich shirm se dam nhan viec xoay robot ve dung huong, false: do bo dk chinh dk huong
-      max_angular_accel: 3.0                                    # Also used by RPP
-      rotate_to_heading_angular_vel: 0.3 # also used by RPP     # gia toc goc yaw khi xoay tai cho
+      max_angular_accel: 1.0                                    # Also used by RPP
+      rotate_to_heading_angular_vel: 0.3 # also used by RPP     # van toc goc yaw khi xoay tai cho
       simulate_ahead_time: 1.0                                  # thoi gian mo phong du doan va cham phia truoc
       closed_loop: true                                         # su dung odom de uoc tinh toc do hien tai
 
@@ -168,7 +170,7 @@ controller_server:
       lookahead_dist: 1.0                                       # only when use_velocity_scaled_lookahead_dist is False
       min_lookahead_dist: 0.5                                   # only when use_velocity_scaled_lookahead_dist is True
       max_lookahead_dist: 1.5                                   # only when use_velocity_scaled_lookahead_dist is True
-      lookahead_time: 1.0                                       # dung de tinh khoang cach look ahead (L=v*t)
+      lookahead_time: 2.0                                       # dung de tinh khoang cach look ahead (L=v*t)
       transform_tolerance: 0.5                                  # qua 0.2 ko nhan duoc tf rpp bao loi
       use_velocity_scaled_lookahead_dist: true                  # cho phep thay doi khoang cach look ahead, chay nhanh nhin xa, chay cham nhin gan
 
@@ -180,8 +182,8 @@ controller_server:
       use_regulated_linear_velocity_scaling: true               # slow down on high curvature paths (bat tat tinh nang giam toc khi gap duong cong co ban kinh nho)
 
       use_cost_regulated_linear_velocity_scaling: true          # needed for obstacle detection (giam toc tuyen tinh khi di gan vat can)
-      cost_scaling_dist: 0.8                                    # cach vat can 0.8m thi bat dau giam toc
-      cost_scaling_gain: 1.5                                    # he so giam toc (cang lon giam toc cang manh)
+      cost_scaling_dist: 0.5                                    # cach vat can 0.8m thi bat dau giam toc
+      cost_scaling_gain: 0.5                                    # he so giam toc (cang lon giam toc cang manh)
 
       regulated_linear_scaling_min_radius: 1.5                  # tu dong giam toc khi duong cong co ban kinh nho hon 1.5m
       regulated_linear_scaling_min_speed: 0.10                  # toc do toi thieu 0.1 m/s khi vao cua 
@@ -190,7 +192,7 @@ controller_server:
 
       use_rotate_to_heading: false                              # cho phep xoay tai cho khi goc lech qua lon, false: vi dung rotation controller
       allow_reversing: false                                    # true: robot duoc phep di lui, false: robot chi duoc di thang
-      rotate_to_heading_min_angle: 0.785                        # nguong goc lech de robot xoay tai cho
+      rotate_to_heading_min_angle: 0.2                          # nguong goc lech de robot xoay tai cho
       use_cancel_deceleration: false
       max_robot_pose_search_dist: 2.0                           # default to local costmap width / 2
       interpolate_curvature_after_goal: false                   # false: ko cho phep tinh do cong de noi suy tim van toc
@@ -462,7 +464,7 @@ velocity_smoother:
     feedback: "CLOSED_LOOP"                                   # OPEN_LOOP
     max_velocity: [0.8, 0.0, 0.5]                             # [linear_x, linear_y, angular_z]
     min_velocity: [-0.8, 0.0, -0.5]
-    max_accel: [2.5, 0.0, 3.2]
+    max_accel: [1.0, 0.0, 3.2]
     max_decel: [-2.5, 0.0, -3.2]
     odom_topic: "/odometry/filtered"
     odom_duration: 0.1

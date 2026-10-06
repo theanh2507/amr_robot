@@ -1,0 +1,180 @@
+[0.051s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg
+[0.118s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.395s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.427s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.490s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.494s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.503s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.518s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.542s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.619s] -- Found rmw_implementation_cmake: 6.1.3 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.625s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.800s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.920s] -- Found canopen_core: 0.2.13 (/opt/ros/humble/share/canopen_core/cmake)
+[1.071s] -- Found canopen_base_driver: 0.2.13 (/opt/ros/humble/share/canopen_base_driver/cmake)
+[1.126s] -- Found canopen_proxy_driver: 0.2.13 (/opt/ros/humble/share/canopen_proxy_driver/cmake)
+[1.143s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[1.167s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.169s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.323s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[1.324s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.352s] -- Found tf2_geometry_msgs: 0.25.22 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.380s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.526s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.527s] -- Configured cppcheck include dirs: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg/src/include
+[1.527s] -- Configured cppcheck exclude dirs and/or files: 
+[1.528s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.529s] -- Added test 'lint_cmake' to check CMake code style
+[1.530s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.535s] -- Added test 'uncrustify' to check C / C++ code style
+[1.535s] -- Configured uncrustify additional arguments: 
+[1.536s] -- Added test 'xmllint' to check XML markup files
+[1.540s] -- Configuring done
+[1.579s] -- Generating done
+[1.589s] -- Build files have been written to: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
+[1.615s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/amr_reality_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg
+[1.623s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg -- -j8 -l8
+[1.733s] [35m[1mConsolidate compiler generated dependencies of target plicp[0m
+[1.765s] [  0%] Built target robot_control_prepare
+[1.796s] [100%] Built target plicp
+[2.753s] joint1: writing 4 bytes to 0x1400/1: 02 02 00 80
+[2.754s] joint1: writing 1 bytes to 0x1400/2: 01
+[2.754s] joint1: writing 1 bytes to 0x1600/0: 00
+[2.754s] joint1: writing 4 bytes to 0x1600/1: 10 00 40 60
+[2.755s] joint1: writing 4 bytes to 0x1600/2: 08 00 60 60
+[2.755s] joint1: writing 1 bytes to 0x1600/0: 02
+[2.755s] joint1: writing 4 bytes to 0x1400/1: 02 02 00 00
+[2.756s] joint1: writing 4 bytes to 0x1401/1: 02 03 00 80
+[2.756s] joint1: writing 1 bytes to 0x1401/2: 01
+[2.756s] joint1: writing 1 bytes to 0x1601/0: 00
+[2.757s] joint1: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[2.757s] joint1: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[2.757s] joint1: writing 1 bytes to 0x1601/0: 02
+[2.758s] joint1: writing 4 bytes to 0x1401/1: 02 03 00 00
+[2.758s] joint1: writing 4 bytes to 0x1800/1: 82 01 00 80
+[2.759s] joint1: writing 1 bytes to 0x1800/2: 01
+[2.759s] joint1: writing 1 bytes to 0x1A00/0: 00
+[2.759s] joint1: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[2.760s] joint1: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[2.760s] joint1: writing 1 bytes to 0x1A00/0: 02
+[2.760s] joint1: writing 4 bytes to 0x1800/1: 82 01 00 00
+[2.761s] joint1: writing 4 bytes to 0x1801/1: 82 02 00 80
+[2.761s] joint1: writing 1 bytes to 0x1801/2: 01
+[2.761s] joint1: writing 1 bytes to 0x1A01/0: 00
+[2.762s] joint1: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[2.762s] joint1: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[2.763s] joint1: writing 1 bytes to 0x1A01/0: 02
+[2.763s] joint1: writing 4 bytes to 0x1801/1: 82 02 00 00
+[2.763s] joint1: writing 4 bytes to 0x1802/1: 82 03 00 80
+[2.764s] joint1: writing 1 bytes to 0x1802/2: 01
+[2.764s] joint1: writing 1 bytes to 0x1A02/0: 00
+[2.764s] joint1: writing 4 bytes to 0x1A02/1: 10 00 3F 60
+[2.765s] joint1: writing 1 bytes to 0x1A02/0: 01
+[2.765s] joint1: writing 4 bytes to 0x1802/1: 82 03 00 00
+[2.765s] joint1: writing 2 bytes to 0x6040/0: 80 00
+[2.766s] joint1: writing 4 bytes to 0x6083/0: A0 86 01 00
+[2.766s] joint1: writing 4 bytes to 0x6084/0: A0 86 01 00
+[2.766s] joint2: writing 4 bytes to 0x1400/1: 03 02 00 80
+[2.767s] joint2: writing 1 bytes to 0x1400/2: 01
+[2.767s] joint2: writing 1 bytes to 0x1600/0: 00
+[2.767s] joint2: writing 4 bytes to 0x1600/1: 10 00 40 60
+[2.768s] joint2: writing 4 bytes to 0x1600/2: 08 00 60 60
+[2.768s] joint2: writing 1 bytes to 0x1600/0: 02
+[2.769s] joint2: writing 4 bytes to 0x1400/1: 03 02 00 00
+[2.769s] joint2: writing 4 bytes to 0x1401/1: 03 03 00 80
+[2.769s] joint2: writing 1 bytes to 0x1401/2: 01
+[2.770s] joint2: writing 1 bytes to 0x1601/0: 00
+[2.770s] joint2: writing 4 bytes to 0x1601/1: 20 00 7A 60
+[2.770s] joint2: writing 4 bytes to 0x1601/2: 20 00 FF 60
+[2.771s] joint2: writing 1 bytes to 0x1601/0: 02
+[2.771s] joint2: writing 4 bytes to 0x1401/1: 03 03 00 00
+[2.771s] joint2: writing 4 bytes to 0x1800/1: 83 01 00 80
+[2.772s] joint2: writing 1 bytes to 0x1800/2: 01
+[2.772s] joint2: writing 1 bytes to 0x1A00/0: 00
+[2.772s] joint2: writing 4 bytes to 0x1A00/1: 10 00 41 60
+[2.773s] joint2: writing 4 bytes to 0x1A00/2: 08 00 61 60
+[2.773s] joint2: writing 1 bytes to 0x1A00/0: 02
+[2.773s] joint2: writing 4 bytes to 0x1800/1: 83 01 00 00
+[2.774s] joint2: writing 4 bytes to 0x1801/1: 83 02 00 80
+[2.774s] joint2: writing 1 bytes to 0x1801/2: 01
+[2.775s] joint2: writing 1 bytes to 0x1A01/0: 00
+[2.775s] joint2: writing 4 bytes to 0x1A01/1: 20 00 64 60
+[2.775s] joint2: writing 4 bytes to 0x1A01/2: 20 00 6C 60
+[2.776s] joint2: writing 1 bytes to 0x1A01/0: 02
+[2.776s] joint2: writing 4 bytes to 0x1801/1: 83 02 00 00
+[2.776s] joint2: writing 4 bytes to 0x1802/1: 83 03 00 80
+[2.777s] joint2: writing 1 bytes to 0x1802/2: 01
+[2.777s] joint2: writing 1 bytes to 0x1A02/0: 00
+[2.777s] joint2: writing 4 bytes to 0x1A02/1: 10 00 3F 60
+[2.778s] joint2: writing 1 bytes to 0x1A02/0: 01
+[2.778s] joint2: writing 4 bytes to 0x1802/1: 83 03 00 00
+[2.778s] joint2: writing 2 bytes to 0x6040/0: 80 00
+[2.779s] joint2: writing 4 bytes to 0x6083/0: A0 86 01 00
+[2.779s] joint2: writing 4 bytes to 0x6084/0: A0 86 01 00
+[3.097s] [100%] Built target robot_control
+[3.131s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg -- -j8 -l8
+[3.134s] Invoking command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg
+[3.148s] -- Install configuration: ""
+[3.148s] -- Execute custom install script
+[3.150s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//cia402_slave.eds
+[3.174s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//ros2_controllers.yaml
+[3.186s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//bus.yml
+[3.198s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint1.bin
+[3.230s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//joint2.bin
+[3.257s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//master.dcf
+[3.289s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/robot_control//preprocessed_bus.yml
+[3.322s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/launch/amr_reality.launch.py
+[3.322s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/launch/localization_launch.py
+[3.323s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/launch/navigation_launch.py
+[3.324s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/launch/online_async_launch.py
+[3.325s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/launch/slamtoolbox_localization.py
+[3.328s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Imu_Link.STL
+[3.329s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Left_Link.STL
+[3.330s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Lidar_Link.STL
+[3.331s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Right_Link.STL
+[3.332s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Left_Link.STL
+[3.332s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Behind_Right_Link.STL
+[3.333s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Left_Link.STL
+[3.334s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/Yaw_Front_Right_Link.STL
+[3.334s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes/base_link.STL
+[3.336s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Imu_Link.STL
+[3.337s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Left_Link.STL
+[3.338s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Lidar_Link.STL
+[3.338s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Right_Link.STL
+[3.339s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Yaw_Behind_Left_Link.STL
+[3.340s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Yaw_Behind_Right_Link.STL
+[3.340s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Yaw_Front_Left_Link.STL
+[3.341s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/Yaw_Front_Right_Link.STL
+[3.342s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/meshes_2/base_link.STL
+[3.344s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/AMR1-00-Khung (1).SLDASM.urdf
+[3.345s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/AMR1-00-Khung_urdf.SLDASM.urdf
+[3.346s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot.urdf.xacro
+[3.347s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.ros2_control.xacro
+[3.348s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/descriptions/urdf/robot_controller/robot_controller.urdf.xacro
+[3.349s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/ekf.yaml
+[3.350s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/twist_mux.yaml
+[3.351s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/laser_filter.yaml
+[3.352s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/nav2_params.yaml
+[3.353s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/mapper_params_online_async.yaml
+[3.354s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/config/collision_monitor_params.yaml
+[3.355s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/ps4_teleop_node.py
+[3.356s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/imu_tl740D.py
+[3.357s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/cov_odom_scan.py
+[3.358s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/publish_test_path.py
+[3.360s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/lib/amr_reality_pkg/plicp
+[3.361s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/ament_index/resource_index/package_run_dependencies/amr_reality_pkg
+[3.363s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/ament_index/resource_index/parent_prefix_path/amr_reality_pkg
+[3.364s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.sh
+[3.365s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/environment/ament_prefix_path.dsv
+[3.366s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.sh
+[3.366s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/environment/path.dsv
+[3.367s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.bash
+[3.369s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.sh
+[3.370s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.zsh
+[3.370s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/local_setup.dsv
+[3.371s] -- Symlinking: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.dsv
+[3.400s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/ament_index/resource_index/packages/amr_reality_pkg
+[3.402s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig.cmake
+[3.402s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/cmake/amr_reality_pkgConfig-version.cmake
+[3.404s] -- Up-to-date symlink: /home/orangepi/Robot_Project/AMR_Robot/amr_robot/install/amr_reality_pkg/share/amr_reality_pkg/package.xml
+[3.411s] Invoked command in '/home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/Robot_Project/AMR_Robot/amr_robot/build/amr_reality_pkg

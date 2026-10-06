@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target plicp_map_matcher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/plicp_map_matcher.dir/src/plicp_map_matcher.cpp.o[0m
+[01m[K/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher/src/plicp_map_matcher.cpp:[m[K In member function ‘[01m[Kvoid plicp_map_matcher::PlicpMapMatcherNode::scanCallback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher/src/plicp_map_matcher.cpp:320:87:[m[K [01;31m[Kerror: [m[K‘[01m[KT_map[m[K’ was not declared in this scope
+  320 |     Pose2D laser_pose_map = guess.compose(T_base_laser);                              [01;31m[KT_map[m[K->laser = T_map_base * T_base_laser
+      |                                                                                       [01;31m[K^~~~~[m[K
+[01m[K/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher/src/plicp_map_matcher.cpp:320:102:[m[K [01;31m[Kerror: [m[K‘[01m[KT_map_base[m[K’ was not declared in this scope
+  320 |     Pose2D laser_pose_map = guess.compose(T_base_laser);                              T_map->laser = [01;31m[KT_map_base[m[K * T_base_laser
+      |                                                                                                      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/orangepi/Robot_Project/AMR_Robot/amr_robot/src/plicp_map_matcher/src/plicp_map_matcher.cpp:323:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+  323 |     for (int i = 0; [01;31m[Ki[m[K < n; ++i, angle += msg->angle_increment) {
+      |                     [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/plicp_map_matcher.dir/build.make:76: CMakeFiles/plicp_map_matcher.dir/src/plicp_map_matcher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/plicp_map_matcher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

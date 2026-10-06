@@ -4,11 +4,18 @@ laser_filter:             # phai dat trung ten voi name trong launch file cua la
       name: angle_filter
       type: laser_filters/LaserScanAngularBoundsFilter          # laser_filters/LaserScanAngularBoundsFilterInPlace: cat du lieu trong vung lower_angle va upper_angle 
       params:
-        # cac gia tri phai la float
-        lower_angle: 0.0                                        # 0 do                     
-        upper_angle: 3.141592                                   # 180 do
 
-        # lower_angle: -1.570796                                # 0 do                     
-        # upper_angle: 1.570796                                 # 180 do
+        # rep 103: goc 0 do tuong ung tia laser chieu thang truoc mat lidar truc X 
+        #          goc 90 la ben trai (Y+)
+        #          goc 180 la phi sau lung X-
+
+        # sick lidar
+        # cac gia tri phai la float (goc quet tong la 180 )
+        # lower_angle: -1.570796                                    # -90 do (voi truc X huong thang theo base, truc Y nam ben trai truc X)                
+        # upper_angle: 1.570796                                     # 90 do
+
+        # rplidar
+        lower_angle: 0.0                                          # 0 do                     
+        upper_angle: 3.141592                                     # 180 do
         
     
